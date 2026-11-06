@@ -1,0 +1,3 @@
+Sora (c) The Sora Project Authors y JetBrains Mono (c) The JetBrains Mono Project Authors.
+Ambas con la SIL Open Font License 1.1: https://openfontlicense.org
+Subconjunto latino descargado de Google Fonts (2026-11-06).
