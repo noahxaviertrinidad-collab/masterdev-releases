@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MasterDev · Donde creadores y jugadores se encuentran</title>
+<meta name="description" content="MasterDev es un centro de mando para crear juegos indie y una comunidad para jugarlos y probarlos. Gratis para Windows.">
+<meta property="og:title" content="MasterDev · Donde creadores y jugadores se encuentran">
+<meta property="og:description" content="Conceptualiza, organiza y programa tu juego indie, y encuentra a quien lo juegue.">
+<meta property="og:image" content="https://masterdev.website/img/app-icon-128.png">
+<meta property="og:url" content="https://masterdev.website/">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="img/app-icon-32.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="MasterDev">
+      <img src="img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#creadores"><span lang="es">Creadores</span><span lang="en">Creators</span></a>
+      <a href="#jugadores"><span lang="es">Jugadores</span><span lang="en">Players</span></a>
+      <a href="#descargar"><span lang="es">Descargar</span><span lang="en">Download</span></a>
+      <a href="#preguntas">FAQ</a>
+    </nav>
+    <button class="lang" type="button" id="lang-btn" aria-label="Cambiar idioma / Change language">EN</button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="kicker">&gt; <span lang="es">para devs indie y jugadores</span><span lang="en">for indie devs and players</span><span class="cursor" aria-hidden="true">_</span></p>
+      <h1>
+        <span lang="es">Donde creadores y jugadores <em>se encuentran</em>.</span>
+        <span lang="en">Where creators and players <em>meet</em>.</span>
+      </h1>
+      <p class="lead">
+        <span lang="es">MasterDev es tu centro de mando para pasar de una idea a un juego que corre: ideas, documento de diseño, proyectos, builds y playtests en un solo sitio. Y una comunidad para que otras personas lo jueguen.</span>
+        <span lang="en">MasterDev is your command center for going from an idea to a game that runs: ideas, design docs, projects, builds and playtests in one place. Plus a community where other people get to play it.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">
+          <span lang="es">Descargar para Windows</span><span lang="en">Download for Windows</span>
+        </a>
+        <a class="btn ghost" href="#creadores"><span lang="es">Ver qué hace</span><span lang="en">See what it does</span></a>
+      </div>
+      <p class="meta mono"><span class="dl-version">MasterDev</span> · Windows 10/11 · 64 bits · <span lang="es">gratis</span><span lang="en">free</span></p>
+    </div>
+
+    <div class="term" role="img" aria-label="Panel de estado de MasterDev">
+      <div class="term-bar"><i></i><i></i><i></i><span>masterdev — centro</span></div>
+<pre class="term-body"><span class="g">== MASTERDEV ==</span> <span class="w">tu estudio indie, en una ventana</span>
+<span class="g">[OK]</span>  idea 007  <span class="d">«Faro de sal»</span>   → refinada
+<span class="g">[OK]</span>  proyecto  <span class="d">phaser · 480×270</span>   → prototipo
+<span class="c">[RUN]</span> build 12  <span class="d">enemigo que persigue</span>
+<span class="a">[!!]</span>  playtest  <span class="d">3 notas nuevas de testers</span>
+<span class="g">[OK]</span>  devlog    <span class="d">publicado en tu servidor</span>
+
+<span class="d">&gt;</span> /build faro-de-sal "añade el faro giratorio"<span class="cursor">_</span></pre>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="creadores">
+  <div class="wrap">
+    <p class="tag mono">01 · <span lang="es">CREADORES</span><span lang="en">CREATORS</span></p>
+    <h2><span lang="es">De la libreta al juego que se puede jugar</span><span lang="en">From notebook to a playable game</span></h2>
+    <p class="sub"><span lang="es">Con el alcance de un estudio indie: primero el core loop, luego el contenido.</span><span lang="en">Scoped like an indie studio: core loop first, content later.</span></p>
+    <div class="grid">
+      <article class="card">
+        <p class="card-k mono">/ideas</p>
+        <h3><span lang="es">Ideas que maduran</span><span lang="en">Ideas that grow up</span></h3>
+        <p><span lang="es">Apunta ideas en bruto y conviértelas en un concepto viable, con su logline y sus referencias.</span><span lang="en">Jot down raw ideas and turn them into a workable concept, with a logline and references.</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">/new-project</p>
+        <h3><span lang="es">Proyectos en cualquier motor</span><span lang="en">Projects in any engine</span></h3>
+        <p><span lang="es">GDD, estructura de carpetas y código que arranca. Los juegos web se juegan dentro de la app, y también puedes vincular los que ya tienes.</span><span lang="en">GDD, folder layout and code that runs. Web games play right inside the app, and you can link games you already have.</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">roblox studio</p>
+        <h3><span lang="es">Roblox Studio integrado</span><span lang="en">Roblox Studio built in</span></h3>
+        <p><span lang="es">Todos tus juegos de Roblox del PC, plantillas para empezar uno y Studio en vivo desde la app.</span><span lang="en">All your Roblox games on this PC, templates to start one, and a live view of Studio from the app.</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">/builds</p>
+        <h3><span lang="es">Builds, playtests y estudio</span><span lang="en">Builds, playtests and studio</span></h3>
+        <p><span lang="es">Tablero, bugs, devlogs, balance y telemetría de tus playtests. Graba notas de voz mientras juegas y conviértelas en tareas.</span><span lang="en">Board, bugs, devlogs, balance and playtest telemetry. Record voice notes while you play and turn them into tasks.</span></p>
+      </article>
+    </div>
+    <div class="note">
+      <p class="note-k mono">◆ <span lang="es">CLAUDE ES OPCIONAL</span><span lang="en">CLAUDE IS OPTIONAL</span></p>
+      <p><span lang="es">Si tienes Claude Code, MasterDev le puede encargar trabajo de verdad: implementar una mecánica, arreglar un bug o refinar una idea, viendo en directo qué archivos toca. Usa tu propia cuenta de Claude. Sin él, todo lo demás funciona igual.</span><span lang="en">If you have Claude Code, MasterDev can hand it real work: implement a mechanic, fix a bug or refine an idea, while you watch which files it touches. It uses your own Claude account. Without it, everything else works the same.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="jugadores">
+  <div class="wrap">
+    <p class="tag mono">02 · <span lang="es">JUGADORES</span><span lang="en">PLAYERS</span></p>
+    <h2><span lang="es">Juega antes que nadie y ayuda a hacerlo mejor</span><span lang="en">Play it first and help make it better</span></h2>
+    <div class="grid">
+      <article class="card">
+        <p class="card-k mono">/discover</p>
+        <h3><span lang="es">Descubrir</span><span lang="en">Discover</span></h3>
+        <p><span lang="es">Juegos publicados por devs reales, con reseñas, etiquetas y playtests abiertos.</span><span lang="en">Games published by real devs, with reviews, tags and open playtests.</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">playtest</p>
+        <h3><span lang="es">Prueba y cuéntalo</span><span lang="en">Test and tell</span></h3>
+        <p><span lang="es">Marca lo que pasa mientras juegas, responde encuestas y entérate cuando arreglan tu bug.</span><span lang="en">Mark moments while you play, answer surveys and hear back when your bug gets fixed.</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">/friend · /call</p>
+        <h3><span lang="es">Comunidad de personas reales</span><span lang="en">A community of real people</span></h3>
+        <p><span lang="es">Amigos, mensajes, servidores con canales y llamadas con pantalla compartida (por ahora en red local).</span><span lang="en">Friends, messages, servers with channels, and calls with screen sharing (local network for now).</span></p>
+      </article>
+      <article class="card">
+        <p class="card-k mono">cartas</p>
+        <h3><span lang="es">Cartas coleccionables</span><span lang="en">Collectible cards</span></h3>
+        <p><span lang="es">Abre sobres, completa colecciones, intercambia y crea las tuyas, también de tu propio juego.</span><span lang="en">Open packs, complete collections, trade, and make your own, even from your own game.</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="descargar">
+  <div class="wrap dl">
+    <div>
+      <p class="tag mono">03 · <span lang="es">DESCARGAR</span><span lang="en">DOWNLOAD</span></p>
+      <h2><span lang="es">Instálalo en un minuto</span><span lang="en">Set it up in a minute</span></h2>
+      <ol class="steps">
+        <li><span lang="es">Descarga el zip y descomprímelo en una carpeta tuya (por ejemplo, <code>Documentos\MasterDev-app</code>).</span><span lang="en">Download the zip and unzip it into a folder of yours (for example, <code>Documents\MasterDev-app</code>).</span></li>
+        <li><span lang="es">Abre <code>MasterDev.exe</code>. No hace falta instalar nada más.</span><span lang="en">Open <code>MasterDev.exe</code>. Nothing else to install.</span></li>
+        <li><span lang="es">Crea tu cuenta local y elige tu camino: creador o jugador.</span><span lang="en">Create your local account and pick your path: creator or player.</span></li>
+        <li><span lang="es">Las versiones nuevas llegan solas: la app te avisa y se actualiza con Ctrl + Shift + R.</span><span lang="en">New versions arrive on their own: the app tells you and updates with Ctrl + Shift + R.</span></li>
+      </ol>
+      <div class="warn">
+        <p class="note-k mono">[!!] <span lang="es">WINDOWS TE AVISARÁ</span><span lang="en">WINDOWS WILL WARN YOU</span></p>
+        <p><span lang="es">MasterDev es un proyecto indie y todavía no tiene firma de código. La primera vez, Windows mostrará «Windows protegió su PC»: pulsa <b>Más información</b> y luego <b>Ejecutar de todos modos</b>. Si tienes <b>Smart App Control</b> activado, Windows no la dejará abrir hasta que esté firmada.</span><span lang="en">MasterDev is an indie project and isn't code-signed yet. The first time, Windows will show "Windows protected your PC": click <b>More info</b> and then <b>Run anyway</b>. If you have <b>Smart App Control</b> turned on, Windows won't let it open until it's signed.</span></p>
+      </div>
+    </div>
+    <aside class="dl-card">
+      <img src="img/app-icon-128.png" alt="" width="72" height="72">
+      <p class="dl-title">MasterDev <span class="dl-version-num">—</span></p>
+      <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
+      <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest"><span lang="es">Descargar el zip</span><span lang="en">Download the zip</span></a>
+      <ul class="req">
+        <li>Windows 10 / 11 · 64 bits</li>
+        <li><span lang="es">WebView2 (viene con Windows 11)</span><span lang="en">WebView2 (included with Windows 11)</span></li>
+        <li><span lang="es">Claude Code: opcional</span><span lang="en">Claude Code: optional</span></li>
+      </ul>
+      <p class="small"><a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases"><span lang="es">Todas las versiones</span><span lang="en">All versions</span></a> · <a class="dl-sha" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest/download/latest.json">SHA-256</a></p>
+    </aside>
+  </div>
+</section>
+
+<section class="band alt" id="preguntas">
+  <div class="wrap faq">
+    <p class="tag mono">04 · <span lang="es">PREGUNTAS</span><span lang="en">QUESTIONS</span></p>
+    <h2><span lang="es">Preguntas frecuentes</span><span lang="en">FAQ</span></h2>
+    <details>
+      <summary><span lang="es">¿Cuánto cuesta?</span><span lang="en">How much does it cost?</span></summary>
+      <p><span lang="es">La versión actual se descarga gratis. Las tareas con Claude usan tu propia cuenta de Claude, si decides conectarla.</span><span lang="en">The current version is a free download. Tasks with Claude use your own Claude account, if you choose to connect it.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Dónde se guardan mis cosas?</span><span lang="en">Where is my stuff stored?</span></summary>
+      <p><span lang="es">En tu PC: tus proyectos e ideas en <code>Documentos\MasterDev</code>, y tu cuenta y ajustes en tus datos locales. La Comunidad pasa por un servidor MasterDev, que puedes alojar tú mismo.</span><span lang="en">On your PC: projects and ideas in <code>Documents\MasterDev</code>, account and settings in your local app data. The Community goes through a MasterDev server, which you can host yourself.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Hay versión para Mac, Linux o móvil?</span><span lang="en">Is there a Mac, Linux or mobile version?</span></summary>
+      <p><span lang="es">Por ahora solo Windows. Linux y una versión web de la Comunidad para el móvil están en el plan.</span><span lang="en">Windows only for now. Linux and a web version of the Community for phones are on the roadmap.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Qué motores puedo usar?</span><span lang="en">Which engines can I use?</span></summary>
+      <p><span lang="es">Los que quieras. MasterDev trae plantillas para juegos web (JavaScript, HTML5, Phaser) y Roblox (Luau), y acepta cualquier otro motor por proyecto.</span><span lang="en">Any you like. MasterDev ships templates for web games (JavaScript, HTML5, Phaser) and Roblox (Luau), and accepts any other engine per project.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Es seguro si Windows me avisa?</span><span lang="en">Is it safe if Windows warns me?</span></summary>
+      <p><span lang="es">El aviso sale con cualquier programa nuevo sin firma. Descárgalo solo desde esta página o desde el GitHub oficial; cada versión publica su SHA-256 para que puedas comprobar el archivo.</span><span lang="en">The warning appears for any new unsigned program. Only download it from this page or the official GitHub; every version publishes its SHA-256 so you can check the file.</span></p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="mono">MASTERDEV · © 2026</p>
+    <p class="small">
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a> ·
+      <a href="creditos.html"><span lang="es">Créditos de la música</span><span lang="en">Music credits</span></a>
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
