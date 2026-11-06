@@ -44,6 +44,24 @@
     document.body.appendChild(bar);
   }
 
+  // 4) Botones «Copiar»: data-copy="texto" o data-copy-from="id del elemento"
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.copy');
+    if (!b) return;
+    var from = b.getAttribute('data-copy-from');
+    var text = from ? (document.getElementById(from) || {}).textContent : b.getAttribute('data-copy');
+    if (!text || !navigator.clipboard) return;
+    var label = b.textContent;
+    navigator.clipboard.writeText(text.trim()).then(function () {
+      b.textContent = lang === 'es' ? 'Copiado ✓' : 'Copied ✓';
+      setTimeout(function () { b.textContent = label; }, 1600);
+    }).catch(function () { /* el texto sigue visible para copiarlo a mano */ });
+  });
+
+  // 5) Si no estás en Windows, lo decimos junto a la descarga
+  var isWin = /Windows/i.test(navigator.userAgent) || (navigator.userAgentData && navigator.userAgentData.platform === 'Windows');
+  if (!isWin) document.querySelectorAll('.not-win').forEach(function (el) { el.hidden = false; });
+
   // 2) Descarga
   var API = 'https://api.github.com/repos/noahxaviertrinidad-collab/masterdev-releases/releases/latest';
   if (!document.querySelector('.dl-link')) return;
@@ -60,6 +78,25 @@
       document.querySelectorAll('.dl-version-num').forEach(function (el) { el.textContent = v; });
       document.querySelectorAll('.dl-date').forEach(function (el) { el.textContent = date; });
       document.querySelectorAll('.dl-size').forEach(function (el) { el.textContent = '· ' + Math.round(asset.size / 1048576) + ' MB'; });
+      document.querySelectorAll('.zip-name').forEach(function (el) { el.textContent = asset.name; });
+      var cmd = document.getElementById('hash-cmd');
+      if (cmd) cmd.textContent = '(Get-FileHash "$env:USERPROFILE\\Downloads\\' + asset.name + '" -Algorithm SHA256).Hash';
+      // Huella SHA-256 (GitHub la calcula al subir el archivo) y su análisis en VirusTotal
+      var sha = /^sha256:([0-9a-f]{64})$/i.exec(asset.digest || '');
+      var shaEl = document.getElementById('sha-value');
+      if (shaEl) shaEl.textContent = sha ? sha[1].toUpperCase() : (lang === 'es' ? 'Está en latest.json de la versión, en GitHub.' : "It's in the release's latest.json on GitHub.");
+      if (sha) document.querySelectorAll('.vt-link').forEach(function (a) {
+        a.href = 'https://www.virustotal.com/gui/file/' + sha[1].toLowerCase();
+        a.hidden = false;
+        var note = a.parentNode.querySelector('.vt-note');
+        if (note) note.hidden = false;
+      });
+      // Qué hay de nuevo: las notas del release (texto plano) o, si no tiene, su nombre y fecha
+      var body = (rel.body || '').replace(/\r/g, '').replace(/[#*_`>]/g, '').trim();
+      document.querySelectorAll('.wn-text').forEach(function (el) {
+        el.textContent = body ? (body.length > 420 ? body.slice(0, 420) + '…' : body) : (rel.name || ('MasterDev ' + v)) + (date ? ' · ' + date : '');
+      });
+      document.querySelectorAll('.wn-link').forEach(function (a) { if (rel.html_url) a.href = rel.html_url; });
     })
     .catch(function () { /* se queda el enlace a la página de releases */ });
 })();

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:Privacidad y datos · MasterDev|en:Privacy and data · MasterDev}}</title>
+<meta name="description" content="{{es:Qué se queda en tu PC, qué pasa por un servidor MasterDev, qué ve Claude si lo conectas y qué hace esta web con tus datos.|en:What stays on your PC, what goes through a MasterDev server, what Claude sees if you connect it, and what this site does with your data.}}">
+<meta property="og:title" content="{{es:Privacidad y datos · MasterDev|en:Privacy and data · MasterDev}}">
+<meta property="og:description" content="{{es:Qué se queda en tu PC y qué no.|en:What stays on your PC and what doesn't.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">{{es:Privacidad|en:Privacy}}</p>
+    <h1>{{es:Tus datos, en claro|en:Your data, plainly}}</h1>
+    <p class="sub">{{es:MasterDev está pensado para que tu trabajo se quede en tu PC. Esto es lo que sale de él, cuándo y hacia dónde.|en:MasterDev is built so your work stays on your PC. This is what leaves it, when, and where it goes.}}</p>
+    <p class="small">{{es:Última actualización: 6 de noviembre de 2026.|en:Last updated: November 6, 2026.}}</p>
+
+    <div class="privacy">
+      <section class="pv">
+        <p class="st ok">{{es:Se queda en tu PC|en:Stays on your PC}}</p>
+        <h2>{{es:Tu trabajo y tu cuenta local|en:Your work and your local account}}</h2>
+        <ul class="bullets">
+          <li>{{es:Ideas, proyectos, tareas, notas, notas de voz, biblioteca, ajustes y temas se guardan en tu PC.|en:Ideas, projects, tasks, notes, voice notes, library, settings and themes are stored on your PC.}}</li>
+          <li>{{es:La cuenta local (@usuario y contraseña) solo existe en tu PC. La contraseña no se guarda: solo una huella cifrada.|en:The local account (@username and password) only exists on your PC. The password isn't stored: only an encrypted fingerprint.}}</li>
+          <li>{{es:La cuenta local bloquea la ventana, pero no cifra tus archivos: quien use tu sesión de Windows puede abrirlos.|en:The local account locks the window, but doesn't encrypt your files: anyone using your Windows session can open them.}}</li>
+          <li>{{es:MasterDev no tiene publicidad ni rastreadores de terceros.|en:MasterDev has no ads and no third-party trackers.}}</li>
+        </ul>
+      </section>
+
+      <section class="pv">
+        <p class="st srv">{{es:Solo si te unes a un servidor|en:Only if you join a server}}</p>
+        <h2>{{es:Comunidad|en:Community}}</h2>
+        <ul class="bullets">
+          <li>{{es:El servidor MasterDev al que te unes guarda tu perfil público, tus amigos, tus mensajes y lo que publiques (juegos, playtests, reseñas).|en:The MasterDev server you join stores your public profile, your friends, your messages and what you publish (games, playtests, reviews).}}</li>
+          <li>{{es:Nunca se suben tus proyectos, ideas, tareas, biblioteca ni ajustes.|en:Your projects, ideas, tasks, library and settings are never uploaded.}}</li>
+          <li>{{es:Quien te busca en el servidor solo ve tu @usuario, tu nombre, tu foto y tu camino. Tus amigos ven tu perfil completo.|en:People who look you up on the server only see your @username, name, picture and path. Your friends see your full profile.}}</li>
+          <li>{{es:Las llamadas y el compartir pantalla van directamente entre los PC (P2P), dentro de la misma red; no pasan por el servidor.|en:Calls and screen sharing go directly between PCs (P2P), within the same network; they don't go through the server.}}</li>
+          <li>{{es:La telemetría de un playtest (cómo se juega una partida de prueba) solo se comparte si lo aceptas en ese playtest.|en:Playtest telemetry (how a test session is played) is only shared if you accept it for that playtest.}}</li>
+          <li>{{es:Puedes alojar tu propio servidor: entonces los datos se quedan en tu máquina.|en:You can host your own server: then the data stays on your machine.}}</li>
+        </ul>
+      </section>
+
+      <section class="pv">
+        <p class="st opt">{{es:Solo si conectas Claude|en:Only if you connect Claude}}</p>
+        <h2>Claude</h2>
+        <ul class="bullets">
+          <li>{{es:Cuando le encargas una tarea, Claude Code lee y edita los archivos de esa tarea y los envía a Anthropic para procesarlos, con tu propia cuenta de Claude y según sus condiciones.|en:When you give it a task, Claude Code reads and edits that task's files and sends them to Anthropic for processing, using your own Claude account and under its terms.}}</li>
+          <li>{{es:La Comunidad nunca usa Claude: hablar con tus amigos no pasa por ninguna IA.|en:The Community never uses Claude: talking with your friends doesn't go through any AI.}}</li>
+        </ul>
+      </section>
+
+      <section class="pv">
+        <p class="st alert">{{es:Conexiones de la app|en:App connections}}</p>
+        <h2>{{es:Cuándo se conecta a internet|en:When it goes online}}</h2>
+        <ul class="bullets">
+          <li>{{es:Para buscar versiones nuevas en GitHub.|en:To check GitHub for new versions.}}</li>
+          <li>{{es:Cuando usas funciones que lo necesitan: el Navegador abre las webs que visitas, la Biblioteca busca portadas e información de juegos en tiendas, y Mi música descarga lo que añades desde YouTube.|en:When you use features that need it: the Browser opens the sites you visit, the Library looks up game covers and info in stores, and My music downloads what you add from YouTube.}}</li>
+        </ul>
+      </section>
+
+      <section class="pv">
+        <p class="st ok">{{es:Esta web|en:This website}}</p>
+        <h2>masterdev.website</h2>
+        <ul class="bullets">
+          <li>{{es:Sin cookies, sin analítica y sin cuentas. Las fuentes se sirven desde la propia web.|en:No cookies, no analytics and no accounts. Fonts are served from the site itself.}}</li>
+          <li>{{es:Para mostrar la última versión, tu navegador pregunta a la API pública de GitHub.|en:To show the latest version, your browser asks GitHub's public API.}}</li>
+          <li>{{es:Tu navegador recuerda el idioma que elegiste (almacenamiento local, no sale de tu equipo).|en:Your browser remembers the language you picked (local storage, it never leaves your device).}}</li>
+          <li>{{es:La web está alojada en GitHub Pages, que puede registrar datos técnicos de las visitas como cualquier servidor web.|en:The site is hosted on GitHub Pages, which may log technical visit data like any web server.}}</li>
+        </ul>
+      </section>
+    </div>
+
+    <aside class="note">
+      <p class="st opt">{{es:Contacto|en:Contact}}</p>
+      <p>{{es:¿Dudas sobre tus datos? Abre una conversación en|en:Questions about your data? Open an issue on}} <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/issues">GitHub</a>.</p>
+    </aside>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

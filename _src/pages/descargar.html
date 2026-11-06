@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:Descargar MasterDev para Windows · Instalación paso a paso|en:Download MasterDev for Windows · Step-by-step setup}}</title>
+<meta name="description" content="{{es:Descarga MasterDev gratis para Windows 10 y 11, instálalo paso a paso, entiende el aviso de Windows y comprueba que el archivo es el original.|en:Download MasterDev free for Windows 10 and 11, set it up step by step, understand the Windows warning and check that the file is the original.}}">
+<meta property="og:title" content="{{es:Descargar MasterDev para Windows|en:Download MasterDev for Windows}}">
+<meta property="og:description" content="{{es:Gratis para Windows 10 y 11. Instalación paso a paso.|en:Free for Windows 10 and 11. Step-by-step setup.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <div class="dl-head">
+      <div>
+        <p class="kicker">{{es:Descargar|en:Download}}</p>
+        <h1>{{es:Instala MasterDev en Windows|en:Install MasterDev on Windows}}</h1>
+        <p class="sub">{{es:Un zip, una carpeta y listo. No hay instalador ni nada más que descargar. Aquí tienes cada paso, con lo que vas a ver en pantalla.|en:One zip, one folder, done. No installer and nothing else to download. Here's every step, with what you'll see on screen.}}</p>
+        <div class="not-win" hidden>
+          <p class="st alert">{{es:Solo para Windows|en:Windows only}}</p>
+          <p>{{es:Parece que no estás en un PC con Windows. MasterDev solo funciona en Windows 10 y 11: copia el enlace y ábrelo en tu PC.|en:It looks like you're not on a Windows PC. MasterDev only runs on Windows 10 and 11: copy the link and open it on your PC.}}</p>
+          <button class="btn ghost small copy" type="button" data-copy="https://masterdev.website/{{es:|en:en/}}descargar.html">{{es:Copiar el enlace|en:Copy the link}}</button>
+        </div>
+      </div>
+      <aside class="dl-card">
+        <img src="{{root}}img/app-icon-128.png" alt="" width="72" height="72">
+        <p class="dl-title">MasterDev <span class="dl-version-num"></span></p>
+        <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
+        <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">{{es:Descargar el zip|en:Download the zip}}</a>
+        <ul class="req">
+          <li>Windows 10 / 11 · {{es:64 bits|en:64-bit}}</li>
+          <li>{{es:WebView2 (viene con Windows 11)|en:WebView2 (included with Windows 11)}}</li>
+          <li>{{es:Claude Code: opcional|en:Claude Code: optional}}</li>
+        </ul>
+        <div class="whatsnew">
+          <p class="foot-h">{{es:Qué hay de nuevo|en:What's new}}</p>
+          <p class="wn-text small">{{es:Las notas de la última versión están en GitHub.|en:The latest release notes are on GitHub.}}</p>
+          <a class="small wn-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">{{es:Ver las notas de la versión|en:See the release notes}}</a>
+        </div>
+      </aside>
+    </div>
+
+    <nav class="toc" aria-label="{{es:En esta página|en:On this page}}">
+      <a href="#pasos">{{es:Pasos|en:Steps}}</a>
+      <a href="#aviso">{{es:El aviso de Windows|en:The Windows warning}}</a>
+      <a href="#comprobar">{{es:Comprobar el archivo|en:Check the file}}</a>
+      <a href="#actualizaciones">{{es:Versiones nuevas|en:New versions}}</a>
+    </nav>
+
+    <section class="howto" id="pasos" aria-labelledby="pasos-h">
+      <h2 id="pasos-h">{{es:Paso a paso|en:Step by step}}</h2>
+      <ol class="howto-steps">
+        <li>
+          <div class="howto-text">
+            <h3>{{es:Descarga el zip|en:Download the zip}}</h3>
+            <p>{{es:Pulsa «Descargar el zip». Se guarda en tu carpeta Descargas como|en:Click “Download the zip”. It's saved to your Downloads folder as}} <code class="zip-name">MasterDev-x.y.z-win-x64.zip</code>{{es:. Pesa unos 340 MB.|en:. It's about 340 MB.}}</p>
+          </div>
+          <div class="ill ill-file" aria-hidden="true">
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono zip-name">MasterDev-x.y.z-win-x64.zip</span></div>
+          </div>
+        </li>
+        <li>
+          <div class="howto-text">
+            <h3>{{es:Descomprímelo en una carpeta tuya|en:Unzip it into a folder of yours}}</h3>
+            <p>{{es:Clic derecho sobre el zip › «Extraer todo…» y elige una carpeta que no vayas a borrar, por ejemplo|en:Right-click the zip › “Extract All…” and choose a folder you won't delete, for example}} <code>{{es:Documentos\MasterDev-app|en:Documents\MasterDev-app}}</code>. {{es:No lo abras desde dentro del zip: tiene que estar extraído.|en:Don't open it from inside the zip: it has to be extracted.}}</p>
+          </div>
+          <div class="ill ill-menu" aria-hidden="true">
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono">MasterDev-…zip</span></div>
+            <div class="ctx">
+              <span>{{es:Abrir|en:Open}}</span>
+              <span class="hl">{{es:Extraer todo…|en:Extract All…}}</span>
+              <span>{{es:Compartir|en:Share}}</span>
+              <span>{{es:Copiar como ruta de acceso|en:Copy as path}}</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="howto-text">
+            <h3>{{es:Abre MasterDev.exe|en:Open MasterDev.exe}}</h3>
+            <p>{{es:Dentro de la carpeta, doble clic en|en:In the folder, double-click}} <code>MasterDev.exe</code>. {{es:La primera vez Windows te avisará, porque la app aún no está firmada. Pulsa «Más información» y después «Ejecutar de todos modos».|en:The first time Windows will warn you, because the app isn't signed yet. Click “More info” and then “Run anyway”.}} <a href="#aviso">{{es:Por qué pasa esto|en:Why this happens}}</a>.</p>
+          </div>
+          <div class="ill ill-ss" aria-hidden="true">
+            <div class="ss">
+              <p class="ss-t">{{es:Windows protegió su PC|en:Windows protected your PC}}</p>
+              <p class="ss-p">{{es:Microsoft Defender SmartScreen impidió el inicio de una aplicación no reconocida…|en:Microsoft Defender SmartScreen prevented an unrecognized app from starting…}}</p>
+              <p class="ss-link hl-ring">{{es:Más información|en:More info}}</p>
+              <p class="ss-btns"><span class="ss-btn ghost">{{es:No ejecutar|en:Don't run}}</span></p>
+            </div>
+            <span class="ill-arrow">→</span>
+            <div class="ss">
+              <p class="ss-t">{{es:Windows protegió su PC|en:Windows protected your PC}}</p>
+              <p class="ss-p">{{es:Aplicación: MasterDev.exe<br>Editor: Editor desconocido|en:App: MasterDev.exe<br>Publisher: Unknown publisher}}</p>
+              <p class="ss-btns"><span class="ss-btn hl-ring">{{es:Ejecutar de todos modos|en:Run anyway}}</span><span class="ss-btn ghost">{{es:No ejecutar|en:Don't run}}</span></p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="howto-text">
+            <h3>{{es:Crea tu cuenta y elige tu camino|en:Create your account and pick your path}}</h3>
+            <p>{{es:Elige un @usuario y una contraseña. Esta cuenta solo existe en tu PC: no es tu cuenta de Claude ni de Roblox. Después eliges si vienes a crear juegos o a jugar y probarlos.|en:Pick a @username and a password. This account only exists on your PC: it isn't your Claude or Roblox account. Then you choose whether you're here to make games or to play and test them.}}</p>
+            <p><a href="primeros-pasos.html">{{es:Qué hacer en tus primeros 10 minutos →|en:What to do in your first 10 minutes →}}</a></p>
+          </div>
+          <div class="ill ill-path" aria-hidden="true">
+            <p class="mono ill-dim">{{es:¿Cuál será tu camino?|en:Which path is yours?}}</p>
+            <div class="paths"><span class="hl">💻 {{es:Desarrollador|en:Developer}}</span><span>🎮 {{es:Jugador|en:Player}}</span></div>
+          </div>
+        </li>
+      </ol>
+      <p class="small ill-note">{{es:Las imágenes de esta página son ilustraciones simplificadas; lo que veas en tu PC puede cambiar un poco según tu versión de Windows.|en:The pictures on this page are simplified illustrations; what you see on your PC may differ a little depending on your Windows version.}}</p>
+    </section>
+
+    <section class="doc" id="aviso" aria-labelledby="aviso-h">
+      <h2 id="aviso-h">{{es:¿Por qué Windows te avisa?|en:Why does Windows warn you?}}</h2>
+      <div class="doc-cols">
+        <div>
+          <p>{{es:Windows muestra «Windows protegió su PC» con cualquier programa nuevo que no tenga <b>firma de código</b>. La firma es un certificado de pago que confirma quién publica el programa. MasterDev es un proyecto indie y todavía no lo tiene.|en:Windows shows “Windows protected your PC” for any new program without a <b>code signature</b>. A signature is a paid certificate that confirms who publishes the program. MasterDev is an indie project and doesn't have one yet.}}</p>
+          <p>{{es:El aviso no significa que se haya encontrado un virus: significa que Windows aún no conoce el archivo. Para estar tranquilo, descárgalo solo desde esta web o desde el GitHub oficial y <a href="#comprobar">comprueba su huella</a>.|en:The warning doesn't mean a virus was found: it means Windows doesn't know the file yet. To be safe, only download it from this site or the official GitHub and <a href="#comprobar">check its fingerprint</a>.}}</p>
+        </div>
+        <div class="warn">
+          <p class="st alert">Smart App Control</p>
+          <p>{{es:Si tienes <b>Smart App Control</b> activado, Windows bloquea los programas sin firma y no aparece «Ejecutar de todos modos». Puedes comprobarlo en Seguridad de Windows › Control de aplicaciones y navegador. Si está activado, MasterDev no abrirá hasta que esté firmada. Ojo: si lo desactivas, Windows no deja volver a activarlo sin reinstalar.|en:If <b>Smart App Control</b> is on, Windows blocks unsigned programs and “Run anyway” doesn't show up. You can check it in Windows Security › App &amp; browser control. If it's on, MasterDev won't open until it's signed. Careful: if you turn it off, Windows won't let you turn it back on without reinstalling.}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="comprobar" aria-labelledby="comprobar-h">
+      <h2 id="comprobar-h">{{es:Comprueba que el archivo es el original|en:Check that the file is the original}}</h2>
+      <p class="sub">{{es:Cada versión publica su huella SHA-256. Si la de tu zip coincide, es exactamente el archivo que se publicó.|en:Every version publishes its SHA-256 fingerprint. If your zip's matches, it's exactly the file that was published.}}</p>
+      <ol class="steps">
+        <li><span>{{es:Abre PowerShell (busca «PowerShell» en el menú Inicio) y pega este comando:|en:Open PowerShell (search “PowerShell” in the Start menu) and paste this command:}}</span></li>
+      </ol>
+      <div class="cmd"><code class="cmd-text" id="hash-cmd">(Get-FileHash "$env:USERPROFILE\Downloads\MasterDev-x.y.z-win-x64.zip" -Algorithm SHA256).Hash</code><button class="btn ghost small copy" type="button" data-copy-from="hash-cmd">{{es:Copiar|en:Copy}}</button></div>
+      <ol class="steps" start="2">
+        <li><span>{{es:Debe salir exactamente esta huella (sin importar mayúsculas):|en:You should get exactly this fingerprint (case doesn't matter):}}</span></li>
+      </ol>
+      <div class="cmd"><code class="cmd-text sha-value" id="sha-value">{{es:Cargando la huella de la última versión…|en:Loading the latest version's fingerprint…}}</code><button class="btn ghost small copy" type="button" data-copy-from="sha-value">{{es:Copiar|en:Copy}}</button></div>
+      <p class="small">{{es:¿Lo guardaste en otra carpeta? Cambia la ruta del comando.|en:Saved it somewhere else? Change the path in the command.}} <a class="vt-link" href="https://www.virustotal.com/" hidden>{{es:Ver el análisis de esta versión en VirusTotal|en:See this version's scan on VirusTotal}}</a><span class="vt-note" hidden> · {{es:si VirusTotal aún no lo conoce, puedes subir el zip tú mismo.|en:if VirusTotal doesn't know it yet, you can upload the zip yourself.}}</span></p>
+    </section>
+
+    <section class="doc" id="actualizaciones" aria-labelledby="act-h">
+      <h2 id="act-h">{{es:Versiones nuevas|en:New versions}}</h2>
+      <div class="grid">
+        <article class="card">
+          <p class="st ok">{{es:Automático|en:Automatic}}</p>
+          <h3>{{es:La app te avisa|en:The app tells you}}</h3>
+          <p>{{es:Cuando sale una versión nueva, MasterDev la descarga y te avisa. Se aplica con|en:When a new version comes out, MasterDev downloads it and tells you. It's applied with}} <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. {{es:Tus proyectos y ajustes no se tocan.|en:Your projects and settings aren't touched.}}</p>
+        </article>
+        <article class="card">
+          <p class="st opt">GitHub</p>
+          <h3>{{es:Avisos por correo|en:Email alerts}}</h3>
+          <p>{{es:En el|en:On the}} <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">{{es:repositorio de GitHub|en:GitHub repository}}</a>{{es:, pulsa Watch › Custom › Releases. GitHub te escribirá con cada versión.|en:, click Watch › Custom › Releases. GitHub will email you on every version.}}</p>
+        </article>
+        <article class="card">
+          <p class="st opt">RSS</p>
+          <h3>{{es:En tu lector de noticias|en:In your feed reader}}</h3>
+          <p>{{es:Añade este feed a tu lector RSS:|en:Add this feed to your RSS reader:}} <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases.atom">releases.atom</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>
