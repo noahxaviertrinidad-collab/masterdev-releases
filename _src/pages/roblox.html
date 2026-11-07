@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:MasterDev y Roblox Studio|en:MasterDev and Roblox Studio}}</title>
+<meta name="description" content="{{es:Todos tus juegos de Roblox en un sitio, plantillas para empezar uno, Roblox Studio en vivo y, si quieres, Claude trabajando dentro de Studio.|en:All your Roblox games in one place, templates to start one, Roblox Studio live and, if you want, Claude working inside Studio.}}">
+<meta property="og:title" content="{{es:MasterDev y Roblox Studio|en:MasterDev and Roblox Studio}}">
+<meta property="og:description" content="{{es:Tus juegos de Roblox, plantillas y Studio en vivo.|en:Your Roblox games, templates and Studio live.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">Roblox Studio</p>
+    <h1>{{es:Tus juegos de Roblox, en un solo sitio|en:Your Roblox games, all in one place}}</h1>
+    <p class="sub">{{es:La vista Roblox Studio de MasterDev reúne tus juegos aunque no sean proyectos de MasterDev, te ayuda a empezar uno nuevo y te deja ver Studio en directo. No necesita Claude.|en:MasterDev's Roblox Studio view gathers your games even if they aren't MasterDev projects, helps you start a new one and lets you watch Studio live. It doesn't need Claude.}}</p>
+
+    <div class="grid three">
+      <article class="card">
+        <p class="st ok">{{es:Disponible|en:Available}}</p>
+        <h3>{{es:Todos tus juegos|en:All your games}}</h3>
+        <p>{{es:Lo que has abierto en Studio en este PC, tus juegos públicos y tus proyectos Luau, cada uno con su icono y un botón para abrirlo en Studio. Busca y filtra por «En Roblox», «Archivos» o «Proyectos».|en:What you've opened in Studio on this PC, your public games and your Luau projects, each with its icon and a button to open it in Studio. Search and filter by “On Roblox”, “Files” or “Projects”.}}</p>
+      </article>
+      <article class="card">
+        <p class="st ok">{{es:Disponible|en:Available}}</p>
+        <h3>{{es:Crear con plantilla|en:Create from a template}}</h3>
+        <p>{{es:Ponle nombre y elige plantilla: Baseplate, la estructura MasterDev (servidor, cliente y módulo ya preparados) o vacío. Puedes registrarlo como proyecto y abrirlo en Studio al momento.|en:Name it and pick a template: Baseplate, the MasterDev structure (server, client and module ready to go) or empty. You can register it as a project and open it in Studio right away.}}</p>
+      </article>
+      <article class="card">
+        <p class="st ok">{{es:Disponible|en:Available}}</p>
+        <h3>{{es:Studio en vivo|en:Studio live}}</h3>
+        <p>{{es:Con Studio abierto y su plugin MCP conectado, ves el Explorador, las propiedades, los scripts, la Salida y una captura del viewport. Es de solo lectura: no cambia nada.|en:With Studio open and its MCP plugin connected, you see the Explorer, properties, scripts, the Output and a viewport capture. It's read-only: it changes nothing.}}</p>
+      </article>
+    </div>
+
+    <section class="doc" aria-labelledby="rbx-claude">
+      <div class="doc-cols">
+        <div>
+          <p class="st opt">{{es:Opcional · con Claude|en:Optional · with Claude}}</p>
+          <h2 id="rbx-claude">{{es:Claude dentro de Studio|en:Claude inside Studio}}</h2>
+          <p>{{es:En las tareas de un proyecto Luau, MasterDev conecta solo el servidor MCP de Roblox Studio. Así Claude puede ver el árbol del juego, leer y editar scripts, crear piezas, pulsar Play, leer la consola y hacer capturas en el Studio que tienes abierto.|en:In tasks for a Luau project, MasterDev connects the Roblox Studio MCP server on its own. Claude can then see the game tree, read and edit scripts, create parts, press Play, read the console and take captures in the Studio you have open.}}</p>
+          <p>{{es:Si no hay ningún Studio abierto, Claude te lo dice y no inventa cambios. Con el modo «plan» solo analiza y propone, sin tocar Studio.|en:If no Studio is open, Claude tells you and doesn't make up changes. In “plan” mode it only analyzes and proposes, without touching Studio.}}</p>
+        </div>
+        <div class="warn">
+          <p class="st alert">{{es:Antes de empezar|en:Before you start}}</p>
+          <ul class="bullets">
+            <li>{{es:Abre Roblox Studio con tu lugar y el plugin MCP conectado.|en:Open Roblox Studio with your place and the MCP plugin connected.}}</li>
+            <li>{{es:Guarda tu lugar como siempre: Claude puede modificarlo, y el historial de versiones de Roblox es tu red de seguridad.|en:Save your place as usual: Claude can modify it, and Roblox's version history is your safety net.}}</li>
+            <li>{{es:Puedes desactivar la conexión en Ajustes › Roblox Studio (MCP).|en:You can turn the connection off in Settings › Roblox Studio (MCP).}}</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" aria-labelledby="rbx-open">
+      <h2 id="rbx-open">{{es:Abrir tu juego sin buscarlo|en:Open your game without hunting for it}}</h2>
+      <ol class="steps">
+        <li><span>{{es:En la ficha del proyecto, pega el enlace del juego, el del panel de creador o el número del lugar. También vale un archivo .rbxl.|en:In the project page, paste the game link, the creator dashboard link or the place number. A .rbxl file works too.}}</span></li>
+        <li><span>{{es:Pulsa ◆ Roblox Studio. Si ya está abierto, MasterDev trae su ventana al frente en vez de abrir otra copia.|en:Click ◆ Roblox Studio. If it's already open, MasterDev brings its window to the front instead of opening another copy.}}</span></li>
+      </ol>
+    </section>
+    <p class="cta page-cta"><a class="btn primary" href="descargar.html">{{es:Descargar para Windows|en:Download for Windows}}</a> <a class="btn ghost" href="creadores.html">{{es:Todo para creadores|en:Everything for creators}}</a></p>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

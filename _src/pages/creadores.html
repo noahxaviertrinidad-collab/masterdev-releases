@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:MasterDev para creadores de juegos indie|en:MasterDev for indie game creators}}</title>
+<meta name="description" content="{{es:De la idea al playtest: libreta de ideas, proyectos en cualquier motor, estudio de cada juego, tareas, bugs y notas de voz. Con Claude opcional.|en:From idea to playtest: idea notebook, projects in any engine, a studio for each game, tasks, bugs and voice notes. Claude optional.}}">
+<meta property="og:title" content="{{es:MasterDev para creadores|en:MasterDev for creators}}">
+<meta property="og:description" content="{{es:Todo tu juego indie, ordenado, de la idea al playtest.|en:Your whole indie game, organized, from idea to playtest.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">{{es:Para creadores|en:For creators}}</p>
+    <h1>{{es:Haz tu juego sin perderte por el camino|en:Make your game without getting lost}}</h1>
+    <p class="sub">{{es:MasterDev reúne lo que normalmente está repartido entre notas, carpetas, hojas de cálculo y chats: tus ideas, tu código, tus tareas y lo que dicen quienes prueban tu juego.|en:MasterDev brings together what's usually scattered across notes, folders, spreadsheets and chats: your ideas, your code, your tasks and what your testers say.}}</p>
+
+    <ol class="journey">
+      <li class="jr">
+        <div class="jr-text">
+          <p class="tl-time mono">{{es:Paso 1|en:Step 1}}</p>
+          <h2>{{es:Una libreta para tus ideas|en:A notebook for your ideas}}</h2>
+          <p>{{es:Apunta ideas en bruto, con imágenes, enlaces y notas. Cuando una te convence, conviértela en un concepto: de qué va, qué hace el jugador una y otra vez, y qué alcance tiene para una persona o un equipo pequeño.|en:Jot down raw ideas, with images, links and notes. When one clicks, turn it into a concept: what it's about, what the player does over and over, and how big it can be for one person or a small team.}}</p>
+        </div>
+        <figure class="shot"><img src="{{root}}img/app/ideas.jpg" alt="{{es:Vista Ideas de MasterDev con cuatro ideas de ejemplo|en:MasterDev Ideas view with four example ideas}}" width="1440" height="900" loading="lazy"></figure>
+      </li>
+      <li class="jr">
+        <div class="jr-text">
+          <p class="tl-time mono">{{es:Paso 2|en:Step 2}}</p>
+          <h2>{{es:Un proyecto que ya arranca|en:A project that already runs}}</h2>
+          <p>{{es:Elige motor y resolución para cada juego. MasterDev crea el documento de diseño, las carpetas y un código inicial que funciona. Los juegos web se juegan dentro de la app con ▶ Jugar. ¿Ya tienes un juego en otra carpeta? Vincúlalo sin copiarlo ni tocarlo.|en:Pick the engine and resolution for each game. MasterDev creates the design document, the folders and starter code that works. Web games play inside the app with ▶ Play. Already have a game in another folder? Link it without copying or changing it.}}</p>
+          <p class="small">{{es:Plantillas para JavaScript + HTML5, Phaser y Roblox (Luau); cualquier otro motor por proyecto.|en:Templates for JavaScript + HTML5, Phaser and Roblox (Luau); any other engine per project.}}</p>
+        </div>
+        <figure class="shot"><img src="{{root}}img/app/proyecto.jpg" alt="{{es:Ficha de un proyecto de ejemplo en MasterDev|en:An example project page in MasterDev}}" width="1440" height="900" loading="lazy"></figure>
+      </li>
+      <li class="jr">
+        <div class="jr-text">
+          <p class="tl-time mono">{{es:Paso 3|en:Step 3}}</p>
+          <h2>{{es:El estudio de cada juego|en:A studio for each game}}</h2>
+          <p>{{es:Cada proyecto tiene su estudio: el bucle principal, el balance, los diálogos, un tablero de tareas, la lista de bugs, el devlog y los textos para prensa y tienda. Graba notas de voz mientras juegas y conviértelas en tareas.|en:Every project has its own studio: the core loop, balance, dialogue, a task board, the bug list, the devlog and the copy for press and store pages. Record voice notes while you play and turn them into tasks.}}</p>
+        </div>
+        <figure class="shot"><img src="{{root}}img/app/tareas.jpg" alt="{{es:Vista Tareas de MasterDev con tareas de un proyecto de ejemplo|en:MasterDev Tasks view with tasks from an example project}}" width="1440" height="900" loading="lazy"></figure>
+      </li>
+      <li class="jr">
+        <div class="jr-text">
+          <p class="tl-time mono">{{es:Paso 4|en:Step 4}}</p>
+          <h2>{{es:Que lo prueben jugadores|en:Get players to test it}}</h2>
+          <p>{{es:Publica tu juego en Descubrir y abre un playtest: los jugadores marcan lo que pasa mientras juegan y responden encuestas cortas. Si lo aceptan, también ves cómo se jugó cada partida.|en:Publish your game in Discover and open a playtest: players mark what happens while they play and answer short surveys. If they agree, you also see how each session was played.}}</p>
+          <p class="st srv">{{es:Con un servidor MasterDev|en:Needs a MasterDev server}}</p>
+        </div>
+        <figure class="shot"><img src="{{root}}img/app/proyectos.jpg" alt="{{es:Lista de proyectos de ejemplo en MasterDev|en:List of example projects in MasterDev}}" width="1440" height="900" loading="lazy"></figure>
+      </li>
+    </ol>
+
+    <section class="doc" id="claude" aria-labelledby="claude-h">
+      <p class="st opt">{{es:Opcional|en:Optional}}</p>
+      <h2 id="claude-h">{{es:Claude, explicado sin rodeos|en:Claude, explained plainly}}</h2>
+      <p class="sub">{{es:Claude es una IA de Anthropic. MasterDev puede encargarle trabajo de verdad sobre tus proyectos a través de Claude Code, si lo tienes. No hace falta para nada más.|en:Claude is an AI made by Anthropic. MasterDev can hand it real work on your projects through Claude Code, if you have it. It isn't needed for anything else.}}</p>
+      <div class="grid">
+        <article class="card">
+          <h3>{{es:Qué hace|en:What it does}}</h3>
+          <p>{{es:Implementa mecánicas, arregla bugs, refina ideas, crea proyectos desde una idea y responde preguntas sobre tu código.|en:Builds mechanics, fixes bugs, refines ideas, creates projects from an idea and answers questions about your code.}}</p>
+        </article>
+        <article class="card">
+          <h3>{{es:Cómo lo ves|en:How you see it}}</h3>
+          <p>{{es:Cada encargo es una tarea. Ves en directo qué archivos lee, crea o edita, y puedes responderle para seguir.|en:Each request is a task. You watch live which files it reads, creates or edits, and you can reply to keep going.}}</p>
+        </article>
+        <article class="card">
+          <h3>{{es:Qué cuesta|en:What it costs}}</h3>
+          <p>{{es:Usa tu propia cuenta de Claude y tu plan. MasterDev no cobra nada por ello.|en:It uses your own Claude account and plan. MasterDev charges nothing for it.}}</p>
+        </article>
+        <article class="card">
+          <h3>{{es:Qué controlas|en:What you control}}</h3>
+          <p>{{es:Eliges si puede editar solo, si te pregunta antes o si solo propone un plan. La Comunidad nunca usa Claude.|en:You choose whether it can edit on its own, asks you first, or only proposes a plan. The Community never uses Claude.}}</p>
+        </article>
+      </div>
+      <div class="example">
+        <p class="foot-h">{{es:Un ejemplo|en:An example}}</p>
+        <p class="ex-ask"><span class="mono">MD ❯</span> {{es:Añade un enemigo que persiga al jugador cuando esté cerca|en:Add an enemy that chases the player when they're close}}</p>
+        <ul class="ex-log mono">
+          <li><span class="tag ok">{{es:lee|en:read}}</span> src/scenes/Game.js</li>
+          <li><span class="tag run">{{es:crea|en:create}}</span> src/entities/Chaser.js</li>
+          <li><span class="tag run">{{es:edita|en:edit}}</span> src/scenes/Game.js</li>
+          <li><span class="tag ok">{{es:listo|en:done}}</span> {{es:Pulsa ▶ Jugar para probarlo|en:Click ▶ Play to try it}}</li>
+        </ul>
+      </div>
+    </section>
+
+    <aside class="note">
+      <p class="st ok">Roblox</p>
+      <h3>{{es:¿Haces juegos de Roblox?|en:Making Roblox games?}}</h3>
+      <p>{{es:MasterDev reúne todos tus juegos de Roblox y se conecta con Roblox Studio.|en:MasterDev gathers all your Roblox games and connects with Roblox Studio.}} <a href="roblox.html">{{es:Mira cómo →|en:See how →}}</a></p>
+    </aside>
+    <p class="cta page-cta"><a class="btn primary" href="descargar.html">{{es:Descargar para Windows|en:Download for Windows}}</a> <a class="btn ghost" href="primeros-pasos.html">{{es:Tus primeros 10 minutos|en:Your first 10 minutes}}</a></p>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

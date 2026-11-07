@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>MasterDev y Roblox Studio</title>
+<meta name="description" content="Todos tus juegos de Roblox en un sitio, plantillas para empezar uno, Roblox Studio en vivo y, si quieres, Claude trabajando dentro de Studio.">
+<meta property="og:title" content="MasterDev y Roblox Studio">
+<meta property="og:description" content="Tus juegos de Roblox, plantillas y Studio en vivo.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/roblox.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/roblox.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/roblox.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/roblox.html">
+<meta property="og:url" content="https://masterdev.website/roblox.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://masterdev.website/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: tu estudio indie en una ventana">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="img/app-icon-128.png">
+<link rel="preload" href="fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, inicio">
+      <img src="img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Secciones">
+      <a href="creadores.html">Creadores</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="./#preguntas">Preguntas</a>
+      <a class="lang" href="https://masterdev.website/en/roblox.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Descargar</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menú</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">Roblox Studio</p>
+    <h1>Tus juegos de Roblox, en un solo sitio</h1>
+    <p class="sub">La vista Roblox Studio de MasterDev reúne tus juegos aunque no sean proyectos de MasterDev, te ayuda a empezar uno nuevo y te deja ver Studio en directo. No necesita Claude.</p>
+
+    <div class="grid three">
+      <article class="card">
+        <p class="st ok">Disponible</p>
+        <h3>Todos tus juegos</h3>
+        <p>Lo que has abierto en Studio en este PC, tus juegos públicos y tus proyectos Luau, cada uno con su icono y un botón para abrirlo en Studio. Busca y filtra por «En Roblox», «Archivos» o «Proyectos».</p>
+      </article>
+      <article class="card">
+        <p class="st ok">Disponible</p>
+        <h3>Crear con plantilla</h3>
+        <p>Ponle nombre y elige plantilla: Baseplate, la estructura MasterDev (servidor, cliente y módulo ya preparados) o vacío. Puedes registrarlo como proyecto y abrirlo en Studio al momento.</p>
+      </article>
+      <article class="card">
+        <p class="st ok">Disponible</p>
+        <h3>Studio en vivo</h3>
+        <p>Con Studio abierto y su plugin MCP conectado, ves el Explorador, las propiedades, los scripts, la Salida y una captura del viewport. Es de solo lectura: no cambia nada.</p>
+      </article>
+    </div>
+
+    <section class="doc" aria-labelledby="rbx-claude">
+      <div class="doc-cols">
+        <div>
+          <p class="st opt">Opcional · con Claude</p>
+          <h2 id="rbx-claude">Claude dentro de Studio</h2>
+          <p>En las tareas de un proyecto Luau, MasterDev conecta solo el servidor MCP de Roblox Studio. Así Claude puede ver el árbol del juego, leer y editar scripts, crear piezas, pulsar Play, leer la consola y hacer capturas en el Studio que tienes abierto.</p>
+          <p>Si no hay ningún Studio abierto, Claude te lo dice y no inventa cambios. Con el modo «plan» solo analiza y propone, sin tocar Studio.</p>
+        </div>
+        <div class="warn">
+          <p class="st alert">Antes de empezar</p>
+          <ul class="bullets">
+            <li>Abre Roblox Studio con tu lugar y el plugin MCP conectado.</li>
+            <li>Guarda tu lugar como siempre: Claude puede modificarlo, y el historial de versiones de Roblox es tu red de seguridad.</li>
+            <li>Puedes desactivar la conexión en Ajustes › Roblox Studio (MCP).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" aria-labelledby="rbx-open">
+      <h2 id="rbx-open">Abrir tu juego sin buscarlo</h2>
+      <ol class="steps">
+        <li><span>En la ficha del proyecto, pega el enlace del juego, el del panel de creador o el número del lugar. También vale un archivo .rbxl.</span></li>
+        <li><span>Pulsa ◆ Roblox Studio. Si ya está abierto, MasterDev trae su ventana al frente en vez de abrir otra copia.</span></li>
+      </ol>
+    </section>
+    <p class="cta page-cta"><a class="btn primary" href="descargar.html">Descargar para Windows</a> <a class="btn ghost" href="creadores.html">Todo para creadores</a></p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Donde creadores y jugadores se encuentran. Un proyecto indie, gratis para Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">Cómo funciona</a>
+      <a href="creadores.html">Para creadores</a>
+      <a href="jugadores.html">Para jugadores</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="descargar.html">Descargar e instalar</a>
+      <a href="primeros-pasos.html">Primeros 10 minutos</a>
+    </nav>
+    <nav aria-label="Recursos">
+      <p class="foot-h">Recursos</p>
+      <a href="./#preguntas">Preguntas frecuentes</a>
+      <a href="privacidad.html">Privacidad y datos</a>
+      <a href="descargar.html#actualizaciones">Avisos de versiones nuevas</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="hoja-de-ruta.html">Hoja de ruta</a>
+      <a href="prensa.html">Prensa</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Créditos de la música</a>
+    </nav>
+    <nav aria-label="Idioma">
+      <p class="foot-h">Idioma</p>
+      <a href="https://masterdev.website/roblox.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/roblox.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Solo para Windows 10 y 11 (64 bits).</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+
+</body>
+</html>

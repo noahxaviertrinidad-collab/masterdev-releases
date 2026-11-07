@@ -62,8 +62,58 @@
   var isWin = /Windows/i.test(navigator.userAgent) || (navigator.userAgentData && navigator.userAgentData.platform === 'Windows');
   if (!isWin) document.querySelectorAll('.not-win').forEach(function (el) { el.hidden = false; });
 
+  // 6) Galería de capturas (portada): las pestañas cambian la imagen y el pie
+  document.querySelectorAll('[data-gallery]').forEach(function (g) {
+    var img = g.querySelector('img'), cap = g.querySelector('.g-cap');
+    var tabs = g.querySelectorAll('[role="tab"]');
+    tabs.forEach(function (b, i) {
+      b.addEventListener('click', function () {
+        tabs.forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+        img.src = img.getAttribute('data-base') + b.getAttribute('data-shot') + '.jpg';
+        if (cap) cap.textContent = b.getAttribute('data-cap');
+      });
+      b.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        var n = tabs[(i + d + tabs.length) % tabs.length]; n.focus(); n.click();
+      });
+    });
+  });
+
+  // 7) Novedades: todas las versiones de GitHub, con sus notas en texto plano
+  var relBox = document.getElementById('releases');
+  if (relBox) {
+    fetch('https://api.github.com/repos/noahxaviertrinidad-collab/masterdev-releases/releases?per_page=30', { headers: { Accept: 'application/vnd.github+json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (list) {
+        // Solo las versiones públicas (v1.2.3); las internas para amigos (v1, v2…) no salen
+        list = list.filter(function (r) { return !r.draft && /^v?\d+\.\d+\.\d+$/.test(r.tag_name || ''); })
+          .sort(function (a, b) { return new Date(b.published_at) - new Date(a.published_at); });
+        if (!list.length) return;
+        relBox.textContent = '';
+        list.forEach(function (rel, i) {
+          var art = document.createElement('article'); art.className = 'rel';
+          var h = document.createElement('div'); h.className = 'rel-h';
+          var t = document.createElement('h2'); t.textContent = rel.name || rel.tag_name; h.appendChild(t);
+          if (i === 0) { var s = document.createElement('p'); s.className = 'st ok'; s.textContent = relBox.getAttribute('data-latest'); h.appendChild(s); }
+          var d = new Date(rel.published_at);
+          var dt = document.createElement('p'); dt.className = 'small mono';
+          dt.textContent = isNaN(d) ? '' : d.toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+          h.appendChild(dt); art.appendChild(h);
+          var body = document.createElement('p'); body.className = 'rel-body';
+          body.textContent = (rel.body || '').replace(/\r/g, '').replace(/^#+\s*/gm, '').replace(/^\s*[-*]\s+/gm, '• ').replace(/[*_`]/g, '').trim() || relBox.getAttribute('data-empty');
+          art.appendChild(body);
+          var foot = document.createElement('p'); foot.className = 'rel-foot';
+          var a = document.createElement('a'); a.href = rel.html_url; a.textContent = relBox.getAttribute('data-dl') + ' ' + (rel.tag_name || '') + ' →';
+          foot.appendChild(a); art.appendChild(foot);
+          relBox.appendChild(art);
+        });
+      })
+      .catch(function () { /* queda el enlace a GitHub */ });
+  }
+
   // 2) Descarga
-  var API = 'https://api.github.com/repos/noahxaviertrinidad-collab/masterdev-releases/releases/latest';
+  var API ='https://api.github.com/repos/noahxaviertrinidad-collab/masterdev-releases/releases/latest';
   if (!document.querySelector('.dl-link')) return;
   fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
