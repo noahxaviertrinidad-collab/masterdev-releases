@@ -6,6 +6,7 @@
 <meta property="og:title" content="MasterDev · Tu estudio indie en una ventana">
 <meta property="og:description" content="Organiza tu juego indie de la idea al playtest y encuentra a quien lo juegue. Gratis para Windows.">
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://masterdev.website/">
 <link rel="alternate" hreflang="es" href="https://masterdev.website/">
@@ -54,8 +55,19 @@
       <a href="creadores.html">Creadores</a>
       <a href="jugadores.html">Jugadores</a>
       <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explora</a>
       <a href="novedades.html">Novedades</a>
-      <a href="./#preguntas">Preguntas</a>
+      <a class="nav-acct" href="cuenta.html">Entrar</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Tema</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automático (según tu sistema)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Bosque pixel</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Papel (claro)</button>
+        </div>
+      </div>
       <a class="lang" href="https://masterdev.website/en/" hreflang="en" lang="en" data-lang-to="en">English</a>
     </nav>
     <a class="btn primary small nav-dl" href="descargar.html">Descargar</a>
@@ -116,6 +128,7 @@
       <span class="door-d">Playtests, cartas, perfil, temas y amigos de verdad.</span>
       <span class="door-go" aria-hidden="true">→</span>
     </a>
+    <p class="doors-more">¿No lo tienes claro? <a href="explora.html#camino">Responde tres preguntas</a> o <a href="explora.html#recorrido">recorre la app</a>.</p>
   </div>
 </section>
 
@@ -206,7 +219,7 @@
   <div class="wrap">
     <p class="kicker">Para jugadores</p>
     <h2>Juega antes que nadie y ayuda a mejorarlo</h2>
-    <p class="sub">La parte social pasa por un servidor MasterDev. El servidor oficial está en pruebas y de momento se entra con invitación; también puedes alojar uno en tu PC.</p>
+    <p class="sub">La parte social pasa por un servidor MasterDev. Con tu cuenta de MasterDev entras en el servidor oficial; también puedes alojar uno en tu PC.</p>
     <div class="grid">
       <article class="card">
         <p class="st srv">Con un servidor</p>
@@ -241,7 +254,7 @@
       <ol class="steps">
         <li><span>Descarga el zip y descomprímelo en una carpeta tuya, por ejemplo <code>Documentos\MasterDev-app</code>.</span></li>
         <li><span>Abre <code>MasterDev.exe</code>. No hace falta instalar nada más.</span></li>
-        <li><span>Crea tu cuenta local y elige tu camino: creador o jugador.</span></li>
+        <li><span>Entra con tu cuenta de MasterDev (la que creas aquí) y elige tu camino: creador o jugador.</span></li>
         <li><span>Las versiones nuevas llegan solas: la app te avisa y se actualiza con <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>.</span></li>
       </ol>
       <div class="warn">
@@ -260,6 +273,7 @@
       <p class="dl-title">MasterDev <span class="dl-version-num"></span></p>
       <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
       <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">Descargar el zip</a>
+      <p class="small gate-note">Para descargar, crea tu cuenta gratis de MasterDev o entra con ella.</p>
       <ul class="req">
         <li>Windows 10 / 11 · 64 bits</li>
         <li>WebView2 (viene con Windows 11)</li>
@@ -280,11 +294,11 @@
     </details>
     <details>
       <summary>¿Qué funciona ya y qué está en pruebas?</summary>
-      <p>Ideas, proyectos, Roblox Studio, tareas, bugs, notas de voz, temas y cartas funcionan en tu PC sin nada más. Comunidad, Descubrir y playtests necesitan un servidor MasterDev: el oficial está en pruebas y de momento se entra con invitación. Las llamadas y el compartir pantalla funcionan solo dentro de la misma red.</p>
+      <p>Ideas, proyectos, Roblox Studio, tareas, bugs, notas de voz, temas y cartas funcionan en tu PC sin nada más. Comunidad, Descubrir y playtests necesitan un servidor MasterDev: con tu cuenta de MasterDev entras en el oficial. Las llamadas y el compartir pantalla funcionan solo dentro de la misma red.</p>
     </details>
     <details>
       <summary>¿Qué es un servidor MasterDev?</summary>
-      <p>Es lo que conecta a las personas: amigos, mensajes, juegos publicados y playtests. Puedes alojar uno en tu PC desde Ajustes › Red, para tu casa o tu red local, o unirte a uno con su dirección y una invitación.</p>
+      <p>Es lo que conecta a las personas: amigos, mensajes, juegos publicados y playtests. Puedes alojar uno en tu PC desde Ajustes › Red, para tu casa o tu red local, o unirte a uno con su dirección o una invitación. Con tu cuenta de MasterDev ya estás en el oficial.</p>
     </details>
     <details>
       <summary>¿Dónde se guardan mis cosas?</summary>
@@ -319,6 +333,7 @@
       <a href="creadores.html">Para creadores</a>
       <a href="jugadores.html">Para jugadores</a>
       <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explora la app</a>
       <a href="descargar.html">Descargar e instalar</a>
       <a href="primeros-pasos.html">Primeros 10 minutos</a>
     </nav>

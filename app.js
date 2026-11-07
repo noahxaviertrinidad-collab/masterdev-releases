@@ -19,8 +19,91 @@
     btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); btn.focus(); } });
-    window.addEventListener('resize', function () { if (window.innerWidth > 860) setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1020) setMenu(false); });
   }
+
+  // 10) Cuenta: el enlace de la barra muestra tu @ con la sesión abierta, y la descarga pide una cuenta de MasterDev
+  //     (cuenta.js guarda el token del servidor oficial en md.token).
+  function session() { try { var t = localStorage.getItem('md.token'); return t ? JSON.parse(localStorage.getItem('md.me') || '{}') : null; } catch (e) { return null; } }
+  function paintAccount() {
+    var me = session();
+    document.querySelectorAll('.nav-acct').forEach(function (a) {
+      a.textContent = me && me.username ? '@' + me.username : (lang === 'es' ? 'Entrar' : 'Sign in');
+      a.classList.toggle('on', !!me);
+    });
+  }
+  paintAccount();
+  document.addEventListener('md-session', paintAccount);
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('.dl-link');
+    if (!a || a.hasAttribute('data-gate-ok') || session()) return;
+    e.preventDefault();
+    try { sessionStorage.setItem('md.after', 'download'); } catch (err) { /* idem */ }
+    location.href = 'cuenta.html#crear';
+  });
+
+  // 8) Temas (como en la app): «auto» sigue el modo claro u oscuro del sistema (Papel o Terminal)
+  var tBtn = document.getElementById('theme-btn'), tMenu = document.getElementById('theme-menu');
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+  function savedTheme() { try { return localStorage.getItem('md.theme') || 'auto'; } catch (e) { return 'auto'; } }
+  function applyTheme(choice) {
+    var t = choice === 'auto' ? (mq && mq.matches ? 'papel' : 'terminal') : choice;
+    root.setAttribute('data-theme', t);
+    if (tMenu) tMenu.querySelectorAll('[data-set-theme]').forEach(function (b) { b.setAttribute('aria-checked', b.getAttribute('data-set-theme') === choice ? 'true' : 'false'); });
+  }
+  applyTheme(savedTheme());
+  if (mq && mq.addEventListener) mq.addEventListener('change', function () { if (savedTheme() === 'auto') applyTheme('auto'); });
+  function setThemeMenu(open) { if (!tBtn) return; tBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); tMenu.hidden = !open; }
+  if (tBtn && tMenu) {
+    tBtn.addEventListener('click', function (e) { e.stopPropagation(); setThemeMenu(tMenu.hidden); });
+    tMenu.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-set-theme]'); if (!b) return;
+      var c = b.getAttribute('data-set-theme');
+      try { localStorage.setItem('md.theme', c); } catch (err) { /* sin almacenamiento */ }
+      applyTheme(c); setThemeMenu(false); tBtn.focus();
+    });
+    document.addEventListener('click', function (e) { if (!tMenu.hidden && !e.target.closest('.theme-pick')) setThemeMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !tMenu.hidden) { setThemeMenu(false); tBtn.focus(); } });
+  }
+
+  // 9) Ilustraciones pixel art (canvas pequeño escalado): cielo, estrellas, montañas y un sprite por sección, con los
+  //    colores del tema activo. Se redibujan al cambiar de tema.
+  var SPRITES = {
+    creadores: ['..bbbbbbbbbbbb..', '..b..........b..', '..b.gggg.....b..', '..b.....cccc.b..', '..b.ggg......b..', '..b......gg..b..', '..b.cc.ggg...b..', '..bbbbbbbbbbbb..', '.......bb.......', '.....bbbbbb.....', 'wwwwwwwwwwwwwwww'],
+    jugadores: ['....bbbbbbbb....', '..bbbbbbbbbbbb..', '.bbbgbbbbbbcbbb.', '.bbgggbbbbcbcbb.', '.bbbgbbbbbbcbbb.', '.bbbbbbbbbbbbbb.', '..bbbb....bbbb..', '...bb......bb...'],
+    descargar: ['......gggg......', '......gggg......', '......gggg......', '...gggggggggg...', '....gggggggg....', '.....gggggg.....', '......gggg......', '.......gg.......', '..b..........b..', '..bbbbbbbbbbbb..'],
+    explora: ['...g........', '...ggg......', '...ggggg....', '...ggg......', '...g........', '...b........', '...b........', '...b........', '..bbb.......', 'bbbbbbbbbbbb']
+  };
+  function cssVar(n) { return getComputedStyle(root).getPropertyValue(n).trim() || '#39FF88'; }
+  function drawScenes() {
+    document.querySelectorAll('canvas.pixel-scene').forEach(function (cv) {
+      var ctx = cv.getContext('2d'); if (!ctx) return;
+      var W = cv.width, H = cv.height, seed = 7;
+      function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+      var sky = ctx.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, cssVar('--bg')); sky.addColorStop(1, cssVar('--panel-2'));
+      ctx.fillStyle = sky; ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = cssVar('--text-2');
+      for (var s = 0; s < 40; s++) { ctx.globalAlpha = .25 + rnd() * .6; ctx.fillRect(Math.floor(rnd() * W), Math.floor(rnd() * H * .55), 1, 1); }
+      ctx.globalAlpha = 1;
+      [['--border', .45, 14], ['--border-2', .62, 9]].forEach(function (layer) {
+        ctx.fillStyle = cssVar(layer[0]);
+        var y = H * layer[1];
+        for (var x = 0; x < W; x++) {
+          y += (rnd() - .5) * 2.2; y = Math.max(H * .3, Math.min(H * .85, y));
+          ctx.fillRect(x, Math.floor(y + Math.sin(x / layer[2]) * 3), 1, H);
+        }
+      });
+      ctx.fillStyle = cssVar('--green'); ctx.globalAlpha = .55; ctx.fillRect(0, H - 2, W, 1); ctx.globalAlpha = 1;
+      var sp = SPRITES[cv.getAttribute('data-scene')];
+      if (sp) {
+        var ox = Math.floor(W * .72), oy = H - 2 - sp.length;
+        var map = { b: cssVar('--text-2'), g: cssVar('--green'), c: cssVar('--cyan'), w: cssVar('--border-2') };
+        sp.forEach(function (row, y) { for (var x = 0; x < row.length; x++) { var k = row[x]; if (map[k]) { ctx.fillStyle = map[k]; ctx.fillRect(ox + x, oy + y, 1, 1); } } });
+      }
+    });
+  }
+  drawScenes();
+  new MutationObserver(drawScenes).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
   // 3) Idioma
   function store(l) { try { localStorage.setItem('md.lang', l); } catch (e) { /* sin almacenamiento */ } }

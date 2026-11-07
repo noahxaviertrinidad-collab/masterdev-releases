@@ -6,6 +6,7 @@
 <meta property="og:title" content="Music credits · MasterDev">
 <meta property="og:description" content="The freely licensed music that ships with MasterDev.">
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://masterdev.website/en/creditos.html">
 <link rel="alternate" hreflang="es" href="https://masterdev.website/creditos.html">
@@ -39,8 +40,19 @@
       <a href="creadores.html">Creators</a>
       <a href="jugadores.html">Players</a>
       <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
       <a href="novedades.html">What's new</a>
-      <a href="./#preguntas">FAQ</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
       <a class="lang" href="https://masterdev.website/creditos.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
     </nav>
     <a class="btn primary small nav-dl" href="descargar.html">Download</a>
@@ -97,6 +109,7 @@
       <a href="creadores.html">For creators</a>
       <a href="jugadores.html">For players</a>
       <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
       <a href="descargar.html">Download and install</a>
       <a href="primeros-pasos.html">First 10 minutes</a>
     </nav>

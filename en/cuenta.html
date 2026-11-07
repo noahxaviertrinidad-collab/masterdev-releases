@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Your MasterDev account</title>
+<meta name="description" content="Create your MasterDev account or sign in. It's the same account you'll use in the app.">
+<meta property="og:title" content="Your MasterDev account">
+<meta property="og:description" content="One account for the website and the app.">
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/en/cuenta.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/cuenta.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/cuenta.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/cuenta.html">
+<meta property="og:url" content="https://masterdev.website/en/cuenta.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://masterdev.website/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: your indie studio in one window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="../img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/app-icon-128.png">
+<link rel="preload" href="../fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, home">
+      <img src="../img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="creadores.html">Creators</a>
+      <a href="jugadores.html">Players</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
+      <a href="novedades.html">What's new</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/cuenta.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Download</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page">
+  <div class="wrap acct-wrap" data-account data-api="https://api.masterdev.website">
+    <p class="kicker">Account</p>
+
+    <!-- Crear cuenta -->
+    <section class="acct-view" data-view="crear" aria-labelledby="crear-h">
+      <h1 id="crear-h">Create your MasterDev account</h1>
+      <p class="sub">Use it to download the app and sign in to it: the same @username and password work on the website, in the app and with your friends.</p>
+      <p class="acct-switch">Already have an account? <a href="#entrar">Sign in</a></p>
+      <form class="acct-form" id="f-crear" novalidate>
+        <div class="field">
+          <label for="c-user">@username</label>
+          <div class="prefixed"><span aria-hidden="true">@</span><input id="c-user" name="username" type="text" autocomplete="username" spellcheck="false" autocapitalize="off" maxlength="32" required aria-describedby="c-user-hint c-user-live"></div>
+          <p class="hint" id="c-user-hint">Lowercase letters, numbers, “_” and “.” (2–32). It's your profile name.</p>
+          <p class="live" id="c-user-live" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="c-name">Display name (optional)</label>
+          <input id="c-name" name="displayName" type="text" autocomplete="nickname" maxlength="32">
+        </div>
+        <div class="field">
+          <label for="c-pw">Password</label>
+          <input id="c-pw" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required aria-describedby="c-pw-hint">
+          <p class="hint" id="c-pw-hint">8 to 128 characters. A long phrase is easy to remember and hard to guess.</p>
+        </div>
+        <div class="field">
+          <label for="c-pw2">Repeat the password</label>
+          <input id="c-pw2" name="password2" type="password" autocomplete="new-password" maxlength="128" required>
+        </div>
+        <fieldset class="field paths-pick">
+          <legend>What are you here for?</legend>
+          <label class="pick"><input type="radio" name="role" value="dev" required> <span><b>💻 Make games</b><small>Ideas, projects, tasks and playtests.</small></span></label>
+          <label class="pick"><input type="radio" name="role" value="gamer"> <span><b>🎮 Play and test</b><small>Playtests, cards, profile and friends.</small></span></label>
+          <p class="hint">Both paths see everything; you can change it later.</p>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="age" required> I'm 13 or older.</label>
+        <label class="check"><input type="checkbox" name="legal" required> <span>I've read and accept the <button type="button" class="link-btn" data-legal="terms">Terms</button>, the <button type="button" class="link-btn" data-legal="privacy">Privacy policy</button> and the <button type="button" class="link-btn" data-legal="rules">Community rules</button> of the MasterDev server, and the <a href="privacidad.html">privacy of this website</a>.</span></label>
+        <p class="form-err" role="alert" hidden></p>
+        <button class="btn primary" type="submit">Create account</button>
+      </form>
+    </section>
+
+    <!-- Entrar -->
+    <section class="acct-view" data-view="entrar" aria-labelledby="entrar-h" hidden>
+      <h1 id="entrar-h">Sign in to your account</h1>
+      <p class="sub">With your MasterDev account's @username and password.</p>
+      <p class="acct-switch">No account yet? <a href="#crear">Create one</a></p>
+      <form class="acct-form" id="f-entrar" novalidate>
+        <div class="field">
+          <label for="e-user">@username</label>
+          <div class="prefixed"><span aria-hidden="true">@</span><input id="e-user" name="username" type="text" autocomplete="username" spellcheck="false" autocapitalize="off" maxlength="32" required></div>
+        </div>
+        <div class="field">
+          <label for="e-pw">Password</label>
+          <input id="e-pw" name="password" type="password" autocomplete="current-password" maxlength="128" required>
+        </div>
+        <p class="form-err" role="alert" hidden></p>
+        <button class="btn primary" type="submit">Sign in</button>
+        <details class="forgot">
+          <summary>Forgot your password?</summary>
+          <p>If you already use it in the app, change it in Settings › Account with your recovery code. Otherwise, write to us on <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/issues">GitHub</a>.</p>
+        </details>
+      </form>
+    </section>
+
+    <!-- Mi cuenta -->
+    <section class="acct-view" data-view="mi-cuenta" aria-labelledby="me-h" hidden>
+      <h1 id="me-h">Hi, <span class="me-name"></span></h1>
+      <p class="sub"><span class="mono me-user"></span> · <span class="me-role"></span></p>
+      <div class="acct-grid">
+        <div class="acct-card dl-ready">
+          <p class="st ok">Ready to download</p>
+          <h2>Download MasterDev</h2>
+          <p class="mono dl-sub"><span class="dl-version"></span> <span class="dl-size"></span></p>
+          <a class="btn primary wide dl-link" data-gate-ok href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">Download for Windows</a>
+          <p class="small"><a href="descargar.html">Step-by-step setup</a></p>
+        </div>
+        <div class="acct-card">
+          <p class="st srv">In the app</p>
+          <h2>Sign in with this account</h2>
+          <ol class="steps">
+            <li><span>Open MasterDev for the first time.</span></li>
+            <li><span>Click “Created your account on masterdev.website? Sign in with it”.</span></li>
+            <li><span>Enter your @username and password. The app creates your account on the PC and connects you to the official server.</span></li>
+          </ol>
+          <p class="small">Already have MasterDev with another account? Connect it in Settings › Network with <code>https://api.masterdev.website</code>.</p>
+        </div>
+      </div>
+      <form class="acct-form acct-edit" id="f-perfil" novalidate>
+        <h2>Your profile</h2>
+        <div class="field">
+          <label for="p-name">Display name</label>
+          <input id="p-name" name="displayName" type="text" maxlength="32">
+        </div>
+        <fieldset class="field paths-pick">
+          <legend>Your path</legend>
+          <label class="pick"><input type="radio" name="role" value="dev"> <span><b>💻 Make games</b></span></label>
+          <label class="pick"><input type="radio" name="role" value="gamer"> <span><b>🎮 Play and test</b></span></label>
+        </fieldset>
+        <p class="hint">Your picture, banner and the rest of your profile are set in the app.</p>
+        <p class="form-err" role="alert" hidden></p>
+        <p class="form-ok" role="status" hidden>Saved.</p>
+        <div class="cta"><button class="btn primary" type="submit">Save</button> <button class="btn ghost" type="button" data-logout>Sign out</button></div>
+      </form>
+    </section>
+
+    <dialog class="legal-dlg" id="legal-dlg" aria-labelledby="legal-h">
+      <h2 id="legal-h"></h2>
+      <div class="legal-text"></div>
+      <form method="dialog"><button class="btn primary">Close</button></form>
+    </dialog>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="../img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Where creators and players meet. An indie project, free for Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">How it works</a>
+      <a href="creadores.html">For creators</a>
+      <a href="jugadores.html">For players</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
+      <a href="descargar.html">Download and install</a>
+      <a href="primeros-pasos.html">First 10 minutes</a>
+    </nav>
+    <nav aria-label="Resources">
+      <p class="foot-h">Resources</p>
+      <a href="./#preguntas">FAQ</a>
+      <a href="privacidad.html">Privacy and data</a>
+      <a href="descargar.html#actualizaciones">New version alerts</a>
+      <a href="novedades.html">What's new</a>
+      <a href="hoja-de-ruta.html">Roadmap</a>
+      <a href="prensa.html">Press</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Music credits</a>
+    </nav>
+    <nav aria-label="Language">
+      <p class="foot-h">Language</p>
+      <a href="https://masterdev.website/cuenta.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/cuenta.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Windows 10 and 11 (64-bit) only.</p>
+  </div>
+</footer>
+<script src="../app.js"></script>
+
+<script src="../cuenta.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:Explora MasterDev: recorrido, comandos y tu camino|en:Explore MasterDev: tour, commands and your path}}</title>
+<meta name="description" content="{{es:Recorre la ventana de MasterDev con capturas reales, prueba su barra de comandos y descubre por dónde empezar.|en:Tour the MasterDev window with real screenshots, try its command bar and find out where to start.}}">
+<meta property="og:title" content="{{es:Explora MasterDev|en:Explore MasterDev}}">
+<meta property="og:description" content="{{es:Recorrido interactivo, barra de comandos y test de camino.|en:Interactive tour, command bar and path quiz.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <canvas class="pixel-scene" data-scene="explora" width="360" height="48" aria-hidden="true"></canvas>
+    <p class="kicker">{{es:Explora|en:Explore}}</p>
+    <h1>{{es:Pruébalo antes de descargarlo|en:Try it before you download it}}</h1>
+    <p class="sub">{{es:Pulsa las secciones de la ventana, escribe comandos como en la app o responde tres preguntas para saber por dónde empezar.|en:Click the window's sections, type commands like in the app, or answer three questions to find where to start.}}</p>
+    <nav class="toc" aria-label="{{es:En esta página|en:On this page}}">
+      <a href="#recorrido">{{es:Recorrido|en:Tour}}</a>
+      <a href="#comandos">{{es:Barra de comandos|en:Command bar}}</a>
+      <a href="#camino">{{es:¿Cuál es tu camino?|en:Which path is yours?}}</a>
+    </nav>
+
+    <section class="doc" id="recorrido" aria-labelledby="tour-h">
+      <h2 id="tour-h">{{es:Recorrido por la ventana|en:A tour of the window}}</h2>
+      <p class="sub">{{es:Elige una sección en la barra lateral. Los números señalan lo más importante de cada pantalla.|en:Pick a section in the sidebar. The numbers point to the most important parts of each screen.}}</p>
+      <div class="tour" data-tour data-base="{{root}}img/app/">
+        <div class="tour-side" role="tablist" aria-label="{{es:Secciones de la app|en:App sections}}" aria-orientation="vertical"></div>
+        <div class="tour-main">
+          <div class="tour-shot"><img src="{{root}}img/app/centro.jpg" alt="" width="1440" height="900"><div class="tour-pins"></div></div>
+          <div class="tour-info" aria-live="polite"><h3 class="tour-title"></h3><p class="tour-desc"></p><ol class="tour-notes"></ol></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="comandos" aria-labelledby="cmd-h">
+      <h2 id="cmd-h">{{es:Prueba la barra de comandos|en:Try the command bar}}</h2>
+      <p class="sub">{{es:En la app, abajo, está la barra|en:At the bottom of the app there's the}} <code>MD ❯</code>{{es:. Escribe una barra y empieza a teclear; pulsa Enter para ver qué haría.|en: bar. Type a slash and start typing; press Enter to see what it would do.}}</p>
+      <div class="cmdbar" data-cmdbar>
+        <label class="sr" for="cmd-in">{{es:Comando|en:Command}}</label>
+        <div class="cmd-row"><span class="mono cmd-prompt">MD ❯</span><input id="cmd-in" type="text" autocomplete="off" spellcheck="false" placeholder="/ideas" role="combobox" aria-expanded="false" aria-controls="cmd-list" aria-autocomplete="list"></div>
+        <ul class="cmd-list" id="cmd-list" role="listbox"></ul>
+        <div class="cmd-out" aria-live="polite"><p class="small">{{es:Prueba con /ideas, /new-project, /roblox o /theme.|en:Try /ideas, /new-project, /roblox or /theme.}}</p></div>
+      </div>
+    </section>
+
+    <section class="doc" id="camino" aria-labelledby="quiz-h">
+      <h2 id="quiz-h">{{es:¿Cuál es tu camino?|en:Which path is yours?}}</h2>
+      <p class="sub">{{es:Tres preguntas y te decimos por dónde empezar. Los dos caminos ven todo; solo cambia lo que tienes más a mano.|en:Three questions and we'll tell you where to start. Both paths see everything; only what's closest to hand changes.}}</p>
+      <form class="quiz" data-quiz>
+        <fieldset>
+          <legend>{{es:1. ¿Qué te apetece más?|en:1. What do you feel like doing most?}}</legend>
+          <label><input type="radio" name="q1" value="c" required> {{es:Hacer mi propio juego|en:Making my own game}}</label>
+          <label><input type="radio" name="q1" value="p"> {{es:Jugar a juegos nuevos|en:Playing new games}}</label>
+          <label><input type="radio" name="q1" value="b"> {{es:Un poco de las dos|en:A bit of both}}</label>
+        </fieldset>
+        <fieldset>
+          <legend>{{es:2. ¿Has programado alguna vez?|en:2. Have you ever coded?}}</legend>
+          <label><input type="radio" name="q2" value="c" required> {{es:Sí, o quiero aprender|en:Yes, or I want to learn}}</label>
+          <label><input type="radio" name="q2" value="r"> {{es:Solo en Roblox Studio|en:Only in Roblox Studio}}</label>
+          <label><input type="radio" name="q2" value="p"> {{es:No, y no me interesa|en:No, and I'm not interested}}</label>
+        </fieldset>
+        <fieldset>
+          <legend>{{es:3. ¿Qué te gustaría hacer esta semana?|en:3. What would you like to do this week?}}</legend>
+          <label><input type="radio" name="q3" value="c" required> {{es:Ordenar mis ideas y empezar un prototipo|en:Sort my ideas and start a prototype}}</label>
+          <label><input type="radio" name="q3" value="p"> {{es:Probar juegos y dar mi opinión|en:Test games and give feedback}}</label>
+          <label><input type="radio" name="q3" value="b"> {{es:Personalizar mi perfil y coleccionar cartas|en:Customize my profile and collect cards}}</label>
+        </fieldset>
+        <button class="btn primary" type="submit">{{es:Ver mi camino|en:See my path}}</button>
+      </form>
+      <div class="quiz-out" aria-live="polite" hidden
+        data-c-title="{{es:💻 Tu camino: Creador|en:💻 Your path: Creator}}"
+        data-c-text="{{es:Empieza apuntando una idea y conviértela en un proyecto. Si tienes Claude, puede crear el código inicial contigo.|en:Start by writing down an idea and turn it into a project. If you have Claude, it can build the starter code with you.}}"
+        data-r-title="{{es:🧱 Tu camino: Creador de Roblox|en:🧱 Your path: Roblox creator}}"
+        data-r-text="{{es:Abre la vista Roblox Studio: verás todos tus juegos y podrás empezar uno con plantilla.|en:Open the Roblox Studio view: you'll see all your games and can start one from a template.}}"
+        data-p-title="{{es:🎮 Tu camino: Jugador|en:🎮 Your path: Player}}"
+        data-p-text="{{es:Elige un tema, prepara tu perfil y abre tus sobres de cartas. Con tu cuenta, en el servidor oficial podrás probar juegos de otros.|en:Pick a theme, set up your profile and open your card packs. With your account, you can test other people's games on the official server.}}"
+        data-b-title="{{es:✨ Tu camino: los dos|en:✨ Your path: both}}"
+        data-b-text="{{es:Elige «Desarrollador» y marca también tus gustos de jugador: tendrás tus proyectos y tus juegos a mano.|en:Pick “Developer” and also tick your player tastes: you'll have your projects and your games at hand.}}"
+        data-c-link="creadores.html" data-r-link="roblox.html" data-p-link="jugadores.html" data-b-link="primeros-pasos.html"
+        data-more="{{es:Saber más|en:Learn more}}"></div>
+    </section>
+
+    <p class="cta page-cta"><a class="btn primary" href="descargar.html">{{es:Descargar para Windows|en:Download for Windows}}</a></p>
+  </div>
+</main>
+{{> footer}}
+<script src="{{root}}explora.js"></script>
+</body>
+</html>

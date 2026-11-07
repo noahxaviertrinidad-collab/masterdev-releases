@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Explore MasterDev: tour, commands and your path</title>
+<meta name="description" content="Tour the MasterDev window with real screenshots, try its command bar and find out where to start.">
+<meta property="og:title" content="Explore MasterDev">
+<meta property="og:description" content="Interactive tour, command bar and path quiz.">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/en/explora.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/explora.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/explora.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/explora.html">
+<meta property="og:url" content="https://masterdev.website/en/explora.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://masterdev.website/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: your indie studio in one window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="../img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/app-icon-128.png">
+<link rel="preload" href="../fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, home">
+      <img src="../img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="creadores.html">Creators</a>
+      <a href="jugadores.html">Players</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
+      <a href="novedades.html">What's new</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/explora.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Download</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page">
+  <div class="wrap">
+    <canvas class="pixel-scene" data-scene="explora" width="360" height="48" aria-hidden="true"></canvas>
+    <p class="kicker">Explore</p>
+    <h1>Try it before you download it</h1>
+    <p class="sub">Click the window's sections, type commands like in the app, or answer three questions to find where to start.</p>
+    <nav class="toc" aria-label="On this page">
+      <a href="#recorrido">Tour</a>
+      <a href="#comandos">Command bar</a>
+      <a href="#camino">Which path is yours?</a>
+    </nav>
+
+    <section class="doc" id="recorrido" aria-labelledby="tour-h">
+      <h2 id="tour-h">A tour of the window</h2>
+      <p class="sub">Pick a section in the sidebar. The numbers point to the most important parts of each screen.</p>
+      <div class="tour" data-tour data-base="../img/app/">
+        <div class="tour-side" role="tablist" aria-label="App sections" aria-orientation="vertical"></div>
+        <div class="tour-main">
+          <div class="tour-shot"><img src="../img/app/centro.jpg" alt="" width="1440" height="900"><div class="tour-pins"></div></div>
+          <div class="tour-info" aria-live="polite"><h3 class="tour-title"></h3><p class="tour-desc"></p><ol class="tour-notes"></ol></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="comandos" aria-labelledby="cmd-h">
+      <h2 id="cmd-h">Try the command bar</h2>
+      <p class="sub">At the bottom of the app there's the <code>MD ❯</code> bar. Type a slash and start typing; press Enter to see what it would do.</p>
+      <div class="cmdbar" data-cmdbar>
+        <label class="sr" for="cmd-in">Command</label>
+        <div class="cmd-row"><span class="mono cmd-prompt">MD ❯</span><input id="cmd-in" type="text" autocomplete="off" spellcheck="false" placeholder="/ideas" role="combobox" aria-expanded="false" aria-controls="cmd-list" aria-autocomplete="list"></div>
+        <ul class="cmd-list" id="cmd-list" role="listbox"></ul>
+        <div class="cmd-out" aria-live="polite"><p class="small">Try /ideas, /new-project, /roblox or /theme.</p></div>
+      </div>
+    </section>
+
+    <section class="doc" id="camino" aria-labelledby="quiz-h">
+      <h2 id="quiz-h">Which path is yours?</h2>
+      <p class="sub">Three questions and we'll tell you where to start. Both paths see everything; only what's closest to hand changes.</p>
+      <form class="quiz" data-quiz>
+        <fieldset>
+          <legend>1. What do you feel like doing most?</legend>
+          <label><input type="radio" name="q1" value="c" required> Making my own game</label>
+          <label><input type="radio" name="q1" value="p"> Playing new games</label>
+          <label><input type="radio" name="q1" value="b"> A bit of both</label>
+        </fieldset>
+        <fieldset>
+          <legend>2. Have you ever coded?</legend>
+          <label><input type="radio" name="q2" value="c" required> Yes, or I want to learn</label>
+          <label><input type="radio" name="q2" value="r"> Only in Roblox Studio</label>
+          <label><input type="radio" name="q2" value="p"> No, and I'm not interested</label>
+        </fieldset>
+        <fieldset>
+          <legend>3. What would you like to do this week?</legend>
+          <label><input type="radio" name="q3" value="c" required> Sort my ideas and start a prototype</label>
+          <label><input type="radio" name="q3" value="p"> Test games and give feedback</label>
+          <label><input type="radio" name="q3" value="b"> Customize my profile and collect cards</label>
+        </fieldset>
+        <button class="btn primary" type="submit">See my path</button>
+      </form>
+      <div class="quiz-out" aria-live="polite" hidden
+        data-c-title="💻 Your path: Creator"
+        data-c-text="Start by writing down an idea and turn it into a project. If you have Claude, it can build the starter code with you."
+        data-r-title="🧱 Your path: Roblox creator"
+        data-r-text="Open the Roblox Studio view: you'll see all your games and can start one from a template."
+        data-p-title="🎮 Your path: Player"
+        data-p-text="Pick a theme, set up your profile and open your card packs. With your account, you can test other people's games on the official server."
+        data-b-title="✨ Your path: both"
+        data-b-text="Pick “Developer” and also tick your player tastes: you'll have your projects and your games at hand."
+        data-c-link="creadores.html" data-r-link="roblox.html" data-p-link="jugadores.html" data-b-link="primeros-pasos.html"
+        data-more="Learn more"></div>
+    </section>
+
+    <p class="cta page-cta"><a class="btn primary" href="descargar.html">Download for Windows</a></p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="../img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Where creators and players meet. An indie project, free for Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">How it works</a>
+      <a href="creadores.html">For creators</a>
+      <a href="jugadores.html">For players</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
+      <a href="descargar.html">Download and install</a>
+      <a href="primeros-pasos.html">First 10 minutes</a>
+    </nav>
+    <nav aria-label="Resources">
+      <p class="foot-h">Resources</p>
+      <a href="./#preguntas">FAQ</a>
+      <a href="privacidad.html">Privacy and data</a>
+      <a href="descargar.html#actualizaciones">New version alerts</a>
+      <a href="novedades.html">What's new</a>
+      <a href="hoja-de-ruta.html">Roadmap</a>
+      <a href="prensa.html">Press</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Music credits</a>
+    </nav>
+    <nav aria-label="Language">
+      <p class="foot-h">Language</p>
+      <a href="https://masterdev.website/explora.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/explora.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Windows 10 and 11 (64-bit) only.</p>
+  </div>
+</footer>
+<script src="../app.js"></script>
+
+<script src="../explora.js"></script>
+</body>
+</html>

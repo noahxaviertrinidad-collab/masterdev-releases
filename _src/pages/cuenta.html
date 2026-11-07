@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:Tu cuenta de MasterDev|en:Your MasterDev account}}</title>
+<meta name="description" content="{{es:Crea tu cuenta de MasterDev o entra con ella. Es la misma cuenta que usarás en la app.|en:Create your MasterDev account or sign in. It's the same account you'll use in the app.}}">
+<meta property="og:title" content="{{es:Tu cuenta de MasterDev|en:Your MasterDev account}}">
+<meta property="og:description" content="{{es:Una cuenta para la web y la app.|en:One account for the website and the app.}}">
+<meta name="robots" content="noindex">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap acct-wrap" data-account data-api="https://api.masterdev.website">
+    <p class="kicker">{{es:Cuenta|en:Account}}</p>
+
+    <!-- Crear cuenta -->
+    <section class="acct-view" data-view="crear" aria-labelledby="crear-h">
+      <h1 id="crear-h">{{es:Crea tu cuenta de MasterDev|en:Create your MasterDev account}}</h1>
+      <p class="sub">{{es:Con ella descargas la app y entras en ella: el mismo @usuario y la misma contraseña sirven en la web, en la app y con tus amigos.|en:Use it to download the app and sign in to it: the same @username and password work on the website, in the app and with your friends.}}</p>
+      <p class="acct-switch">{{es:¿Ya tienes cuenta?|en:Already have an account?}} <a href="#entrar">{{es:Entra|en:Sign in}}</a></p>
+      <form class="acct-form" id="f-crear" novalidate>
+        <div class="field">
+          <label for="c-user">{{es:@usuario|en:@username}}</label>
+          <div class="prefixed"><span aria-hidden="true">@</span><input id="c-user" name="username" type="text" autocomplete="username" spellcheck="false" autocapitalize="off" maxlength="32" required aria-describedby="c-user-hint c-user-live"></div>
+          <p class="hint" id="c-user-hint">{{es:Minúsculas, números, «_» y «.» (2–32). Es tu nombre en tu perfil.|en:Lowercase letters, numbers, “_” and “.” (2–32). It's your profile name.}}</p>
+          <p class="live" id="c-user-live" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="c-name">{{es:Nombre visible (opcional)|en:Display name (optional)}}</label>
+          <input id="c-name" name="displayName" type="text" autocomplete="nickname" maxlength="32">
+        </div>
+        <div class="field">
+          <label for="c-pw">{{es:Contraseña|en:Password}}</label>
+          <input id="c-pw" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required aria-describedby="c-pw-hint">
+          <p class="hint" id="c-pw-hint">{{es:De 8 a 128 caracteres. Una frase larga es fácil de recordar y difícil de adivinar.|en:8 to 128 characters. A long phrase is easy to remember and hard to guess.}}</p>
+        </div>
+        <div class="field">
+          <label for="c-pw2">{{es:Repite la contraseña|en:Repeat the password}}</label>
+          <input id="c-pw2" name="password2" type="password" autocomplete="new-password" maxlength="128" required>
+        </div>
+        <fieldset class="field paths-pick">
+          <legend>{{es:¿Qué vienes a hacer?|en:What are you here for?}}</legend>
+          <label class="pick"><input type="radio" name="role" value="dev" required> <span><b>💻 {{es:Crear juegos|en:Make games}}</b><small>{{es:Ideas, proyectos, tareas y playtests.|en:Ideas, projects, tasks and playtests.}}</small></span></label>
+          <label class="pick"><input type="radio" name="role" value="gamer"> <span><b>🎮 {{es:Jugar y probar|en:Play and test}}</b><small>{{es:Playtests, cartas, perfil y amigos.|en:Playtests, cards, profile and friends.}}</small></span></label>
+          <p class="hint">{{es:Los dos caminos ven todo; se puede cambiar luego.|en:Both paths see everything; you can change it later.}}</p>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="age" required> {{es:Tengo 13 años o más.|en:I'm 13 or older.}}</label>
+        <label class="check"><input type="checkbox" name="legal" required> <span>{{es:He leído y acepto los|en:I've read and accept the}} <button type="button" class="link-btn" data-legal="terms">{{es:Términos|en:Terms}}</button>, {{es:la|en:the}} <button type="button" class="link-btn" data-legal="privacy">{{es:Privacidad|en:Privacy policy}}</button> {{es:y las|en:and the}} <button type="button" class="link-btn" data-legal="rules">{{es:Normas de la comunidad|en:Community rules}}</button> {{es:del servidor MasterDev, y la|en:of the MasterDev server, and the}} <a href="privacidad.html">{{es:privacidad de esta web|en:privacy of this website}}</a>.</span></label>
+        <p class="form-err" role="alert" hidden></p>
+        <button class="btn primary" type="submit">{{es:Crear cuenta|en:Create account}}</button>
+      </form>
+    </section>
+
+    <!-- Entrar -->
+    <section class="acct-view" data-view="entrar" aria-labelledby="entrar-h" hidden>
+      <h1 id="entrar-h">{{es:Entra en tu cuenta|en:Sign in to your account}}</h1>
+      <p class="sub">{{es:Con el @usuario y la contraseña de tu cuenta de MasterDev.|en:With your MasterDev account's @username and password.}}</p>
+      <p class="acct-switch">{{es:¿No tienes cuenta?|en:No account yet?}} <a href="#crear">{{es:Crea una|en:Create one}}</a></p>
+      <form class="acct-form" id="f-entrar" novalidate>
+        <div class="field">
+          <label for="e-user">{{es:@usuario|en:@username}}</label>
+          <div class="prefixed"><span aria-hidden="true">@</span><input id="e-user" name="username" type="text" autocomplete="username" spellcheck="false" autocapitalize="off" maxlength="32" required></div>
+        </div>
+        <div class="field">
+          <label for="e-pw">{{es:Contraseña|en:Password}}</label>
+          <input id="e-pw" name="password" type="password" autocomplete="current-password" maxlength="128" required>
+        </div>
+        <p class="form-err" role="alert" hidden></p>
+        <button class="btn primary" type="submit">{{es:Entrar|en:Sign in}}</button>
+        <details class="forgot">
+          <summary>{{es:¿Olvidaste la contraseña?|en:Forgot your password?}}</summary>
+          <p>{{es:Si ya la usas en la app, cámbiala en Ajustes › Cuenta con tu código de recuperación. Si no, escríbenos en|en:If you already use it in the app, change it in Settings › Account with your recovery code. Otherwise, write to us on}} <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/issues">GitHub</a>.</p>
+        </details>
+      </form>
+    </section>
+
+    <!-- Mi cuenta -->
+    <section class="acct-view" data-view="mi-cuenta" aria-labelledby="me-h" hidden>
+      <h1 id="me-h">{{es:Hola,|en:Hi,}} <span class="me-name"></span></h1>
+      <p class="sub"><span class="mono me-user"></span> · <span class="me-role"></span></p>
+      <div class="acct-grid">
+        <div class="acct-card dl-ready">
+          <p class="st ok">{{es:Listo para descargar|en:Ready to download}}</p>
+          <h2>{{es:Descarga MasterDev|en:Download MasterDev}}</h2>
+          <p class="mono dl-sub"><span class="dl-version"></span> <span class="dl-size"></span></p>
+          <a class="btn primary wide dl-link" data-gate-ok href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">{{es:Descargar para Windows|en:Download for Windows}}</a>
+          <p class="small"><a href="descargar.html">{{es:Instalación paso a paso|en:Step-by-step setup}}</a></p>
+        </div>
+        <div class="acct-card">
+          <p class="st srv">{{es:En la app|en:In the app}}</p>
+          <h2>{{es:Entra con esta cuenta|en:Sign in with this account}}</h2>
+          <ol class="steps">
+            <li><span>{{es:Abre MasterDev por primera vez.|en:Open MasterDev for the first time.}}</span></li>
+            <li><span>{{es:Pulsa «¿Te creaste la cuenta en masterdev.website? Entra con ella».|en:Click “Created your account on masterdev.website? Sign in with it”.}}</span></li>
+            <li><span>{{es:Escribe tu @usuario y tu contraseña. La app crea tu cuenta en el PC y te conecta al servidor oficial.|en:Enter your @username and password. The app creates your account on the PC and connects you to the official server.}}</span></li>
+          </ol>
+          <p class="small">{{es:¿Ya tienes MasterDev con otra cuenta? Conéctala en Ajustes › Red con|en:Already have MasterDev with another account? Connect it in Settings › Network with}} <code>https://api.masterdev.website</code>.</p>
+        </div>
+      </div>
+      <form class="acct-form acct-edit" id="f-perfil" novalidate>
+        <h2>{{es:Tu perfil|en:Your profile}}</h2>
+        <div class="field">
+          <label for="p-name">{{es:Nombre visible|en:Display name}}</label>
+          <input id="p-name" name="displayName" type="text" maxlength="32">
+        </div>
+        <fieldset class="field paths-pick">
+          <legend>{{es:Tu camino|en:Your path}}</legend>
+          <label class="pick"><input type="radio" name="role" value="dev"> <span><b>💻 {{es:Crear juegos|en:Make games}}</b></span></label>
+          <label class="pick"><input type="radio" name="role" value="gamer"> <span><b>🎮 {{es:Jugar y probar|en:Play and test}}</b></span></label>
+        </fieldset>
+        <p class="hint">{{es:La foto, el banner y lo demás de tu perfil se eligen en la app.|en:Your picture, banner and the rest of your profile are set in the app.}}</p>
+        <p class="form-err" role="alert" hidden></p>
+        <p class="form-ok" role="status" hidden>{{es:Guardado.|en:Saved.}}</p>
+        <div class="cta"><button class="btn primary" type="submit">{{es:Guardar|en:Save}}</button> <button class="btn ghost" type="button" data-logout>{{es:Cerrar sesión|en:Sign out}}</button></div>
+      </form>
+    </section>
+
+    <dialog class="legal-dlg" id="legal-dlg" aria-labelledby="legal-h">
+      <h2 id="legal-h"></h2>
+      <div class="legal-text"></div>
+      <form method="dialog"><button class="btn primary">{{es:Cerrar|en:Close}}</button></form>
+    </dialog>
+  </div>
+</main>
+{{> footer}}
+<script src="{{root}}cuenta.js"></script>
+</body>
+</html>

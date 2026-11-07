@@ -6,6 +6,7 @@
 <meta property="og:title" content="MasterDev · Your indie studio in one window">
 <meta property="og:description" content="Take your indie game from idea to playtest and find people to play it. Free for Windows.">
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://masterdev.website/en/">
 <link rel="alternate" hreflang="es" href="https://masterdev.website/">
@@ -54,8 +55,19 @@
       <a href="creadores.html">Creators</a>
       <a href="jugadores.html">Players</a>
       <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
       <a href="novedades.html">What's new</a>
-      <a href="./#preguntas">FAQ</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
       <a class="lang" href="https://masterdev.website/" hreflang="es" lang="es" data-lang-to="es">Español</a>
     </nav>
     <a class="btn primary small nav-dl" href="descargar.html">Download</a>
@@ -116,6 +128,7 @@
       <span class="door-d">Playtests, cards, profile, themes and real friends.</span>
       <span class="door-go" aria-hidden="true">→</span>
     </a>
+    <p class="doors-more">Not sure? <a href="explora.html#camino">Answer three questions</a> or <a href="explora.html#recorrido">take a tour of the app</a>.</p>
   </div>
 </section>
 
@@ -206,7 +219,7 @@
   <div class="wrap">
     <p class="kicker">For players</p>
     <h2>Play it first and help make it better</h2>
-    <p class="sub">The social side runs through a MasterDev server. The official server is in testing and invite-only for now; you can also host one on your PC.</p>
+    <p class="sub">The social side runs through a MasterDev server. Your MasterDev account gets you into the official server; you can also host one on your PC.</p>
     <div class="grid">
       <article class="card">
         <p class="st srv">Needs a server</p>
@@ -241,7 +254,7 @@
       <ol class="steps">
         <li><span>Download the zip and unzip it into a folder of yours, for example <code>Documents\MasterDev-app</code>.</span></li>
         <li><span>Open <code>MasterDev.exe</code>. Nothing else to install.</span></li>
-        <li><span>Create your local account and pick your path: creator or player.</span></li>
+        <li><span>Sign in with your MasterDev account (the one you create here) and pick your path: creator or player.</span></li>
         <li><span>New versions arrive on their own: the app tells you and updates with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>.</span></li>
       </ol>
       <div class="warn">
@@ -260,6 +273,7 @@
       <p class="dl-title">MasterDev <span class="dl-version-num"></span></p>
       <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
       <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">Download the zip</a>
+      <p class="small gate-note">To download, create your free MasterDev account or sign in.</p>
       <ul class="req">
         <li>Windows 10 / 11 · 64-bit</li>
         <li>WebView2 (included with Windows 11)</li>
@@ -280,11 +294,11 @@
     </details>
     <details>
       <summary>What works today and what is still in testing?</summary>
-      <p>Ideas, projects, Roblox Studio, tasks, bugs, voice notes, themes and cards work on your PC with nothing else. Community, Discover and playtests need a MasterDev server: the official one is in testing and invite-only for now. Calls and screen sharing only work within the same network.</p>
+      <p>Ideas, projects, Roblox Studio, tasks, bugs, voice notes, themes and cards work on your PC with nothing else. Community, Discover and playtests need a MasterDev server: your MasterDev account gets you into the official one. Calls and screen sharing only work within the same network.</p>
     </details>
     <details>
       <summary>What is a MasterDev server?</summary>
-      <p>It's what connects people: friends, messages, published games and playtests. You can host one on your PC from Settings › Network, for your home or local network, or join one with its address and an invite.</p>
+      <p>It's what connects people: friends, messages, published games and playtests. You can host one on your PC from Settings › Network, for your home or local network, or join one with its address or an invite. Your MasterDev account is already on the official one.</p>
     </details>
     <details>
       <summary>Where is my stuff stored?</summary>
@@ -319,6 +333,7 @@
       <a href="creadores.html">For creators</a>
       <a href="jugadores.html">For players</a>
       <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
       <a href="descargar.html">Download and install</a>
       <a href="primeros-pasos.html">First 10 minutes</a>
     </nav>

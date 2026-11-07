@@ -6,6 +6,7 @@
 <meta property="og:title" content="MasterDev para jugadores">
 <meta property="og:description" content="Juega antes que nadie y ayuda a mejorar juegos indie.">
 <meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://masterdev.website/jugadores.html">
 <link rel="alternate" hreflang="es" href="https://masterdev.website/jugadores.html">
@@ -39,8 +40,19 @@
       <a href="creadores.html">Creadores</a>
       <a href="jugadores.html">Jugadores</a>
       <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explora</a>
       <a href="novedades.html">Novedades</a>
-      <a href="./#preguntas">Preguntas</a>
+      <a class="nav-acct" href="cuenta.html">Entrar</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Tema</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automático (según tu sistema)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Bosque pixel</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Papel (claro)</button>
+        </div>
+      </div>
       <a class="lang" href="https://masterdev.website/en/jugadores.html" hreflang="en" lang="en" data-lang-to="en">English</a>
     </nav>
     <a class="btn primary small nav-dl" href="descargar.html">Descargar</a>
@@ -52,13 +64,14 @@
 
 <main id="contenido" class="page">
   <div class="wrap">
+    <canvas class="pixel-scene" data-scene="jugadores" width="360" height="48" aria-hidden="true"></canvas>
     <p class="kicker">Para jugadores</p>
     <h1>Juega antes que nadie y deja tu huella</h1>
     <p class="sub">En MasterDev los juegos los hacen personas reales que quieren saber qué opinas. Pruébalos, cuéntales qué pasó y ve cómo cambian con lo que dijiste.</p>
 
     <aside class="warn status-note">
       <p class="st srv">Con un servidor MasterDev</p>
-      <p>Descubrir, los playtests y la Comunidad funcionan a través de un servidor MasterDev. El servidor oficial está en pruebas y de momento se entra con invitación. Cartas, perfil, temas y música funcionan sin servidor.</p>
+      <p>Descubrir, los playtests y la Comunidad funcionan a través de un servidor MasterDev. Tu cuenta de MasterDev ya te da acceso al servidor oficial. Cartas, perfil, temas y música funcionan sin servidor.</p>
     </aside>
 
     <div class="feature-rows">
@@ -135,6 +148,7 @@
       <a href="creadores.html">Para creadores</a>
       <a href="jugadores.html">Para jugadores</a>
       <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explora la app</a>
       <a href="descargar.html">Descargar e instalar</a>
       <a href="primeros-pasos.html">Primeros 10 minutos</a>
     </nav>
