@@ -102,6 +102,8 @@
     ['/mini', L('Mini reproductor de música, también fuera de MasterDev.', 'Mini music player, also outside MasterDev.'), 0],
     ['/ambiente', L('Modo ambiente: el fondo animado del tema a pantalla completa.', 'Ambient mode: the theme’s animated background in full screen.'), 0],
     ['/navegador', L('Abre el navegador integrado.', 'Opens the built-in browser.'), 0],
+    ['/captura', L('Una captura a la Galería: ya, con retardo (/captura 5) o la vista de Roblox Studio (/captura studio). También Ctrl + Alt + S.', 'A screenshot to the Gallery: now, with a delay (/captura 5) or the Roblox Studio view (/captura studio). Also Ctrl + Alt + S.'), 0],
+    ['/clips', L('Tus clips: verlos, ordenarlos en colecciones, el reproductor y sus ajustes.', 'Your clips: watch them, sort them into collections, the player and its settings.'), 0],
     ['/analytics', L('Cifras del mercado de videojuegos; con texto, Claude investiga tu pregunta.', 'Video game market figures; with text, Claude researches your question.'), 1],
     ['/personalizar', L('Skills en tareas y proyectos, y rutinas que corren solas.', 'Skills for tasks and projects, and routines that run on their own.'), 0],
     ['/setup', L('Rehace tu perfil: camino, nivel, motores y estilo.', 'Redoes your profile: path, level, engines and style.'), 0],

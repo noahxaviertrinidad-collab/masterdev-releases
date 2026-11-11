@@ -90,6 +90,7 @@
           <li>People who look you up on the server only see your @username, name, picture and path. Your friends see your full profile.</li>
           <li>Calls and screen sharing go directly between PCs (P2P), within the same network; they don't go through the server.</li>
           <li>Playtest telemetry (how a test session is played) is only shared if you accept it for that playtest.</li>
+          <li>From your Gallery and Clips, only what you share is uploaded: a link (its images are deleted when it expires or you revoke it), the cloud according to your rules, a featured clip, comments and your game page's screenshots. Before uploading, MasterDev removes the metadata (location, your Windows user name).</li>
           <li>You can host your own server: then the data stays on your machine.</li>
         </ul>
       </section>
@@ -102,6 +103,7 @@
           <li>The same with ChatGPT or Gemini, if you choose them: the task's files go to OpenAI or Google with your account. With a local AI (Ollama) nothing leaves your PC.</li>
           <li>If you ask several AIs at once or ask for a second opinion, your question goes to each AI you pick. Generating or editing images with AI sends your description (and the image, when editing) to OpenAI or Google, only with your key and after telling you the cost.</li>
           <li>In the Browser, the companion, “Explain”, “Ask” and the Lens send the text or image of the tabs you give them to the AI you pick; never private tabs or Claude’s tab. When Claude uses its tab it never sees your passwords: if a sign-in is needed, you do it.</li>
+          <li>In the Gallery, “describe with AI” is off by default; if you turn it on, each screenshot (scaled down) goes to Claude or Gemini so you can search by what's in it. Narrating a clip with an OpenAI or Gemini voice sends them only the text, with your key and after telling you the cost; the Windows voice never leaves your PC.</li>
           <li>API and connector keys are stored encrypted on your PC and are only sent to the service they belong to.</li>
           <li>The MCP server for other AIs (Connectors) is off by default. If you turn it on and paste its URL into Gemini or another AI, that AI can read your profile, projects, ideas and tasks (not your files) and, if you allow it, save things to your Inbox. The URL carries a private key; if you use the Cloudflare tunnel, requests go through Cloudflare. “New key” cuts access immediately.</li>
           <li>The Community never uses Claude: talking with your friends doesn't go through any AI.</li>
@@ -118,6 +120,8 @@
           <li>Only when you click “Download”: the official Roblox or Phaser docs, checked to arrive complete. If you share a skill with the community, it's uploaded to the MasterDev server you use.</li>
           <li>When you use features that need it: the Browser opens the sites you visit, the Library looks up game covers and info in stores, and My music downloads what you add from YouTube.</li>
           <li>In the Browser: converting currencies asks Frankfurter (from the European Central Bank) for exchange rates, with none of your data; if you turn on the shield, it downloads the EasyList and EasyPrivacy lists from easylist.to; “Save game” reads the public Steam, itch.io or Roblox page, and YouTube transcripts are fetched with yt-dlp. No account or keys needed.</li>
+          <li>In the Gallery and Clips: “To Discord” uploads the image or clip, without metadata, to the webhook you paste (stored encrypted); Real-ESRGAN, for upscaling, is downloaded from GitHub only if you accept; and “OneDrive and Google Drive” copies into your sync folder, which their own app uploads.</li>
+          <li>The Gallery's “📱 Phone” opens a small separate server on your local network only while you use it: a new key in the QR code each time, only for addresses on your private network, with no access to the rest of MasterDev, and it turns itself off after 30 minutes. Windows will ask for permission: give it on private networks only.</li>
         </ul>
       </section>
 
