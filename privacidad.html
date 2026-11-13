@@ -91,6 +91,7 @@
           <li>Las llamadas y el compartir pantalla van directamente entre los PC (P2P), dentro de la misma red; no pasan por el servidor.</li>
           <li>La telemetría de un playtest (cómo se juega una partida de prueba) solo se comparte si lo aceptas en ese playtest.</li>
           <li>De tu Galería y tus Clips solo se sube lo que compartes: un enlace (sus imágenes se borran al caducar o al revocarlo), la nube según tus reglas, un clip destacado, los comentarios y las capturas de la página de tu juego. Antes de subir, MasterDev quita los metadatos (ubicación, tu nombre de usuario de Windows).</li>
+          <li>De tu música solo se sube lo que activas: tu top del mes y tu lista destacada en el perfil, lo más escuchado de tus últimas semanas para las mezclas con amigos, las canciones que compartes en el chat o en un canal de música y la banda sonora que publicas en Descubrir. Al quitarlo, se borra del servidor.</li>
           <li>Puedes alojar tu propio servidor: entonces los datos se quedan en tu máquina.</li>
         </ul>
       </section>
@@ -104,6 +105,7 @@
           <li>Si preguntas a varias IA a la vez o pides una segunda opinión, lo que preguntas va a cada IA que elijas. Generar o editar imágenes con IA envía tu descripción (y la imagen, al editar) a OpenAI o a Google, solo con tu clave y avisándote antes del coste.</li>
           <li>En el Navegador, el acompañante, «Explicar», «Preguntar» y el Lens envían a la IA que elijas el texto o la imagen de las pestañas que les das; nunca las pestañas privadas ni la de Claude. Cuando Claude usa su pestaña, nunca ve tus contraseñas: si hace falta iniciar sesión, lo haces tú.</li>
           <li>En la Galería, «describir con IA» viene apagado; si lo enciendes, cada captura (reducida) va a Claude o a Gemini para buscarla por lo que se ve. La narración de un clip con la voz de OpenAI o de Gemini les envía solo el texto, con tu clave y avisándote del coste; la voz de Windows no sale del PC.</li>
+          <li>En la música de tu proyecto, «Proponer música» envía a tu IA el documento de diseño y «Generar» envía tu descripción; la partitura que devuelve se toca en tu PC.</li>
           <li>Las claves de API y de los conectores se guardan cifradas en tu PC y solo se envían al servicio al que pertenecen.</li>
           <li>El servidor MCP para otras IA (Conectores) viene apagado. Si lo enciendes y pegas su URL en Gemini u otra IA, esa IA puede leer tu perfil, tus proyectos, ideas y tareas (sin tus archivos) y, si lo permites, guardar cosas en tu Bandeja. La URL lleva una clave privada; si usas el túnel de Cloudflare, las peticiones pasan por Cloudflare. «Nueva clave» corta el acceso al momento.</li>
           <li>La Comunidad nunca usa Claude: hablar con tus amigos no pasa por ninguna IA.</li>
@@ -121,7 +123,9 @@
           <li>Cuando usas funciones que lo necesitan: el Navegador abre las webs que visitas, la Biblioteca busca portadas e información de juegos en tiendas, y Mi música descarga lo que añades desde YouTube.</li>
           <li>En el Navegador: convertir monedas pide los tipos de cambio a Frankfurter (del Banco Central Europeo), sin datos tuyos; si enciendes el escudo, baja las listas EasyList y EasyPrivacy de easylist.to; «Guardar juego» lee la ficha pública de Steam, itch.io o Roblox, y las transcripciones de YouTube se bajan con yt-dlp. Todo sin cuenta ni claves.</li>
           <li>En la Galería y los Clips: «A Discord» sube la imagen o el clip, sin metadatos, al webhook que pegues (se guarda cifrado); Real-ESRGAN, para ampliar, se descarga de GitHub solo si lo aceptas; y «OneDrive y Google Drive» copia en tu carpeta de sincronización, que sube su propio programa.</li>
+          <li>En la música: «Reconocer» envía la huella del audio (nunca el archivo) a AcoustID con tu clave, que se guarda cifrada, y pide los datos de la canción a MusicBrainz y la portada a Cover Art Archive. Buscar en YouTube y SoundCloud usa yt-dlp, y yt-dlp y fpcalc se descargan de GitHub solo si lo aceptas, comprobando su hash.</li>
           <li>«📱 Móvil» de la Galería abre un pequeño servidor aparte en tu red local solo mientras lo usas: una clave nueva cada vez en el QR, solo para direcciones de tu red privada, sin acceso al resto de MasterDev, y se apaga solo a los 30 minutos. Windows te pedirá permiso: dalo solo en redes privadas.</li>
+          <li>«📱 En el móvil» del modo música usa ese mismo servidor de tu red local, con las mismas reglas: solo sirve tu música, sin nombres de archivo ni carpetas, y se apaga igual.</li>
         </ul>
       </section>
 
