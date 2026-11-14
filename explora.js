@@ -108,6 +108,8 @@
     ['/calendario', L('El calendario de lanzamiento: tu lanzamiento, tus posts y tus clips programados.', 'The launch calendar: your launch, your posts and your scheduled clips.'), 0],
     ['/directos', L('Quién está en directo en Twitch, con aviso cuando empiezan tus streamers.', 'Who’s live on Twitch, with a notice when your streamers go live.'), 0],
     ['/streamer', L('Modo streamer: esconde tus datos y pone el chat en una esquina (también Ctrl + Alt + Mayús + S).', 'Streamer mode: hides your data and puts the chat in a corner (also Ctrl + Alt + Shift + S).'), 0],
+    ['/jugar', L('Abre un juego de tu Biblioteca por su nombre: /jugar hades. Sin nombre, tus juegos.', 'Opens a game from your Library by name: /jugar hades. With no name, your games.'), 0],
+    ['/modo', L('Cambia entre el modo jugador (tus juegos primero) y el modo creador: /modo jugador.', 'Switches between player mode (your games first) and creator mode: /modo jugador.'), 0],
     ['/analytics', L('Cifras del mercado de videojuegos; con texto, Claude investiga tu pregunta.', 'Video game market figures; with text, Claude researches your question.'), 1],
     ['/personalizar', L('Skills en tareas y proyectos, y rutinas que corren solas.', 'Skills for tasks and projects, and routines that run on their own.'), 0],
     ['/setup', L('Rehace tu perfil: camino, nivel, motores y estilo.', 'Redoes your profile: path, level, engines and style.'), 0],

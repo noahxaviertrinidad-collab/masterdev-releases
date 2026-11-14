@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <title>Privacidad y datos · MasterDev</title>
-<meta name="description" content="Qué se queda en tu PC, qué pasa por un servidor MasterDev, qué ve Claude si lo conectas, qué sale a cada conector (Discord, Google, Spotify, Twitch, tiendas, GitHub) y qué hace esta web con tus datos.">
+<meta name="description" content="Qué se queda en tu PC, qué pasa por un servidor MasterDev, qué ve Claude si lo conectas, qué sale a cada conector (Discord, Google, Spotify, Twitch, tiendas, GitHub), qué ven tus amigos de tus juegos y qué hace esta web con tus datos.">
 <meta property="og:title" content="Privacidad y datos · MasterDev">
 <meta property="og:description" content="Qué se queda en tu PC y qué no.">
 <meta charset="utf-8">
@@ -117,6 +117,32 @@
           <li><b>GitHub.</b> Solo los repos en los que instalas tu GitHub App (o los de tu token fino), con los permisos que le das: issues con la etiqueta <code>bug</code> (título y pasos, sin rutas de tu PC), Actions y, al abrir un PR, los archivos que cambió esa tarea en una rama nueva. Los webhooks de entrada pasan por tu propio servidor de MasterDev, si lo tienes.</li>
         </ul>
         <p class="small">MasterDev no vende ni comparte los datos que recibe de estos servicios, no los usa para publicidad y solo los usa para las funciones que encendiste. Desde «Cerrar sesión» o en la web de cada servicio puedes quitarle el acceso cuando quieras.</p>
+      </section>
+
+      <section class="pv wide" id="jugar">
+        <p class="st opt">Solo si lo usas</p>
+        <h2>Tus juegos: biblioteca, partidas, amigos y descubrir</h2>
+        <p>La Biblioteca lee en tu PC qué juegos tienes (Steam, Epic, GOG, Xbox, Roblox, Minecraft y los que añades) y cuánto los juegas. Esa lista, tus estanterías, notas, metas y duraciones se quedan en tu PC (carpeta <code>jugador</code> de los datos locales).</p>
+        <ul class="bullets">
+          <li><b>MasterDev no mete nada en tus juegos.</b> No inyecta código, no lee su memoria ni toca sus archivos mientras están abiertos. La capa es una ventana aparte de MasterDev encima del juego; el mando, el sonido y las luces se ajustan desde Windows y vuelven a como estaban al cerrar el juego. Los juegos con antitrampas no admiten mods.</li>
+          <li><b>Tus partidas y tus mods solo se tocan con el juego cerrado y con copia.</b> Copiar, restaurar, activar o quitar mods espera a que el juego esté cerrado; restaurar te enseña antes qué cambia, guarda lo que hay y se puede deshacer, y desactivar un mod deja la carpeta como estaba. MasterDev nunca borra un juego. Lo que te pasa un amigo se comprueba y se instala con copia previa.</li>
+          <li><b>«Copia en Drive»</b> (Conectores › Google) sube ahora también tu carpeta <code>jugador</code> (estanterías, notas, metas, duraciones…: solo esos datos, nunca claves ni tokens) a tu propia Drive, y las copias de tus partidas solo si lo enciendes en ese juego.</li>
+        </ul>
+        <h3>Qué sale a cada servicio (solo ids de juegos)</h3>
+        <ul class="bullets">
+          <li><b>SteamGridDB</b> (con tu clave): el id de Steam o el nombre de un juego para buscar su portada, que se baja una vez y se guarda en tu PC.</li>
+          <li><b>Steam</b>: la tienda recibe ids de juegos sueltos (géneros, requisitos, noticias, lanzamientos), nunca tu lista; con tu clave de la Web API, tu SteamID para tus horas, tus logros, tu lista de deseos y, solo si enciendes «Ver a mis amigos de Steam», tu lista de amigos. Tus amigos de Steam nunca van al servidor de MasterDev.</li>
+          <li><b>IsThereAnyDeal</b> (con tu clave): los ids o nombres de los juegos de tu lista de deseos, para sus precios; si inicias sesión, sincroniza esa lista con tu Waitlist. Sin clave, los nombres van a CheapShark.</li>
+          <li><b>Roblox</b>: tu nombre de usuario público (para tus favoritos) y ids de experiencias; nunca tu cookie ni tu contraseña.</li>
+          <li><b>Microsoft</b>: nada tuyo; MasterDev baja las listas públicas de Game Pass y las cruza con tus pendientes en tu PC.</li>
+          <li>También, solo cuando lo pides: el nombre del juego a speedrun.com, el autor y el paquete a Thunderstore, y la base de rutas de partidas de Ludusavi desde GitHub (comprobando su huella). Lo gratis de la semana viene de Epic y GamerPower sin nada tuyo. OpenRGB funciona dentro de tu PC o tu red.</li>
+        </ul>
+        <h3>Qué ven tus amigos</h3>
+        <ul class="bullets">
+          <li>En <b>Ajustes › Privacidad › Jugar con amigos</b>, todo apagado de serie: tus horas de la semana, tus juegos de Steam (sin horas), que tus amigos se unan desde «Jugando ahora» y ver a tus amigos de Steam. En <b>Perfil › 🎮 Estado y jugador</b>, siete interruptores apagados de serie para tu tarjeta de jugador (favoritos, horas, géneros, logros destacados, top 10, metas y año). Solo sube lo encendido; al apagarlo se borra del servidor, y en invisible nadie ve nada.</li>
+          <li>Lo demás solo sale con tu clic: un grupo que publicas, una invitación a tu partida (sin tu IP; caduca a las 4 h, al usarse o al cerrar el juego), una noche de juego, un reto, una carrera de logros (solo tu porcentaje y la fecha de tu último logro), una recomendación o una entrada de tu diario.</li>
+          <li>«Ver mi partida» y «jugar a distancia» te piden un sí cada vez y van directos entre los dos PC (P2P): solo la ventana del juego, nunca la pantalla entera, y nada se graba. El mando de tu amigo solo llega a la ventana del juego, solo en juegos que marcas como locales, y el pánico lo corta todo.</li>
+        </ul>
       </section>
 
       <section class="pv">
