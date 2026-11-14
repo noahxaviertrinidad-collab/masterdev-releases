@@ -1,8 +1,20 @@
 // MasterDev · web pública.
-// 1) Menú del móvil. 2) El botón de descarga apunta al zip del último release de GitHub (masterdev-releases), con su versión,
+// 1) Menú del móvil. 2) El botón de descarga apunta al instalador (o, si no lo trae, al zip) del último release de GitHub (masterdev-releases), con su versión,
 //    fecha y tamaño; si la API falla, el enlace se queda en la página de releases, que siempre funciona.
 // 3) Idioma: cada idioma tiene su página (/ y /en/). Se recuerda el que eliges y, la primera vez, se sugiere el otro
 //    si tu navegador no está en el idioma de la página (sin redirigir: los buscadores ven las dos).
+// <pick> Build 166 (GU03): qué archivo baja el botón principal. Función pura (la prueba con deno: tests/dl-pick.test.ts).
+// El instalador nuevo (MasterDev-win-Setup.exe, mismo nombre en todas las versiones); si la release no lo trae (las 1.0.x),
+// el zip de siempre. Además la portable. → { main, setup, zip, portable } (asset de GitHub o null).
+function mdPickDownload(rel) {
+  var assets = (rel && rel.assets) || [];
+  var by = function (test) { return assets.filter(function (a) { return a && typeof a.name === 'string' && test(a.name); })[0] || null; };
+  var setup = by(function (n) { return n === 'MasterDev-win-Setup.exe'; });
+  var zip = by(function (n) { return /^MasterDev-[\d.]+-win-x64\.zip$/.test(n); });
+  var portable = by(function (n) { return n === 'MasterDev-win-Portable.zip'; });
+  return { main: setup || zip, setup: setup, zip: zip, portable: portable };
+}
+// </pick>
 (function () {
   var root = document.documentElement;
   var lang = (root.getAttribute('lang') || 'es').slice(0, 2);
@@ -201,8 +213,10 @@
   fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (rel) {
-      var asset = (rel.assets || []).filter(function (a) { return /^MasterDev-[\d.]+-win-x64\.zip$/.test(a.name); })[0];
+      var pick = mdPickDownload(rel); // b166: el instalador, o el zip si la release no lo trae
+      var asset = pick.main;
       if (!asset) return;
+      if (pick.portable) document.querySelectorAll('.dl-portable').forEach(function (a) { a.href = pick.portable.browser_download_url; });
       var v = (rel.tag_name || '').replace(/^v/, '');
       var d = new Date(rel.published_at);
       var date = isNaN(d) ? '' : d.toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' });

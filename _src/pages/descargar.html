@@ -16,7 +16,7 @@
       <div>
         <p class="kicker">{{es:Descargar|en:Download}}</p>
         <h1>{{es:Instala MasterDev en Windows|en:Install MasterDev on Windows}}</h1>
-        <p class="sub">{{es:Un zip, una carpeta y listo. No hay instalador ni nada más que descargar. Aquí tienes cada paso, con lo que vas a ver en pantalla.|en:One zip, one folder, done. No installer and nothing else to download. Here's every step, with what you'll see on screen.}}</p>
+        <p class="sub">{{es:Un instalador, dos clics y listo: se instala solo para ti (sin administrador), se actualiza solo y no necesitas instalar nada más. Aquí tienes cada paso, con lo que vas a ver en pantalla.|en:One installer, two clicks, done: it installs just for you (no administrator), updates itself and you don't need to install anything else. Here's every step, with what you'll see on screen.}}</p>
         <div class="not-win" hidden>
           <p class="st alert">{{es:Solo para Windows|en:Windows only}}</p>
           <p>{{es:Parece que no estás en un PC con Windows. MasterDev solo funciona en Windows 10 y 11: copia el enlace y ábrelo en tu PC.|en:It looks like you're not on a Windows PC. MasterDev only runs on Windows 10 and 11: copy the link and open it on your PC.}}</p>
@@ -27,11 +27,13 @@
         <img src="{{root}}img/app-icon-128.png" alt="" width="72" height="72">
         <p class="dl-title">MasterDev <span class="dl-version-num"></span></p>
         <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
-        <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">{{es:Descargar el zip|en:Download the zip}}</a>
+        <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest/download/MasterDev-win-Setup.exe">{{es:Descargar el instalador|en:Download the installer}}</a>
+        <p class="small dl-alt"><a class="dl-portable" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest/download/MasterDev-win-Portable.zip">{{es:Portable (.zip)|en:Portable (.zip)}}</a> · <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases">{{es:Otras versiones|en:Other versions}}</a> · <a href="instalar.html">{{es:Ayuda para instalar|en:Install help}}</a></p>
       <p class="small gate-note">{{es:Para descargar, crea tu cuenta gratis de MasterDev o entra con ella.|en:To download, create your free MasterDev account or sign in.}}</p>
         <ul class="req">
           <li>Windows 10 / 11 · {{es:64 bits|en:64-bit}}</li>
-          <li>{{es:WebView2 (viene con Windows 11)|en:WebView2 (included with Windows 11)}}</li>
+          <li>{{es:WebView2 (el instalador lo pone si falta)|en:WebView2 (the installer adds it if missing)}}</li>
+          <li>{{es:1 GB libre|en:1 GB free}}</li>
           <li>{{es:Claude Code: opcional|en:Claude Code: optional}}</li>
         </ul>
         <div class="whatsnew">
@@ -54,32 +56,26 @@
       <ol class="howto-steps">
         <li>
           <div class="howto-text">
-            <h3>{{es:Descarga el zip|en:Download the zip}}</h3>
-            <p>{{es:Pulsa «Descargar el zip». Se guarda en tu carpeta Descargas como|en:Click “Download the zip”. It's saved to your Downloads folder as}} <code class="zip-name">MasterDev-x.y.z-win-x64.zip</code>{{es:. Pesa unos 340 MB.|en:. It's about 340 MB.}}</p>
+            <h3>{{es:Descarga el instalador|en:Download the installer}}</h3>
+            <p>{{es:Pulsa «Descargar el instalador». Se guarda en tu carpeta Descargas como|en:Click “Download the installer”. It's saved to your Downloads folder as}} <code class="zip-name">MasterDev-win-Setup.exe</code>{{es:. Pesa unos 270 MB (lleva todo dentro: no hace falta instalar .NET).|en:. It's about 270 MB (everything is included: no need to install .NET).}}</p>
           </div>
           <div class="ill ill-file" aria-hidden="true">
-            <div class="ill-row"><span class="ico-zip"></span><span class="mono zip-name">MasterDev-x.y.z-win-x64.zip</span></div>
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono zip-name">MasterDev-win-Setup.exe</span></div>
           </div>
         </li>
         <li>
           <div class="howto-text">
-            <h3>{{es:Descomprímelo en una carpeta tuya|en:Unzip it into a folder of yours}}</h3>
-            <p>{{es:Clic derecho sobre el zip › «Extraer todo…» y elige una carpeta que no vayas a borrar, por ejemplo|en:Right-click the zip › “Extract All…” and choose a folder you won't delete, for example}} <code>{{es:Documentos\MasterDev-app|en:Documents\MasterDev-app}}</code>. {{es:No lo abras desde dentro del zip: tiene que estar extraído.|en:Don't open it from inside the zip: it has to be extracted.}}</p>
+            <h3>{{es:Ábrelo|en:Open it}}</h3>
+            <p>{{es:Doble clic en|en:Double-click}} <code>MasterDev-win-Setup.exe</code>. {{es:Se instala solo para tu usuario, sin pedir administrador: crea los accesos directos del Escritorio y del menú Inicio, sale en «Aplicaciones instaladas» y, si a tu Windows le falta WebView2, lo instala antes. Al acabar, MasterDev se abre solo.|en:It installs just for your user, without asking for administrator: it creates the Desktop and Start menu shortcuts, shows up in “Installed apps” and, if your Windows lacks WebView2, installs it first. When it finishes, MasterDev opens by itself.}}</p>
           </div>
-          <div class="ill ill-menu" aria-hidden="true">
-            <div class="ill-row"><span class="ico-zip"></span><span class="mono">MasterDev-…zip</span></div>
-            <div class="ctx">
-              <span>{{es:Abrir|en:Open}}</span>
-              <span class="hl">{{es:Extraer todo…|en:Extract All…}}</span>
-              <span>{{es:Compartir|en:Share}}</span>
-              <span>{{es:Copiar como ruta de acceso|en:Copy as path}}</span>
-            </div>
+          <div class="ill ill-file" aria-hidden="true">
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono">{{es:Instalando MasterDev…|en:Installing MasterDev…}}</span></div>
           </div>
         </li>
         <li>
           <div class="howto-text">
-            <h3>{{es:Abre MasterDev.exe|en:Open MasterDev.exe}}</h3>
-            <p>{{es:Dentro de la carpeta, doble clic en|en:In the folder, double-click}} <code>MasterDev.exe</code>. {{es:La primera vez Windows te avisará, porque la app aún no está firmada. Pulsa «Más información» y después «Ejecutar de todos modos».|en:The first time Windows will warn you, because the app isn't signed yet. Click “More info” and then “Run anyway”.}} <a href="#aviso">{{es:Por qué pasa esto|en:Why this happens}}</a>.</p>
+            <h3>{{es:Si Windows te avisa|en:If Windows warns you}}</h3>
+            <p>{{es:Al abrir el instalador, Windows te avisará porque la app aún no está firmada. Pulsa «Más información» y después «Ejecutar de todos modos».|en:The first time Windows will warn you, because the app isn't signed yet. Click “More info” and then “Run anyway”.}} <a href="#aviso">{{es:Por qué pasa esto|en:Why this happens}}</a>.</p>
           </div>
           <div class="ill ill-ss" aria-hidden="true">
             <div class="ss">
@@ -91,7 +87,7 @@
             <span class="ill-arrow">→</span>
             <div class="ss">
               <p class="ss-t">{{es:Windows protegió su PC|en:Windows protected your PC}}</p>
-              <p class="ss-p">{{es:Aplicación: MasterDev.exe<br>Editor: Editor desconocido|en:App: MasterDev.exe<br>Publisher: Unknown publisher}}</p>
+              <p class="ss-p">{{es:Aplicación: MasterDev-win-Setup.exe<br>Editor: Editor desconocido|en:App: MasterDev-win-Setup.exe<br>Publisher: Unknown publisher}}</p>
               <p class="ss-btns"><span class="ss-btn hl-ring">{{es:Ejecutar de todos modos|en:Run anyway}}</span><span class="ss-btn ghost">{{es:No ejecutar|en:Don't run}}</span></p>
             </div>
           </div>
@@ -127,11 +123,11 @@
 
     <section class="doc" id="comprobar" aria-labelledby="comprobar-h">
       <h2 id="comprobar-h">{{es:Comprueba que el archivo es el original|en:Check that the file is the original}}</h2>
-      <p class="sub">{{es:Cada versión publica su huella SHA-256. Si la de tu zip coincide, es exactamente el archivo que se publicó.|en:Every version publishes its SHA-256 fingerprint. If your zip's matches, it's exactly the file that was published.}}</p>
+      <p class="sub">{{es:Cada versión publica su huella SHA-256. Si la de tu archivo coincide, es exactamente el archivo que se publicó.|en:Every version publishes its SHA-256 fingerprint. If your file's matches, it's exactly the file that was published.}}</p>
       <ol class="steps">
         <li><span>{{es:Abre PowerShell (busca «PowerShell» en el menú Inicio) y pega este comando:|en:Open PowerShell (search “PowerShell” in the Start menu) and paste this command:}}</span></li>
       </ol>
-      <div class="cmd"><code class="cmd-text" id="hash-cmd">(Get-FileHash "$env:USERPROFILE\Downloads\MasterDev-x.y.z-win-x64.zip" -Algorithm SHA256).Hash</code><button class="btn ghost small copy" type="button" data-copy-from="hash-cmd">{{es:Copiar|en:Copy}}</button></div>
+      <div class="cmd"><code class="cmd-text" id="hash-cmd">(Get-FileHash "$env:USERPROFILE\Downloads\MasterDev-win-Setup.exe" -Algorithm SHA256).Hash</code><button class="btn ghost small copy" type="button" data-copy-from="hash-cmd">{{es:Copiar|en:Copy}}</button></div>
       <ol class="steps" start="2">
         <li><span>{{es:Debe salir exactamente esta huella (sin importar mayúsculas):|en:You should get exactly this fingerprint (case doesn't matter):}}</span></li>
       </ol>
@@ -145,7 +141,7 @@
         <article class="card">
           <p class="st ok">{{es:Automático|en:Automatic}}</p>
           <h3>{{es:La app te avisa|en:The app tells you}}</h3>
-          <p>{{es:Cuando sale una versión nueva, MasterDev la descarga y te avisa. Se aplica con|en:When a new version comes out, MasterDev downloads it and tells you. It's applied with}} <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. {{es:Tus proyectos y ajustes no se tocan.|en:Your projects and settings aren't touched.}}</p>
+          <p>{{es:MasterDev mira si hay versión nueva al abrirse y cada 6 horas, la descarga sola y la instala al cerrarlo (o al momento con|en:MasterDev checks for a new version when it opens and every 6 hours, downloads it by itself and installs it when you close it (or right away with}} <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>). {{es:Tus proyectos y ajustes no se tocan.|en:Your projects and settings aren't touched.}}</p>
         </article>
         <article class="card">
           <p class="st opt">GitHub</p>

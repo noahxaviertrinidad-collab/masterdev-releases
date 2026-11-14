@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Install, update and uninstall MasterDev · Help</title>
+<meta name="description" content="How MasterDev installs on Windows, what to do about the “Windows protected your PC” warning and Smart App Control, how it updates itself, the portable version and how to uninstall it and delete your data.">
+<meta property="og:title" content="Install MasterDev · Help">
+<meta property="og:description" content="The Windows warning, requirements, updates, portable and uninstalling.">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/en/instalar.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/instalar.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/instalar.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/instalar.html">
+<meta property="og:url" content="https://masterdev.website/en/instalar.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://masterdev.website/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: your indie studio in one window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="../img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/app-icon-128.png">
+<link rel="preload" href="../fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+<a class="skip" href="#contenido">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, home">
+      <img src="../img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="creadores.html">Creators</a>
+      <a href="jugadores.html">Players</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
+      <a href="novedades.html">What's new</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/instalar.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Download</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">Help</p>
+    <h1>Install, update and uninstall</h1>
+    <p class="sub">Everything MasterDev does on your PC, no fine print. Don't have it yet? <a href="descargar.html">Download it here</a>.</p>
+
+    <nav class="toc" aria-label="On this page">
+      <a href="#requisitos">Requirements</a>
+      <a href="#aviso">“Windows protected your PC”</a>
+      <a href="#sac">Smart App Control</a>
+      <a href="#actualizar">Updates</a>
+      <a href="#portable">Portable</a>
+      <a href="#desinstalar">Uninstall</a>
+      <a href="#antes">If you already had it</a>
+    </nav>
+
+    <section class="doc" id="requisitos" aria-labelledby="req-h">
+      <h2 id="req-h">What your PC needs</h2>
+      <ul>
+        <li>Windows 10 (version 2004 or newer) or Windows 11, 64-bit.</li>
+        <li>WebView2, the engine MasterDev draws its window with: the installer adds it if missing. If it's ever missing, MasterDev tells you when it opens, with Microsoft's official link (never a blank window).</li>
+        <li>1 GB free on the disk (and about three times an update's size to download it).</li>
+        <li>No .NET and no administrator needed: everything is included and it installs just for your user, in <code>%LOCALAPPDATA%\MasterDev</code>.</li>
+      </ul>
+      <p class="small">In the app, Settings › Updates › “Check my PC” checks all of it.</p>
+    </section>
+
+    <section class="doc" id="aviso" aria-labelledby="aviso-h">
+      <h2 id="aviso-h">“Windows protected your PC”</h2>
+      <div class="doc-cols">
+        <div>
+          <p class="st alert">If the version isn't signed (today)</p>
+          <ol class="steps">
+            <li><span>Open <code>MasterDev-win-Setup.exe</code>. The blue “Windows protected your PC” screen appears.</span></li>
+            <li><span>Click “More info”.</span></li>
+            <li><span>Click “Run anyway”. The publisher will show as “Unknown publisher”.</span></li>
+          </ol>
+          <p class="small">It happens with every new version until many people have downloaded it. It doesn't mean there's a virus: it means Windows doesn't know the file yet. Only download it from masterdev.website or the official GitHub and, if you like, <a href="descargar.html#comprobar">check its fingerprint</a>.</p>
+        </div>
+        <div>
+          <p class="st ok">If the version is signed</p>
+          <p>Once MasterDev has code signing, Windows will show the publisher's name instead of “Unknown publisher”, the warning will appear much less (or not at all) and Smart App Control will let it through. Each version's notes say whether it's signed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="sac" aria-labelledby="sac-h">
+      <h2 id="sac-h">Smart App Control</h2>
+      <div class="warn">
+        <p>It comes on in some PCs with a freshly installed Windows 11. It blocks unsigned programs <b>with no “Run anyway” option</b>. To check: Windows Security › App &amp; browser control › Smart App Control settings.</p>
+        <p>If it's on, unsigned MasterDev won't open. You can turn it off right there (Windows warns that it can't be turned back on without reinstalling Windows: think it over) or wait for a signed version.</p>
+      </div>
+      <p class="small">Some antivirus may give a false positive with a new unsigned program. If it does, check it on VirusTotal from the download page.</p>
+    </section>
+
+    <section class="doc" id="actualizar" aria-labelledby="act-h">
+      <h2 id="act-h">Automatic updates</h2>
+      <p>MasterDev checks for a new version when it opens and every 6 hours, downloads it in the background (showing its size, and never on a metered connection like mobile data) and installs it <b>when you close it</b>. To skip the wait, press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>: it updates right away and your tasks carry on where they were.</p>
+      <p>Every package is checked (its SHA fingerprint) before installing, and it never goes back to an older version. You can see and change it all in Settings › Updates.</p>
+    </section>
+
+    <section class="doc" id="portable" aria-labelledby="port-h">
+      <h2 id="port-h">The portable version</h2>
+      <p><code>MasterDev-win-Portable.zip</code> isn't installed: unzip it wherever you like (a USB stick, for example) and open <code>MasterDev.exe</code>. Everything lives in its folder: your data in <code>datos</code> and your projects in <code>MasterDev</code>. It also updates itself.</p>
+      <ul>
+        <li>It leaves nothing in Windows: no shortcuts, no masterdev:// links, no scheduled tasks. That's why routines only run while MasterDev is open.</li>
+        <li>Connector keys are stored encrypted for that PC: on another one you'll have to connect them again.</li>
+        <li>To remove it, close MasterDev and delete the folder.</li>
+      </ul>
+    </section>
+
+    <section class="doc" id="desinstalar" aria-labelledby="des-h">
+      <h2 id="des-h">Uninstall</h2>
+      <div class="doc-cols">
+        <div>
+          <p>From Settings › Apps › Installed apps › MasterDev › Uninstall. The program, its shortcuts and what it left in Windows (scheduled tasks and masterdev:// links) are removed. <b>Your data stays</b>: it can't ask from there.</p>
+          <p>Or from the app, in Settings › Updates › “Uninstall MasterDev…”, which lets you choose: keep your data (the default) or send it to the Recycle Bin, and separately, with its own checkbox, your projects. You can export your data first, and a backup is always made.</p>
+        </div>
+        <div>
+          <p class="st opt">Where your things stay</p>
+          <ul>
+            <li>Your data (account, settings, library, music…): <code>%LOCALAPPDATA%\GC3</code></li>
+            <li>Your projects and ideas: <code>Documents\MasterDev</code></li>
+          </ul>
+          <p class="small">To delete them by hand: close MasterDev, paste that path into File Explorer's address bar and delete the folder (it goes to the Recycle Bin).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="antes" aria-labelledby="antes-h">
+      <h2 id="antes-h">If you already had MasterDev</h2>
+      <p>If you installed it before (version 1.0.x or with a friend's launcher), it keeps updating as always. Once on the new version, Settings › Updates offers “Switch to the new installer”: it downloads the installer, checks its fingerprint and opens it; when the new one opens, the old one removes itself. Your data and projects stay where they are. If you say no, nothing changes.</p>
+    </section>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="../img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Where creators and players meet. An indie project, free for Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">How it works</a>
+      <a href="creadores.html">For creators</a>
+      <a href="jugadores.html">For players</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
+      <a href="descargar.html">Download and install</a>
+      <a href="primeros-pasos.html">First 10 minutes</a>
+    </nav>
+    <nav aria-label="Resources">
+      <p class="foot-h">Resources</p>
+      <a href="./#preguntas">FAQ</a>
+      <a href="privacidad.html">Privacy and data</a>
+      <a href="descargar.html#actualizaciones">New version alerts</a>
+      <a href="novedades.html">What's new</a>
+      <a href="hoja-de-ruta.html">Roadmap</a>
+      <a href="prensa.html">Press</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Music credits</a>
+    </nav>
+    <nav aria-label="Language">
+      <p class="foot-h">Language</p>
+      <a href="https://masterdev.website/instalar.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/instalar.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Windows 10 and 11 (64-bit) only.</p>
+  </div>
+</footer>
+<script src="../app.js"></script>
+
+</body>
+</html>

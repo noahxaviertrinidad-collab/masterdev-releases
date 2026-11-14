@@ -69,7 +69,7 @@
       <div>
         <p class="kicker">Download</p>
         <h1>Install MasterDev on Windows</h1>
-        <p class="sub">One zip, one folder, done. No installer and nothing else to download. Here's every step, with what you'll see on screen.</p>
+        <p class="sub">One installer, two clicks, done: it installs just for you (no administrator), updates itself and you don't need to install anything else. Here's every step, with what you'll see on screen.</p>
         <div class="not-win" hidden>
           <p class="st alert">Windows only</p>
           <p>It looks like you're not on a Windows PC. MasterDev only runs on Windows 10 and 11: copy the link and open it on your PC.</p>
@@ -80,11 +80,13 @@
         <img src="../img/app-icon-128.png" alt="" width="72" height="72">
         <p class="dl-title">MasterDev <span class="dl-version-num"></span></p>
         <p class="mono dl-sub"><span class="dl-date"></span> <span class="dl-size"></span></p>
-        <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest">Download the zip</a>
+        <a class="btn primary wide dl-link" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest/download/MasterDev-win-Setup.exe">Download the installer</a>
+        <p class="small dl-alt"><a class="dl-portable" href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases/latest/download/MasterDev-win-Portable.zip">Portable (.zip)</a> · <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases/releases">Other versions</a> · <a href="instalar.html">Install help</a></p>
       <p class="small gate-note">To download, create your free MasterDev account or sign in.</p>
         <ul class="req">
           <li>Windows 10 / 11 · 64-bit</li>
-          <li>WebView2 (included with Windows 11)</li>
+          <li>WebView2 (the installer adds it if missing)</li>
+          <li>1 GB free</li>
           <li>Claude Code: optional</li>
         </ul>
         <div class="whatsnew">
@@ -107,32 +109,26 @@
       <ol class="howto-steps">
         <li>
           <div class="howto-text">
-            <h3>Download the zip</h3>
-            <p>Click “Download the zip”. It's saved to your Downloads folder as <code class="zip-name">MasterDev-x.y.z-win-x64.zip</code>. It's about 340 MB.</p>
+            <h3>Download the installer</h3>
+            <p>Click “Download the installer”. It's saved to your Downloads folder as <code class="zip-name">MasterDev-win-Setup.exe</code>. It's about 270 MB (everything is included: no need to install .NET).</p>
           </div>
           <div class="ill ill-file" aria-hidden="true">
-            <div class="ill-row"><span class="ico-zip"></span><span class="mono zip-name">MasterDev-x.y.z-win-x64.zip</span></div>
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono zip-name">MasterDev-win-Setup.exe</span></div>
           </div>
         </li>
         <li>
           <div class="howto-text">
-            <h3>Unzip it into a folder of yours</h3>
-            <p>Right-click the zip › “Extract All…” and choose a folder you won't delete, for example <code>Documents\MasterDev-app</code>. Don't open it from inside the zip: it has to be extracted.</p>
+            <h3>Open it</h3>
+            <p>Double-click <code>MasterDev-win-Setup.exe</code>. It installs just for your user, without asking for administrator: it creates the Desktop and Start menu shortcuts, shows up in “Installed apps” and, if your Windows lacks WebView2, installs it first. When it finishes, MasterDev opens by itself.</p>
           </div>
-          <div class="ill ill-menu" aria-hidden="true">
-            <div class="ill-row"><span class="ico-zip"></span><span class="mono">MasterDev-…zip</span></div>
-            <div class="ctx">
-              <span>Open</span>
-              <span class="hl">Extract All…</span>
-              <span>Share</span>
-              <span>Copy as path</span>
-            </div>
+          <div class="ill ill-file" aria-hidden="true">
+            <div class="ill-row"><span class="ico-zip"></span><span class="mono">Installing MasterDev…</span></div>
           </div>
         </li>
         <li>
           <div class="howto-text">
-            <h3>Open MasterDev.exe</h3>
-            <p>In the folder, double-click <code>MasterDev.exe</code>. The first time Windows will warn you, because the app isn't signed yet. Click “More info” and then “Run anyway”. <a href="#aviso">Why this happens</a>.</p>
+            <h3>If Windows warns you</h3>
+            <p>The first time Windows will warn you, because the app isn't signed yet. Click “More info” and then “Run anyway”. <a href="#aviso">Why this happens</a>.</p>
           </div>
           <div class="ill ill-ss" aria-hidden="true">
             <div class="ss">
@@ -144,7 +140,7 @@
             <span class="ill-arrow">→</span>
             <div class="ss">
               <p class="ss-t">Windows protected your PC</p>
-              <p class="ss-p">App: MasterDev.exe<br>Publisher: Unknown publisher</p>
+              <p class="ss-p">App: MasterDev-win-Setup.exe<br>Publisher: Unknown publisher</p>
               <p class="ss-btns"><span class="ss-btn hl-ring">Run anyway</span><span class="ss-btn ghost">Don't run</span></p>
             </div>
           </div>
@@ -180,11 +176,11 @@
 
     <section class="doc" id="comprobar" aria-labelledby="comprobar-h">
       <h2 id="comprobar-h">Check that the file is the original</h2>
-      <p class="sub">Every version publishes its SHA-256 fingerprint. If your zip's matches, it's exactly the file that was published.</p>
+      <p class="sub">Every version publishes its SHA-256 fingerprint. If your file's matches, it's exactly the file that was published.</p>
       <ol class="steps">
         <li><span>Open PowerShell (search “PowerShell” in the Start menu) and paste this command:</span></li>
       </ol>
-      <div class="cmd"><code class="cmd-text" id="hash-cmd">(Get-FileHash "$env:USERPROFILE\Downloads\MasterDev-x.y.z-win-x64.zip" -Algorithm SHA256).Hash</code><button class="btn ghost small copy" type="button" data-copy-from="hash-cmd">Copy</button></div>
+      <div class="cmd"><code class="cmd-text" id="hash-cmd">(Get-FileHash "$env:USERPROFILE\Downloads\MasterDev-win-Setup.exe" -Algorithm SHA256).Hash</code><button class="btn ghost small copy" type="button" data-copy-from="hash-cmd">Copy</button></div>
       <ol class="steps" start="2">
         <li><span>You should get exactly this fingerprint (case doesn't matter):</span></li>
       </ol>
@@ -198,7 +194,7 @@
         <article class="card">
           <p class="st ok">Automatic</p>
           <h3>The app tells you</h3>
-          <p>When a new version comes out, MasterDev downloads it and tells you. It's applied with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. Your projects and settings aren't touched.</p>
+          <p>MasterDev checks for a new version when it opens and every 6 hours, downloads it by itself and installs it when you close it (or right away with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>). Your projects and settings aren't touched.</p>
         </article>
         <article class="card">
           <p class="st opt">GitHub</p>

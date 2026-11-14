@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+<title>{{es:Instalar, actualizar y desinstalar MasterDev · Ayuda|en:Install, update and uninstall MasterDev · Help}}</title>
+<meta name="description" content="{{es:Cómo se instala MasterDev en Windows, qué hacer con el aviso «Windows protegió su PC» y Smart App Control, cómo se actualiza solo, la versión portable y cómo desinstalarlo y borrar tus datos.|en:How MasterDev installs on Windows, what to do about the “Windows protected your PC” warning and Smart App Control, how it updates itself, the portable version and how to uninstall it and delete your data.}}">
+<meta property="og:title" content="{{es:Instalar MasterDev · Ayuda|en:Install MasterDev · Help}}">
+<meta property="og:description" content="{{es:El aviso de Windows, requisitos, actualizaciones, portable y desinstalar.|en:The Windows warning, requirements, updates, portable and uninstalling.}}">
+{{> head}}
+</head>
+<body>
+{{> nav}}
+<main id="contenido" class="page">
+  <div class="wrap">
+    <p class="kicker">{{es:Ayuda|en:Help}}</p>
+    <h1>{{es:Instalar, actualizar y desinstalar|en:Install, update and uninstall}}</h1>
+    <p class="sub">{{es:Todo lo que pasa en tu PC con MasterDev, sin letra pequeña. ¿Aún no lo tienes?|en:Everything MasterDev does on your PC, no fine print. Don't have it yet?}} <a href="descargar.html">{{es:Descárgalo aquí|en:Download it here}}</a>.</p>
+
+    <nav class="toc" aria-label="{{es:En esta página|en:On this page}}">
+      <a href="#requisitos">{{es:Requisitos|en:Requirements}}</a>
+      <a href="#aviso">{{es:«Windows protegió su PC»|en:“Windows protected your PC”}}</a>
+      <a href="#sac">Smart App Control</a>
+      <a href="#actualizar">{{es:Actualizaciones|en:Updates}}</a>
+      <a href="#portable">{{es:Portable|en:Portable}}</a>
+      <a href="#desinstalar">{{es:Desinstalar|en:Uninstall}}</a>
+      <a href="#antes">{{es:Si ya lo tenías|en:If you already had it}}</a>
+    </nav>
+
+    <section class="doc" id="requisitos" aria-labelledby="req-h">
+      <h2 id="req-h">{{es:Lo que necesita tu PC|en:What your PC needs}}</h2>
+      <ul>
+        <li>{{es:Windows 10 (versión 2004 o más nueva) o Windows 11, de 64 bits.|en:Windows 10 (version 2004 or newer) or Windows 11, 64-bit.}}</li>
+        <li>{{es:WebView2, el motor con el que MasterDev pinta su ventana: el instalador lo pone si falta. Si alguna vez falta, MasterDev te lo dice al abrirse con el enlace oficial de Microsoft (nunca una ventana en blanco).|en:WebView2, the engine MasterDev draws its window with: the installer adds it if missing. If it's ever missing, MasterDev tells you when it opens, with Microsoft's official link (never a blank window).}}</li>
+        <li>{{es:1 GB libre en el disco (y unas tres veces el tamaño de una actualización para bajarla).|en:1 GB free on the disk (and about three times an update's size to download it).}}</li>
+        <li>{{es:No hace falta .NET ni administrador: va todo dentro y se instala solo para tu usuario, en|en:No .NET and no administrator needed: everything is included and it installs just for your user, in}} <code>%LOCALAPPDATA%\MasterDev</code>.</li>
+      </ul>
+      <p class="small">{{es:En la app, Ajustes › Actualizaciones › «Comprobar mi PC» lo revisa todo.|en:In the app, Settings › Updates › “Check my PC” checks all of it.}}</p>
+    </section>
+
+    <section class="doc" id="aviso" aria-labelledby="aviso-h">
+      <h2 id="aviso-h">{{es:«Windows protegió su PC»|en:“Windows protected your PC”}}</h2>
+      <div class="doc-cols">
+        <div>
+          <p class="st alert">{{es:Si la versión no está firmada (hoy)|en:If the version isn't signed (today)}}</p>
+          <ol class="steps">
+            <li><span>{{es:Abre|en:Open}} <code>MasterDev-win-Setup.exe</code>. {{es:Sale la pantalla azul «Windows protegió su PC».|en:The blue “Windows protected your PC” screen appears.}}</span></li>
+            <li><span>{{es:Pulsa «Más información».|en:Click “More info”.}}</span></li>
+            <li><span>{{es:Pulsa «Ejecutar de todas formas». El editor saldrá como «Editor desconocido».|en:Click “Run anyway”. The publisher will show as “Unknown publisher”.}}</span></li>
+          </ol>
+          <p class="small">{{es:Pasa con cada versión nueva hasta que mucha gente la ha descargado. No significa que haya un virus: significa que Windows aún no conoce el archivo. Descárgalo solo de masterdev.website o del GitHub oficial y, si quieres,|en:It happens with every new version until many people have downloaded it. It doesn't mean there's a virus: it means Windows doesn't know the file yet. Only download it from masterdev.website or the official GitHub and, if you like,}} <a href="descargar.html#comprobar">{{es:comprueba su huella|en:check its fingerprint}}</a>.</p>
+        </div>
+        <div>
+          <p class="st ok">{{es:Si la versión está firmada|en:If the version is signed}}</p>
+          <p>{{es:Cuando MasterDev tenga firma de código, Windows enseñará el nombre del editor en vez de «Editor desconocido», el aviso saldrá mucho menos (o nada) y Smart App Control la dejará pasar. Las notas de cada versión dicen si va firmada.|en:Once MasterDev has code signing, Windows will show the publisher's name instead of “Unknown publisher”, the warning will appear much less (or not at all) and Smart App Control will let it through. Each version's notes say whether it's signed.}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="sac" aria-labelledby="sac-h">
+      <h2 id="sac-h">Smart App Control</h2>
+      <div class="warn">
+        <p>{{es:Viene encendido en algunos PC con Windows 11 instalado de cero. Bloquea los programas sin firma <b>sin opción de «Ejecutar de todas formas»</b>. Para comprobarlo: Seguridad de Windows › Control de aplicaciones y navegador › Configuración de Smart App Control.|en:It comes on in some PCs with a freshly installed Windows 11. It blocks unsigned programs <b>with no “Run anyway” option</b>. To check: Windows Security › App &amp; browser control › Smart App Control settings.}}</p>
+        <p>{{es:Si está encendido, MasterDev sin firmar no se abrirá. Puedes apagarlo ahí mismo (Windows avisa de que no se puede volver a encender sin reinstalar Windows: decídelo con calma) o esperar a una versión firmada.|en:If it's on, unsigned MasterDev won't open. You can turn it off right there (Windows warns that it can't be turned back on without reinstalling Windows: think it over) or wait for a signed version.}}</p>
+      </div>
+      <p class="small">{{es:Algún antivirus puede dar un falso positivo con un programa nuevo sin firma. Si pasa, compruébalo en VirusTotal desde la página de descarga.|en:Some antivirus may give a false positive with a new unsigned program. If it does, check it on VirusTotal from the download page.}}</p>
+    </section>
+
+    <section class="doc" id="actualizar" aria-labelledby="act-h">
+      <h2 id="act-h">{{es:Actualizaciones solas|en:Automatic updates}}</h2>
+      <p>{{es:MasterDev mira si hay versión nueva al abrirse y cada 6 horas, la baja en segundo plano (con el tamaño a la vista y nunca con una conexión medida, como los datos del móvil) y la instala <b>al cerrarlo</b>. Para no esperar, pulsa|en:MasterDev checks for a new version when it opens and every 6 hours, downloads it in the background (showing its size, and never on a metered connection like mobile data) and installs it <b>when you close it</b>. To skip the wait, press}} <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>{{es:: se actualiza al momento y tus tareas siguen donde iban.|en:: it updates right away and your tasks carry on where they were.}}</p>
+      <p>{{es:Cada paquete se comprueba (su huella SHA) antes de instalarlo, y nunca baja a una versión más vieja. Todo se ve y se cambia en Ajustes › Actualizaciones.|en:Every package is checked (its SHA fingerprint) before installing, and it never goes back to an older version. You can see and change it all in Settings › Updates.}}</p>
+    </section>
+
+    <section class="doc" id="portable" aria-labelledby="port-h">
+      <h2 id="port-h">{{es:La versión portable|en:The portable version}}</h2>
+      <p><code>MasterDev-win-Portable.zip</code> {{es:no se instala: descomprímelo donde quieras (un USB, por ejemplo) y abre|en:isn't installed: unzip it wherever you like (a USB stick, for example) and open}} <code>MasterDev.exe</code>. {{es:Todo va dentro de su carpeta: tus datos en|en:Everything lives in its folder: your data in}} <code>datos</code> {{es:y tus proyectos en|en:and your projects in}} <code>MasterDev</code>. {{es:También se actualiza sola.|en:It also updates itself.}}</p>
+      <ul>
+        <li>{{es:No deja nada en Windows: ni accesos directos, ni enlaces masterdev://, ni tareas programadas. Por eso las rutinas solo corren con MasterDev abierto.|en:It leaves nothing in Windows: no shortcuts, no masterdev:// links, no scheduled tasks. That's why routines only run while MasterDev is open.}}</li>
+        <li>{{es:Las claves de los conectores se guardan cifradas para ese PC: en otro, tendrás que volver a conectarlas.|en:Connector keys are stored encrypted for that PC: on another one you'll have to connect them again.}}</li>
+        <li>{{es:Para quitarla, cierra MasterDev y borra la carpeta.|en:To remove it, close MasterDev and delete the folder.}}</li>
+      </ul>
+    </section>
+
+    <section class="doc" id="desinstalar" aria-labelledby="des-h">
+      <h2 id="des-h">{{es:Desinstalar|en:Uninstall}}</h2>
+      <div class="doc-cols">
+        <div>
+          <p>{{es:Desde Configuración › Aplicaciones › Aplicaciones instaladas › MasterDev › Desinstalar. Se quitan el programa, sus accesos directos y lo que dejó en Windows (las tareas programadas y los enlaces masterdev://). <b>Tus datos se quedan</b>: desde ahí no se puede preguntar.|en:From Settings › Apps › Installed apps › MasterDev › Uninstall. The program, its shortcuts and what it left in Windows (scheduled tasks and masterdev:// links) are removed. <b>Your data stays</b>: it can't ask from there.}}</p>
+          <p>{{es:O desde la app, en Ajustes › Actualizaciones › «Desinstalar MasterDev…», que te deja elegir: conservar tus datos (de serie) o mandarlos a la Papelera, y aparte, con su casilla, tus proyectos. Antes puedes exportar tus datos, y siempre se hace una copia.|en:Or from the app, in Settings › Updates › “Uninstall MasterDev…”, which lets you choose: keep your data (the default) or send it to the Recycle Bin, and separately, with its own checkbox, your projects. You can export your data first, and a backup is always made.}}</p>
+        </div>
+        <div>
+          <p class="st opt">{{es:Dónde quedan tus cosas|en:Where your things stay}}</p>
+          <ul>
+            <li>{{es:Tus datos (cuenta, ajustes, biblioteca, música…):|en:Your data (account, settings, library, music…):}} <code>%LOCALAPPDATA%\GC3</code></li>
+            <li>{{es:Tus proyectos e ideas:|en:Your projects and ideas:}} <code>{{es:Documentos\MasterDev|en:Documents\MasterDev}}</code></li>
+          </ul>
+          <p class="small">{{es:Para borrarlos a mano: cierra MasterDev, pega esa ruta en la barra del Explorador de archivos y borra la carpeta (va a la Papelera).|en:To delete them by hand: close MasterDev, paste that path into File Explorer's address bar and delete the folder (it goes to the Recycle Bin).}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc" id="antes" aria-labelledby="antes-h">
+      <h2 id="antes-h">{{es:Si ya tenías MasterDev|en:If you already had MasterDev}}</h2>
+      <p>{{es:Si lo instalaste antes (la versión 1.0.x o con el lanzador de un amigo), se sigue actualizando como siempre. Ya en la versión nueva, Ajustes › Actualizaciones te ofrece «Pasar al instalador nuevo»: baja el instalador, comprueba su huella y lo abre; al abrirse la nueva, la vieja se quita sola. Tus datos y tus proyectos se quedan donde están. Si dices que no, todo sigue igual.|en:If you installed it before (version 1.0.x or with a friend's launcher), it keeps updating as always. Once on the new version, Settings › Updates offers “Switch to the new installer”: it downloads the installer, checks its fingerprint and opens it; when the new one opens, the old one removes itself. Your data and projects stay where they are. If you say no, nothing changes.}}</p>
+    </section>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>
