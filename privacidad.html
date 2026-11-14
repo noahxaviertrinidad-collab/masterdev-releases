@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <title>Privacidad y datos · MasterDev</title>
-<meta name="description" content="Qué se queda en tu PC, qué pasa por un servidor MasterDev, qué ve Claude si lo conectas y qué hace esta web con tus datos.">
+<meta name="description" content="Qué se queda en tu PC, qué pasa por un servidor MasterDev, qué ve Claude si lo conectas, qué sale a cada conector (Discord, Google, Spotify, Twitch, tiendas, GitHub) y qué hace esta web con tus datos.">
 <meta property="og:title" content="Privacidad y datos · MasterDev">
 <meta property="og:description" content="Qué se queda en tu PC y qué no.">
 <meta charset="utf-8">
@@ -67,7 +67,7 @@
     <p class="kicker">Privacidad</p>
     <h1>Tus datos, en claro</h1>
     <p class="sub">MasterDev está pensado para que tu trabajo se quede en tu PC. Esto es lo que sale de él, cuándo y hacia dónde.</p>
-    <p class="small">Última actualización: 10 de noviembre de 2026.</p>
+    <p class="small">Última actualización: 14 de noviembre de 2026.</p>
 
     <div class="privacy">
       <section class="pv">
@@ -94,6 +94,29 @@
           <li>De tu música solo se sube lo que activas: tu top del mes y tu lista destacada en el perfil, lo más escuchado de tus últimas semanas para las mezclas con amigos, las canciones que compartes en el chat o en un canal de música y la banda sonora que publicas en Descubrir. Al quitarlo, se borra del servidor.</li>
           <li>Puedes alojar tu propio servidor: entonces los datos se quedan en tu máquina.</li>
         </ul>
+      </section>
+
+      <section class="pv wide" id="conectores">
+        <p class="st opt">Solo si los conectas</p>
+        <h2>Conectores: Discord, Spotify, Google, redes, Twitch, tiendas y GitHub</h2>
+        <p>Cada conector usa tu propia app de desarrollador (la creas tú en la web de cada servicio) y no hace nada hasta que pegas su clave e inicias sesión. Sin clave, funciona en modo de prueba con datos de ejemplo y no sale nada.</p>
+        <ul class="bullets">
+          <li><b>Tus claves y tokens, cifrados en tu PC.</b> Se guardan con el cifrado de Windows (DPAPI, ligado a tu usuario), en la carpeta de datos locales de MasterDev, nunca en tus proyectos. No se enseñan, no se copian en las copias de seguridad, no se mandan a ninguna IA ni a ningún servidor de MasterDev, y solo viajan al servicio al que pertenecen. Las tareas de Claude que usan conectores nunca reciben un token: MasterDev hace la llamada.</li>
+          <li><b>Iniciar sesión</b> abre la web del servicio en tu navegador (y vuelve a MasterDev por <code>127.0.0.1</code>, en tu propio PC) o te da un código para escribirlo en su web. Cada función pide solo su permiso cuando la enciendes. «Cerrar sesión» borra el token y lo revoca en el servicio.</li>
+          <li><b>Nada se publica sin ti.</b> Todo lo que publica (un post, un anuncio, una build, un lugar de Roblox, un issue o un PR) te enseña antes lo que va a salir y espera tu sí: en las tiendas y Roblox, con un código de confirmación; en Reddit, solo con tu clic; en X, después de aceptar lo que cuesta. Los Shorts y las emisiones a YouTube salen como privados. Las recetas nacen apagadas y piden aprobación.</li>
+        </ul>
+        <h3>Qué sale a cada servicio</h3>
+        <ul class="bullets">
+          <li><b>Discord.</b> Tu estado (el juego que tienes abierto, el proyecto en el que trabajas o «un juego secreto», la canción que suena) va a la app de Discord de tu PC, sin internet, solo si lo enciendes. «Tu cuenta» pide solo <code>identify</code> (tu nombre de Discord). El bot, con el token que pegas, publica los anuncios, capturas y clips que mandas, registra /bug y /playtest en los servidores que eliges, lleva los puentes que creas y lee las menciones y los mensajes de los canales que eliges para el resumen de la comunidad (ese resumen lo hace tu IA, con esos mensajes como datos de terceros).</li>
+          <li><b>Spotify y Last.fm.</b> Spotify (sin secreto) lee lo que suena, tus listas y tus canciones, recibe tus órdenes del mando y guarda la canción a la que das ♥. Last.fm recibe el artista, el título, el álbum, la duración y la hora de cada canción que escuchas en Mi música (scrobble) y tus ♥.</li>
+          <li><b>Google y YouTube.</b> Cada función pide su permiso: YouTube lee tus suscripciones y las cifras de tu canal (<code>youtube.readonly</code>, <code>yt-analytics.readonly</code>) y solo sube un clip si amplías permisos (<code>youtube.upload</code>), siempre como privado. <b>Drive</b> usa solo <code>drive.file</code>: MasterDev solo ve y crea lo suyo (la carpeta <code>MasterDev</code> con tus copias de seguridad y las imágenes que mandas), nunca el resto de tu Drive. <b>Gmail</b> es solo lectura (<code>gmail.readonly</code>) y con lo justo: busca correos de los últimos 3 días de las tiendas de la lista (Steam, itch.io, Roblox…), lee solo su remitente, asunto, fecha y extracto (nunca el cuerpo entero ni los adjuntos) y los deja en tu Bandeja con un enlace; si las reglas no saben clasificar uno, el asunto y el extracto van a tu IA (con una IA local no salen del PC). Nunca envía, borra ni cambia correos. <b>Calendar</b> lee tus eventos y solo escribe en el calendario «MasterDev» que crea (<code>calendar.app.created</code>); Search Console y Analytics son de solo lectura.</li>
+          <li><b>Bluesky, X, Reddit y Pinterest.</b> Bluesky usa una contraseña de app (sin acceso a mensajes directos); X, Reddit y Pinterest, su inicio de sesión. Reciben el texto, las imágenes (sin metadatos) o el clip de cada post que apruebas y devuelven sus cifras. Pinterest es solo lectura: trae los pines del tablero que eliges a tus referencias. «Proponer» o «Revisar con IA» mandan tu borrador (y, para Reddit, las normas del subreddit) a tu IA.</li>
+          <li><b>Obsidian.</b> Todo en tu PC, sin internet: MasterDev lee las notas de tu vault para enlazarlas con tus ideas y, si se lo permites, instala su plugin en él.</li>
+          <li><b>Twitch, OBS y emitir.</b> Twitch (cliente público, sin secreto) recibe tu búsqueda de streamers y los ids de tu lista para saber quién está en directo; cada función pide su permiso (a quién sigues, chat de solo lectura, clips, emitir). El chat nunca envía mensajes. Al emitir, tu vídeo y tu audio van a Twitch o a YouTube (privado) con tu clave de emisión. OBS se conecta solo en tu PC o tu red local y nunca recibe tu contraseña (solo una prueba cifrada).</li>
+          <li><b>Steam, itch.io y Roblox.</b> Steam lee tus horas y logros con tu clave de la Web API y, si pegas la clave de socio, tus ventas y wishlists (solo lectura). itch.io lee tus juegos y, al confirmar, butler sube la carpeta de tu juego al canal que eliges; butler se descarga de su release oficial de GitHub solo si lo aceptas, comprobando su huella. Roblox Open Cloud recibe el lugar, los assets (imágenes sin metadatos, audio, modelos) y los avisos que confirmas.</li>
+          <li><b>GitHub.</b> Solo los repos en los que instalas tu GitHub App (o los de tu token fino), con los permisos que le das: issues con la etiqueta <code>bug</code> (título y pasos, sin rutas de tu PC), Actions y, al abrir un PR, los archivos que cambió esa tarea en una rama nueva. Los webhooks de entrada pasan por tu propio servidor de MasterDev, si lo tienes.</li>
+        </ul>
+        <p class="small">MasterDev no vende ni comparte los datos que recibe de estos servicios, no los usa para publicidad y solo los usa para las funciones que encendiste. Desde «Cerrar sesión» o en la web de cada servicio puedes quitarle el acceso cuando quieras.</p>
       </section>
 
       <section class="pv">
@@ -129,7 +152,7 @@
         </ul>
       </section>
 
-      <section class="pv">
+      <section class="pv wide">
         <p class="st ok">Esta web</p>
         <h2>masterdev.website</h2>
         <ul class="bullets">

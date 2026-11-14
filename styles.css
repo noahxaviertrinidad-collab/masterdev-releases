@@ -541,3 +541,5 @@ html[data-theme="synthwave"] .hero { background: radial-gradient(800px 380px at 
   .theme-pick { padding: 12px 0; border-bottom: 1px solid var(--border); }
   .theme-menu { position: static; box-shadow: none; margin-top: 8px; }
 }
+.pv.wide { grid-column: 1 / -1; }
+.pv h3 { font-size: var(--fs-md); margin: var(--s4) 0 var(--s2); }
