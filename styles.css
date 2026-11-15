@@ -324,6 +324,8 @@ details p { color: var(--text-2); margin-top: var(--s3); max-width: 70ch; }
 
 .shot { margin: 0; border: 1px solid var(--border-2); border-radius: 12px; overflow: hidden; background: var(--deep); box-shadow: 0 24px 60px rgb(0 0 0 / .45); }
 .shot img { display: block; width: 100%; height: auto; }
+.shot video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--deep); }
+.trailer-shot { margin-top: var(--s5); }
 .gallery { margin-top: var(--s6); }
 .g-tabs { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s4); }
 .g-tabs button { font: 500 var(--fs-sm) var(--display); color: var(--text-2); background: transparent; border: 1px solid var(--border-2); border-radius: 999px; padding: 7px 14px; cursor: pointer; min-height: 38px; }

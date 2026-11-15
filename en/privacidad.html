@@ -78,6 +78,7 @@
           <li>Ideas, projects, tasks, notes, voice notes, library, settings and themes are stored on your PC.</li>
           <li>The local account (@username and password) only exists on your PC. The password isn't stored: only an encrypted fingerprint.</li>
           <li>The local account locks the window, but doesn't encrypt your files: anyone using your Windows session can open them.</li>
+          <li>What you learn about MasterDev (the features you already use, your quests, the tips you dismissed, your map and your paths) and what you chose in the welcome are stored on your PC and never leave it: not to the AI, not to the server, not in a report. “Bring what you already have” only looks at your folders on your PC and copies nothing you don't tick.</li>
           <li>MasterDev has no ads and no third-party trackers.</li>
         </ul>
       </section>
@@ -170,7 +171,8 @@
         <p class="st alert">App connections</p>
         <h2>When it goes online</h2>
         <ul class="bullets">
-          <li>To check GitHub for new versions.</li>
+          <li>To look for and download new versions: the app asks GitHub (MasterDev's releases) for the version list and, if there's a new one, its package; it sends nothing of yours, just the download. In Settings › Updates you decide “Search now” and “Update when MasterDev closes”; the portable version doesn't update itself.</li>
+          <li>Help › Status asks your MasterDev server whether it responds, its version and known issues (the same as this site's status page), and shows the latest version the update check found.</li>
           <li>Only when you click “Send” in “Report a problem”: first you see exactly what gets sent, already clean (without your Windows user name or your PC's paths, emails, tokens, your project names or the text of tasks or messages), and it goes to your MasterDev server; the screenshot is optional. You can also save it as a .zip and send it yourself. If it ever opens on GitHub, only the title and version go in the address.</li>
           <li>Only when you click “Download”: tools like ffmpeg, PresentMon or Ollama, from their official sites and checked to arrive complete. Recordings, their transcription and search all happen on your PC.</li>
           <li>Only if you turn on phone alerts: the alert text (without paths, emails or keys) goes to ntfy.sh, to the private topic you create, or to the Discord webhook you paste. Anyone who knows that topic can read your alerts, so don't share its QR.</li>
@@ -191,7 +193,8 @@
           <li>No cookies and no analytics. Fonts are served from the site itself.</li>
           <li>If you create an account, the site creates it directly on the official MasterDev server (api.masterdev.website): your @username, display name, path and an encrypted fingerprint of your password (never the password itself). You must be 13 or older.</li>
           <li>While you're signed in, your browser keeps the session token and your @username (local storage). “Sign out” deletes them.</li>
-          <li>To show the latest version, your browser asks GitHub's public API.</li>
+          <li>To show the latest version, your browser asks GitHub's public API; the installer and the portable version are downloaded from GitHub.</li>
+          <li>The status page asks api.masterdev.website from your browser (no session, no cookies) whether it responds. The help center and its search work inside the site, without asking anyone.</li>
           <li>Your browser remembers the language you picked (local storage, it never leaves your device).</li>
           <li>The site is hosted on GitHub Pages, which may log technical visit data like any web server.</li>
         </ul>

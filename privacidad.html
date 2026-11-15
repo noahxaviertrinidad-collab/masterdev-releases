@@ -78,6 +78,7 @@
           <li>Ideas, proyectos, tareas, notas, notas de voz, biblioteca, ajustes y temas se guardan en tu PC.</li>
           <li>La cuenta local (@usuario y contraseña) solo existe en tu PC. La contraseña no se guarda: solo una huella cifrada.</li>
           <li>La cuenta local bloquea la ventana, pero no cifra tus archivos: quien use tu sesión de Windows puede abrirlos.</li>
+          <li>Lo que aprendes de MasterDev (las funciones que ya usas, tus misiones, los consejos que quitaste, tu mapa y tus rutas) y lo que elegiste en la bienvenida se guardan en tu PC y no salen nunca: ni a la IA, ni al servidor, ni en un informe. «Traer lo que ya tienes» solo mira tus carpetas en tu PC y no copia nada que no marques.</li>
           <li>MasterDev no tiene publicidad ni rastreadores de terceros.</li>
         </ul>
       </section>
@@ -170,7 +171,8 @@
         <p class="st alert">Conexiones de la app</p>
         <h2>Cuándo se conecta a internet</h2>
         <ul class="bullets">
-          <li>Para buscar versiones nuevas en GitHub.</li>
+          <li>Para buscar y bajar versiones nuevas: la app pide a GitHub (las releases de MasterDev) la lista de versiones y, si hay una nueva, su paquete; no envía nada tuyo, solo la descarga. En Ajustes › Actualizaciones decides «Buscar ahora» y «Actualizar al cerrar»; la portable no se actualiza sola.</li>
+          <li>Ayuda › Estado pregunta a tu servidor de MasterDev si responde, su versión y los fallos conocidos (lo mismo que la página de estado de esta web), y te enseña la última versión que encontró la búsqueda de actualizaciones.</li>
           <li>Solo cuando pulsas «Enviar» en «Reportar un problema»: antes ves exactamente lo que se manda, ya limpio (sin tu nombre de usuario de Windows ni rutas de tu PC, correos, tokens, nombres de tus proyectos ni textos de tareas o mensajes), y va a tu servidor de MasterDev; la captura es opcional. También puedes guardarlo como .zip y mandarlo tú. Si algún día se abre en GitHub, en la dirección solo van el título y la versión.</li>
           <li>Solo cuando pulsas «Descargar»: herramientas como ffmpeg, PresentMon u Ollama, desde su web oficial y comprobando que llegan enteras. Las grabaciones, su transcripción y la búsqueda se hacen en tu PC.</li>
           <li>Solo si activas los avisos al móvil: el texto del aviso (sin rutas, correos ni claves) va a ntfy.sh, al tema privado que creas, o al webhook de Discord que pegues. Quien conozca ese tema puede leer tus avisos, así que no compartas su QR.</li>
@@ -191,7 +193,8 @@
           <li>Sin cookies ni analítica. Las fuentes se sirven desde la propia web.</li>
           <li>Si creas una cuenta, la web la crea directamente en el servidor oficial de MasterDev (api.masterdev.website): tu @usuario, tu nombre visible, tu camino y una huella cifrada de tu contraseña (nunca la contraseña). Hay que tener 13 años o más.</li>
           <li>Mientras tienes la sesión abierta, tu navegador guarda el token de la sesión y tu @usuario (almacenamiento local). «Cerrar sesión» los borra.</li>
-          <li>Para mostrar la última versión, tu navegador pregunta a la API pública de GitHub.</li>
+          <li>Para mostrar la última versión, tu navegador pregunta a la API pública de GitHub; el instalador y la portable se descargan de GitHub.</li>
+          <li>La página de estado pregunta desde tu navegador a api.masterdev.website (sin sesión ni cookies) si responde. El centro de ayuda y su buscador funcionan dentro de la web, sin preguntar a nadie.</li>
           <li>Tu navegador recuerda el idioma que elegiste (almacenamiento local, no sale de tu equipo).</li>
           <li>La web está alojada en GitHub Pages, que puede registrar datos técnicos de las visitas como cualquier servidor web.</li>
         </ul>

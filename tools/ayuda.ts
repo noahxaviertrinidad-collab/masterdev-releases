@@ -105,7 +105,7 @@ ${GEN.trim()}
 <head>
 <base href="../">
 <title>{{es:${esc(titleEs).replace(/[|{}]/g, " ")} · Ayuda de MasterDev|en:${esc(titleEn).replace(/[|{}]/g, " ")} · MasterDev Help}}</title>
-<meta name="description" content="{{es:${desc(ce).replace(/[|{}]/g, " ")}|en:${desc(cn).replace(/[|{}]/g, " ")}}">
+<meta name="description" content="{{es:${desc(ce).replace(/[|{}]/g, " ")}|en:${desc(cn).replace(/[|{}]/g, " ")}}}">
 {{> head}}
 </head>
 <body>
