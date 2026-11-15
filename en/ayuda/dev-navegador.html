@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Generado por tools/ayuda.ts desde la Guía de la app (gc3-app/src/wwwroot/js/guia/exportar.js). No lo edites a mano. -->
+<html lang="en">
+<head>
+<base href="../">
+<title>The Browser · MasterDev Help</title>
+<meta name="description" content="{{es:Un navegador hecho para crear.|en:A browser made for creating.}">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/en/ayuda/dev-navegador.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/ayuda/dev-navegador.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/ayuda/dev-navegador.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/ayuda/dev-navegador.html">
+<meta property="og:url" content="https://masterdev.website/en/ayuda/dev-navegador.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://masterdev.website/img/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: your indie studio in one window">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="../img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../img/app-icon-128.png">
+<link rel="preload" href="../fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+<a class="skip" href="ayuda/dev-navegador.html#contenido">Skip to content</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, home">
+      <img src="../img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Sections">
+      <a href="creadores.html">Creators</a>
+      <a href="jugadores.html">Players</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explore</a>
+      <a href="novedades.html">What's new</a>
+      <a href="ayuda.html">Help</a>
+      <a class="nav-acct" href="cuenta.html">Sign in</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Theme</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automatic (follow your system)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Pixel forest</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Paper (light)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/ayuda/dev-navegador.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Download</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page help-page">
+  <div class="wrap help-art" lang="en">
+    <span class="lv lv-basico">Basic</span>
+
+    <p class="kicker"><a href="ayuda.html">Help center</a> · For creators</p>
+    <h1>🌐 The Browser</h1>
+    <p class="sub">A browser made for creating.</p>
+    <p class="help-easy"><b>In short:</b> The Browser is a web browser inside MasterDev. The AI can use it too, in its own tab.</p>
+    <nav class="help-toc" aria-label="On this page"><ul><li><a href="ayuda/dev-navegador.html#lo-de-desarrolladores">Developer stuff</a></li><li><a href="ayuda/dev-navegador.html#abrirlo-y-moverte">Open it and move around</a></li><li><a href="ayuda/dev-navegador.html#pestanas">Tabs</a></li><li><a href="ayuda/dev-navegador.html#la-pestana-nueva">The new tab</a></li><li><a href="ayuda/dev-navegador.html#marcadores-historial-y-descargas">Bookmarks, history and downloads</a></li><li><a href="ayuda/dev-navegador.html#las-herramientas-de-la-izquierda">The tools on the left</a></li><li><a href="ayuda/dev-navegador.html#escudo-privacidad-y-permisos">Shield, privacy and permissions</a></li><li><a href="ayuda/dev-navegador.html#personalizarlo">Customize it</a></li></ul></nav>
+    <section class="help-sec" id="lo-de-desarrolladores"><h2>Developer stuff <a class="anchor" href="ayuda/dev-navegador.html#lo-de-desarrolladores" aria-label="#">#</a></h2><ul class="bullets"><li><strong>🤖 Claude's tab:</strong> tasks use the Browser in their own tab, which you see live: they open pages, read them, click, take screenshots, check the console and <strong>test your web games</strong>. It uses a separate profile, without your sessions, and doesn't touch your tabs.</li><li><strong>💬 Ask:</strong> Claude reads one or more tabs (up to 4) and answers you, citing where each piece of information comes from. “Turn into task” sends it to a task.</li><li><strong>🔍 Lens:</strong> draw around something with the mouse and Claude tells you what it is and how to use it.</li><li><strong>📌 Save</strong> a page (and its screenshot) to a project's or idea's references: its tasks receive it.</li><li><strong>Spaces per project:</strong> each project can have its own tabs; they change when you switch projects.</li><li><strong>▶ Test a game</strong> and <strong>📱 device mode</strong> to see your web game as on a phone.</li><li><strong>F12</strong> opens the page's developer tools.</li></ul></section>
+<section class="help-sec" id="abrirlo-y-moverte"><h2>Open it and move around <a class="anchor" href="ayuda/dev-navegador.html#abrirlo-y-moverte" aria-label="#">#</a></h2><p>The Browser is a real web browser inside MasterDev (the same engine as Edge). Open it from the menu, with <code>/navegador</code> or by typing an address in the bar below. Your tabs are saved when you close MasterDev.</p><ul class="bullets"><li><strong>Address bar:</strong> type a website or whatever you want to search for. As you type, suggestions appear: what Enter would do, your bookmarks ★, your history 🕘 and open tabs ⇄. <kbd>Ctrl</kbd>+<kbd>L</kbd> or <kbd>F6</kbd> takes you to it.</li><li><strong>Search shortcuts:</strong> start with a short keyword to search a specific site: <code>yt gatos</code> searches YouTube, <code>steam</code>, <code>itch</code>, <code>wiki</code>, <code>tr</code> (translator)… You can change them or add your own (up to 30) in ⚙.</li><li><strong>Back, forward and reload:</strong> ← → ⟳ in the bar, or <kbd>Alt</kbd>+<kbd>←</kbd> <kbd>Alt</kbd>+<kbd>→</kbd> <kbd>F5</kbd>.</li><li><strong>Zoom per site:</strong> <kbd>Ctrl</kbd> <kbd>Ctrl</kbd>+<kbd>-</kbd> <kbd>Ctrl</kbd>+<kbd>0</kbd> (or the mouse wheel with Ctrl). MasterDev remembers each site's zoom; the “125 %” chip in the address bar resets it to normal.</li></ul></section>
+<section class="help-sec" id="pestanas"><h2>Tabs <a class="anchor" href="ayuda/dev-navegador.html#pestanas" aria-label="#">#</a></h2><ul class="bullets"><li><strong>＋</strong> or <kbd>Ctrl</kbd>+<kbd>T</kbd> opens a new tab; <kbd>Ctrl</kbd>+<kbd>W</kbd> closes it and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd> reopens the last one you closed.</li><li><kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd> switch tabs; <kbd>Ctrl</kbd>+<kbd>1…8</kbd> goes to that tab and <kbd>Ctrl</kbd>+<kbd>9</kbd> to the last one. Drag them to reorder.</li><li><strong>Right-click a tab:</strong> reload, duplicate, <strong>pin</strong> (it stays in front, small and without ×), <strong>mute</strong>, add to bookmarks or quick links, close the others… The 🔊 shows which one is playing.</li><li><strong>🕶 Private tab</strong> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>): leaves no history or saved zoom, and isn't remembered when you close it.</li><li><strong>⌄ Search tabs</strong> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>) lists all open tabs. Tabs you haven't looked at for a while <strong>go to sleep 💤</strong> to save memory, and when you return they're just as you left them (tabs playing sound never sleep).</li><li>In ⚙ › Tabs you can put them <strong>vertically on the left</strong>, change their style and group them by color.</li></ul></section>
+<section class="help-sec" id="la-pestana-nueva"><h2>The new tab <a class="anchor" href="ayuda/dev-navegador.html#la-pestana-nueva" aria-label="#">#</a></h2><p>When you open a new tab you see the MasterDev start page: a large search box, your <strong>quick links</strong> (up to 12) and, if you want, the time and a greeting. <strong>⚙ Customize this page</strong> changes what it shows and its background (your theme's, a color or an image of yours).</p></section>
+<section class="help-sec" id="marcadores-historial-y-descargas"><h2>Bookmarks, history and downloads <a class="anchor" href="ayuda/dev-navegador.html#marcadores-historial-y-descargas" aria-label="#">#</a></h2><ul class="bullets"><li><strong>☆</strong> in the address bar (or <kbd>Ctrl</kbd>+<kbd>D</kbd>) saves the page to <strong>bookmarks</strong>, which appear in the bar below. You can make folders, rename by double-clicking, and <strong>import them from Edge or Chrome</strong> via ☰ Manage bookmarks. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> shows or hides the bar.</li><li><strong>🕘 History</strong> (<kbd>Ctrl</kbd>+<kbd>H</kbd>): with search, by day and with “Delete…”. You decide how many days are kept (or none) in ⚙ › Privacy.</li><li><strong>⬇ Downloads</strong> (<kbd>Ctrl</kbd>+<kbd>J</kbd>): what you download, with its progress, “Open” and “Folder”. Clearing the list never deletes the files.</li></ul></section>
+<section class="help-sec" id="las-herramientas-de-la-izquierda"><h2>The tools on the left <a class="anchor" href="ayuda/dev-navegador.html#las-herramientas-de-la-izquierda" aria-label="#">#</a></h2><p>On the left of the page there's a toolbar (in narrow windows it's in the ⋯ menu):</p><ul class="bullets"><li><strong>✂ Crop</strong> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd>): the page freezes and you choose what to crop (rectangle, freehand or everything). It's saved straight to <code>Pictures\MasterDev\Capturas</code> and you copy or download it from there. <strong>🖼 Gallery</strong> shows them all.</li><li><strong>🎥 Record:</strong> a clip or GIF of the tab, up to 15 seconds.</li><li><strong>⧉ Floating:</strong> pops the tab's video into a small window <strong>on top of all apps</strong>, including a game.</li><li><strong>📖 Reader:</strong> just the article text, in your theme's colors.</li><li><strong>🖌 Styles:</strong> changes how a site looks (dark mode, larger text or your own CSS).</li><li><strong>🎨 Resources:</strong> the page's palette, fonts and images.</li><li><strong>💾 Sessions:</strong> saves a group of tabs under a name and reopens it whenever you want.</li><li><strong>⫿ Split:</strong> two tabs at once, side by side. Drag the border to share the space.</li></ul></section>
+<section class="help-sec" id="escudo-privacidad-y-permisos"><h2>Shield, privacy and permissions <a class="anchor" href="ayuda/dev-navegador.html#escudo-privacidad-y-permisos" aria-label="#">#</a></h2><ul class="bullets"><li><strong>🛡 Shield:</strong> blocks ads and trackers. Its menu shows how many things it blocked on that page and lets you turn it off for a specific site if something doesn't work.</li><li><strong>Permissions:</strong> when a website asks for camera, mic or location, MasterDev asks you first. In ⚙ › Websites you can see what you gave each site and remove it.</li><li><strong>Clear browsing data</strong> (⚙ › Privacy): cookies, cache, history, passwords…, from the last hour to everything.</li><li><strong>📱 Device mode</strong> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>): view the web as on a phone, a tablet or any size you want.</li></ul></section>
+<section class="help-sec" id="personalizarlo"><h2>Customize it <a class="anchor" href="ayuda/dev-navegador.html#personalizarlo" aria-label="#">#</a></h2><p>Everything is changed from the <strong>⚙</strong> at the end of the bar (<kbd>Ctrl</kbd>+<kbd>,</kbd> or <code>/navegador ajustes</code>): the search engine, what opens at startup, tabs, which buttons show, the theme for websites, the starting zoom, privacy, shortcuts… Each setting has its ↺ to go back to the default, and it saves automatically.</p><p class="tip">💡 Your Browser settings, history and bookmarks belong to this PC: all your MasterDev accounts share them.</p></section>
+
+    <p class="small help-back"><a href="ayuda.html">← Back to the help center</a> · <a href="descargar.html">Download MasterDev</a></p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="../img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Where creators and players meet. An indie project, free for Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">How it works</a>
+      <a href="creadores.html">For creators</a>
+      <a href="jugadores.html">For players</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explore the app</a>
+      <a href="descargar.html">Download and install</a>
+      <a href="primeros-pasos.html">First 10 minutes</a>
+    </nav>
+    <nav aria-label="Resources">
+      <p class="foot-h">Resources</p>
+      <a href="ayuda.html">Help center</a>
+      <a href="./#preguntas">FAQ</a>
+      <a href="estado.html">MasterDev status</a>
+      <a href="privacidad.html">Privacy and data</a>
+      <a href="descargar.html#actualizaciones">New version alerts</a>
+      <a href="novedades.html">What's new</a>
+      <a href="hoja-de-ruta.html">Roadmap</a>
+      <a href="prensa.html">Press</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Music credits</a>
+    </nav>
+    <nav aria-label="Language">
+      <p class="foot-h">Language</p>
+      <a href="https://masterdev.website/ayuda/dev-navegador.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/ayuda/dev-navegador.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Windows 10 and 11 (64-bit) only.</p>
+  </div>
+</footer>
+<script src="../app.js"></script>
+
+</body>
+</html>

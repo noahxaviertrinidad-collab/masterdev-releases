@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- Generado por tools/ayuda.ts desde la Guía de la app (gc3-app/src/wwwroot/js/guia/exportar.js). No lo edites a mano. -->
+<html lang="es">
+<head>
+<title>Centro de ayuda · MasterDev</title>
+<meta name="description" content="La Guía de MasterDev en la web: cada sección de la app explicada paso a paso, por niveles, con buscador y preguntas frecuentes.">
+<meta property="og:title" content="Centro de ayuda · MasterDev">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/ayuda.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/ayuda.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/ayuda.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/ayuda.html">
+<meta property="og:url" content="https://masterdev.website/ayuda.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://masterdev.website/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: tu estudio indie en una ventana">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="img/app-icon-128.png">
+<link rel="preload" href="fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<a class="skip" href="ayuda.html#contenido">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, inicio">
+      <img src="img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Secciones">
+      <a href="creadores.html">Creadores</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explora</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a class="nav-acct" href="cuenta.html">Entrar</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Tema</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automático (según tu sistema)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Bosque pixel</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Papel (claro)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/en/ayuda.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Descargar</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menú</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page help-page">
+  <div class="wrap">
+    <p class="kicker">Ayuda</p>
+    <h1>Centro de ayuda</h1>
+    <p class="sub">La misma Guía que tienes en la app (pulsa ? o F1 allí), aquí para leerla sin abrirla. ¿Algo va mal? Mira el <a href="estado.html">estado de MasterDev</a>.</p>
+    <div class="help-search" data-help data-index="ayuda-index.json">
+      <label class="sr" for="help-q">Buscar en la ayuda</label>
+      <input id="help-q" type="search" autocomplete="off" placeholder="¿Qué quieres saber? Por ejemplo: grabar un clip">
+      <div class="help-filters" role="group" aria-label="Nivel">
+        <button type="button" class="chip on" data-lv="">Todo</button>
+        <button type="button" class="chip" data-lv="basico">Básico</button>
+        <button type="button" class="chip" data-lv="intermedio">Intermedio</button>
+        <button type="button" class="chip" data-lv="avanzado">Avanzado</button>
+      </div>
+      <p class="small help-count" aria-live="polite"></p>
+      <ol class="help-results" hidden></ol>
+    </div>
+    <div class="help-guides">
+
+      <section class="help-guide" id="jugador">
+        <h2>Para jugadores</h2>
+        <p class="small">Todo lo que puedes hacer en MasterDev para jugar, hablar con tus amigos, escuchar música y navegar, explicado paso a paso.</p>
+        <ul class="help-list">
+          <li data-lv="basico"><a href="ayuda/jugador-empezar.html"><span class="ic" aria-hidden="true">🚀</span> Empezar</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-zona.html"><span class="ic" aria-hidden="true">🏠</span> Tu zona (Centro)</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-juegos.html"><span class="ic" aria-hidden="true">🎮</span> Tus juegos</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-galeria.html"><span class="ic" aria-hidden="true">🖼</span> Galería y clips</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-amigos.html"><span class="ic" aria-hidden="true">👥</span> Amigos y comunidad</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-musica.html"><span class="ic" aria-hidden="true">🎧</span> Música</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-navegador.html"><span class="ic" aria-hidden="true">🌐</span> El Navegador</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-estilo.html"><span class="ic" aria-hidden="true">🎨</span> A tu estilo</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-atajos.html"><span class="ic" aria-hidden="true">⌨</span> Comandos y atajos</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-primeros-pasos.html"><span class="ic" aria-hidden="true">🧭</span> Primeros pasos</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-instalar.html"><span class="ic" aria-hidden="true">📦</span> Instalar y actualizar</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-secciones.html"><span class="ic" aria-hidden="true">🗂</span> Cada sección, en corto</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-problemas.html"><span class="ic" aria-hidden="true">🛟</span> Si algo no va</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/jugador-novedades-r11.html"><span class="ic" aria-hidden="true">✨</span> Lo nuevo</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r10.html"><span class="ic" aria-hidden="true">✨</span> Fase 6: tus cuentas, conectadas</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r9.html"><span class="ic" aria-hidden="true">✨</span> Fase 5: la música</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r8.html"><span class="ic" aria-hidden="true">✨</span> Fase 4: tus capturas y clips</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r7.html"><span class="ic" aria-hidden="true">✨</span> Fase 3: un Navegador más tuyo</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r6.html"><span class="ic" aria-hidden="true">✨</span> Fase 1: graba, juega y búscalo todo</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r5.html"><span class="ic" aria-hidden="true">✨</span> La gran actualización</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r4.html"><span class="ic" aria-hidden="true">✨</span> Cuarta tanda</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/jugador-novedades-r3.html"><span class="ic" aria-hidden="true">🆕</span> Tercera tanda</a> <span class="lv lv-intermedio">Intermedio</span></li>
+        </ul>
+      </section>
+      <section class="help-guide" id="dev">
+        <h2>Para creadores</h2>
+        <p class="small">Tu taller para crear juegos: proyectos, Roblox Studio, ideas, notas, tareas con Claude, el Navegador y la comunidad.</p>
+        <ul class="help-list">
+          <li data-lv="basico"><a href="ayuda/dev-empezar.html"><span class="ic" aria-hidden="true">🚀</span> Empezar</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-flujo.html"><span class="ic" aria-hidden="true">🧭</span> El flujo de trabajo</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-proyectos.html"><span class="ic" aria-hidden="true">🎮</span> Proyectos</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-roblox.html"><span class="ic" aria-hidden="true">🧱</span> Roblox Studio</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-claude.html"><span class="ic" aria-hidden="true">◆</span> Tareas con Claude</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-ideas.html"><span class="ic" aria-hidden="true">📝</span> Ideas, notas y voz</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-builds.html"><span class="ic" aria-hidden="true">🏗️</span> Builds y propuestas</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-navegador.html"><span class="ic" aria-hidden="true">🌐</span> El Navegador</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-galeria.html"><span class="ic" aria-hidden="true">🖼</span> Galería y clips</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="avanzado"><a href="ayuda/dev-musica.html"><span class="ic" aria-hidden="true">🎵</span> Música para tu juego</a> <span class="lv lv-avanzado">Avanzado</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-comunidad.html"><span class="ic" aria-hidden="true">👥</span> Comunidad y playtests</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="avanzado"><a href="ayuda/dev-analytics.html"><span class="ic" aria-hidden="true">📈</span> Analytics</a> <span class="lv lv-avanzado">Avanzado</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-conectores.html"><span class="ic" aria-hidden="true">🔌</span> Conectores</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-personalizar.html"><span class="ic" aria-hidden="true">🎨</span> A tu manera</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-atajos.html"><span class="ic" aria-hidden="true">⌨</span> Comandos y atajos</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-primeros-pasos.html"><span class="ic" aria-hidden="true">🧭</span> Primeros pasos</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-instalar.html"><span class="ic" aria-hidden="true">📦</span> Instalar y actualizar</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-secciones.html"><span class="ic" aria-hidden="true">🗂</span> Cada sección, en corto</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-problemas.html"><span class="ic" aria-hidden="true">🛟</span> Si algo no va</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="basico"><a href="ayuda/dev-novedades-r12-dev.html"><span class="ic" aria-hidden="true">✨</span> Lo nuevo</a> <span class="lv lv-basico">Básico</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r11-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 6: conectores</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r10-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 5: la música</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r9-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 4: la Galería y los Clips</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r8-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 3: un Navegador para crear</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r7-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 2: la IA, a tu medida</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r6-dev.html"><span class="ic" aria-hidden="true">✨</span> Fase 1: los cimientos</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r5-dev.html"><span class="ic" aria-hidden="true">✨</span> La gran actualización</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r4-dev.html"><span class="ic" aria-hidden="true">✨</span> Cuarta tanda</a> <span class="lv lv-intermedio">Intermedio</span></li>
+          <li data-lv="intermedio"><a href="ayuda/dev-novedades-r3-dev.html"><span class="ic" aria-hidden="true">🆕</span> Tercera tanda</a> <span class="lv lv-intermedio">Intermedio</span></li>
+        </ul>
+      </section>
+
+    </div>
+    <section class="help-faqs" id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+
+        <details class="help-faq" id="faq-1"><summary>¿Necesito Claude para usar MasterDev?</summary><p>No. Claude es opcional: sin él funcionan tu cuenta, el perfil, Comunidad, las llamadas, las cartas, Descubrir, la Galería y tus proyectos. Solo las tareas, crear un proyecto con IA y unas pocas funciones marcadas «Requiere Claude» lo usan.</p></details>
+        <details class="help-faq" id="faq-2"><summary>¿Qué es un servidor MasterDev?</summary><p>Es el sitio donde está tu comunidad: amigos, mensajes, servidores, cartas compartidas y Descubrir. Lo aloja alguien (puede ser tu PC, en Ajustes › Red) y te conectas con tu @usuario y tu contraseña de MasterDev.</p></details>
+        <details class="help-faq" id="faq-3"><summary>Olvidé mi contraseña</summary><p>En la pantalla de entrar, «¿Olvidaste la contraseña?» usa tu código de recuperación. Si tampoco lo tienes, escríbenos desde «Escríbenos» con otra cuenta o pide al admin de tu servidor que la restablezca.</p></details>
+        <details class="help-faq" id="faq-4"><summary>Alguien me molesta: ¿qué hago?</summary><p>Pulsa su nombre y elige 🔕 Silenciar (solo en tu PC), ⛔ Bloquear o ⚑ Denunciar. Las denuncias llegan a los moderadores con el contexto.</p></details>
+        <details class="help-faq" id="faq-5"><summary>Sale «Reconectando…» arriba</summary><p>Se cortó la conexión con tu servidor. MasterDev vuelve a intentarlo solo, cada vez esperando un poco más (hasta 30 s). Lo que escribas mientras tanto se queda «⏳ en cola» y se manda al volver, una sola vez. «Reintentar ahora» lo prueba al momento.</p></details>
+        <details class="help-faq" id="faq-6"><summary>Mi mensaje se quedó «en cola»</summary><p>Se mandará solo en cuanto vuelva la conexión, en el mismo orden. Si prefieres no mandarlo, pulsa ✕ en el mensaje.</p></details>
+        <details class="help-faq" id="faq-7"><summary>Han retirado una imagen mía</summary><p>Los admins revisan los avatares, banners, cartas, iconos y emojis que se suben. Si una no cumple las normas, deja de verse y te llega un aviso. No se puede volver a subir esa misma imagen. Si crees que es un error, escríbenos.</p></details>
+        <details class="help-faq" id="faq-8"><summary>¿Cómo consigo chispas?</summary><p>Con las misiones diarias y semanales, la carta del día, reciclando cartas repetidas, con los premios de los playtests y con la caza de bugs. Nunca se compran con dinero.</p></details>
+        <details class="help-faq" id="faq-9"><summary>Un sobre no me dio nada</summary><p>Mira en Cartas › Regalos por abrir: los sobres regalados y los premios llegan ahí. Si se cortó la red al abrirlo, el sobre vuelve a salir al reconectar.</p></details>
+        <details class="help-faq" id="faq-10"><summary>¿Dónde están mis juegos?</summary><p>En Proyectos. Cada juego vive en su carpeta (projects/&lt;id&gt;/) o en la tuya si lo vinculaste. ▶ Jugar abre los proyectos web en la app.</p></details>
+        <details class="help-faq" id="faq-11"><summary>¿Cómo pruebo mi juego con otras personas?</summary><p>En la ficha del proyecto › 🧪 Playtest: ábrelo a tus amigos o a todos, con encuestas, grabación con permiso y marcas.</p></details>
+        <details class="help-faq" id="faq-12"><summary>MasterDev se cerró o falló</summary><p>Al volver a abrirlo te preguntará si quieres mandar el informe del fallo. No lleva datos personales: tu usuario de Windows sale como &lt;usuario&gt; y no van tokens ni mensajes. Antes de mandarlo puedes ver exactamente lo que se manda. Lo cambias en Ajustes › Sistema › Diagnóstico.</p></details>
+        <details class="help-faq" id="faq-13"><summary>Encontré un fallo</summary><p>Pulsa 🐞 arriba (o /bug). Mira antes «Fallos conocidos» por si ya está en la lista. Si el admin lo confirma, la caza de bugs te da chispas.</p></details>
+        <details class="help-faq" id="faq-14"><summary>Va lento o no conecta</summary><p>Ajustes › Sistema › Diagnóstico mide la respuesta del servidor y junta un ZIP para quien te ayude (sin contraseñas, mensajes ni proyectos).</p></details>
+        <details class="help-faq" id="faq-15"><summary>¿Qué guarda el servidor de mí?</summary><p>Tu cuenta, tu perfil, tus mensajes y lo que compartes. En Ajustes › Cuenta puedes bajar un ZIP con todos tus datos o borrar tu cuenta.</p></details>
+        <details class="help-faq" id="faq-16"><summary>¿Puedo usar MasterDev sin internet?</summary><p>Sí: proyectos, ideas, notas, música, Galería y lo que es de tu PC funcionan sin red. Lo social espera a que vuelva la conexión.</p></details>
+
+    </section>
+    <section class="help-more">
+      <h2>¿No lo encuentras?</h2>
+      <p>En la app tienes «💬 Pregúntale a MasterDev» en el ?, la ayuda en la comunidad de tu servidor (con mentores 🎓) y 🐞 Reportar un problema, con vista previa de lo que se manda.</p>
+    </section>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Donde creadores y jugadores se encuentran. Un proyecto indie, gratis para Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">Cómo funciona</a>
+      <a href="creadores.html">Para creadores</a>
+      <a href="jugadores.html">Para jugadores</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explora la app</a>
+      <a href="descargar.html">Descargar e instalar</a>
+      <a href="primeros-pasos.html">Primeros 10 minutos</a>
+    </nav>
+    <nav aria-label="Recursos">
+      <p class="foot-h">Recursos</p>
+      <a href="ayuda.html">Centro de ayuda</a>
+      <a href="./#preguntas">Preguntas frecuentes</a>
+      <a href="estado.html">Estado de MasterDev</a>
+      <a href="privacidad.html">Privacidad y datos</a>
+      <a href="descargar.html#actualizaciones">Avisos de versiones nuevas</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="hoja-de-ruta.html">Hoja de ruta</a>
+      <a href="prensa.html">Prensa</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Créditos de la música</a>
+    </nav>
+    <nav aria-label="Idioma">
+      <p class="foot-h">Idioma</p>
+      <a href="https://masterdev.website/ayuda.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/ayuda.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Solo para Windows 10 y 11 (64 bits).</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+
+<script src="ayuda.js"></script>
+</body>
+</html>

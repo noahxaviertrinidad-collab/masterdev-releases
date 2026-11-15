@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Generado por tools/ayuda.ts desde la Guía de la app (gc3-app/src/wwwroot/js/guia/exportar.js). No lo edites a mano. -->
+<html lang="es">
+<head>
+<base href="../">
+<title>Proyectos · Ayuda de MasterDev</title>
+<meta name="description" content="{{es:Tus juegos: nuevos o los que ya tienes.|en:Your games: new ones or ones you already have.}">
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("md.theme")||"auto";if(t==="auto")t=matchMedia("(prefers-color-scheme: light)").matches?"papel":"terminal";document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://masterdev.website/ayuda/dev-proyectos.html">
+<link rel="alternate" hreflang="es" href="https://masterdev.website/ayuda/dev-proyectos.html">
+<link rel="alternate" hreflang="en" href="https://masterdev.website/en/ayuda/dev-proyectos.html">
+<link rel="alternate" hreflang="x-default" href="https://masterdev.website/ayuda/dev-proyectos.html">
+<meta property="og:url" content="https://masterdev.website/ayuda/dev-proyectos.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MasterDev">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://masterdev.website/img/og-es.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MasterDev: tu estudio indie en una ventana">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="img/app-icon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="img/app-icon-128.png">
+<link rel="preload" href="fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<a class="skip" href="ayuda/dev-proyectos.html#contenido">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="./" aria-label="MasterDev, inicio">
+      <img src="img/app-icon-128.png" alt="" width="32" height="32">
+      <span>MASTERDEV</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Secciones">
+      <a href="creadores.html">Creadores</a>
+      <a href="jugadores.html">Jugadores</a>
+      <a href="roblox.html">Roblox</a>
+      <a href="explora.html">Explora</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="ayuda.html">Ayuda</a>
+      <a class="nav-acct" href="cuenta.html">Entrar</a>
+      <div class="theme-pick">
+        <button class="theme-btn" type="button" id="theme-btn" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"><span class="theme-dot" aria-hidden="true"></span>Tema</button>
+        <div class="theme-menu" id="theme-menu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-set-theme="auto"><span class="sw" style="background:linear-gradient(135deg,#0B0F14 50%,#EFEBE2 50%)"></span>Automático (según tu sistema)</button>
+          <button type="button" role="menuitemradio" data-set-theme="terminal"><span class="sw sw-terminal"></span>Terminal</button>
+          <button type="button" role="menuitemradio" data-set-theme="synthwave"><span class="sw sw-synthwave"></span>Synthwave</button>
+          <button type="button" role="menuitemradio" data-set-theme="bosque"><span class="sw sw-bosque"></span>Bosque pixel</button>
+          <button type="button" role="menuitemradio" data-set-theme="papel"><span class="sw sw-papel"></span>Papel (claro)</button>
+        </div>
+      </div>
+      <a class="lang" href="https://masterdev.website/en/ayuda/dev-proyectos.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+    <a class="btn primary small nav-dl" href="descargar.html">Descargar</a>
+    <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu">
+      <span class="menu-ico" aria-hidden="true"></span><span class="sr">Menú</span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" class="page help-page">
+  <div class="wrap help-art" lang="es">
+    <span class="lv lv-basico">Básico</span>
+
+    <p class="kicker"><a href="ayuda.html">Centro de ayuda</a> · Para creadores</p>
+    <h1>🎮 Proyectos</h1>
+    <p class="sub">Tus juegos: nuevos o los que ya tienes.</p>
+    <p class="help-easy"><b>En corto:</b> Cada juego es un proyecto. Crea uno nuevo o vincula el que ya tienes; su ficha y su Estudio guardan todo lo del juego.</p>
+    <nav class="help-toc" aria-label="En esta página"><ul><li><a href="ayuda/dev-proyectos.html#crear-uno-nuevo">Crear uno nuevo</a></li><li><a href="ayuda/dev-proyectos.html#vincular-el-que-ya-tienes">Vincular el que ya tienes</a></li><li><a href="ayuda/dev-proyectos.html#el-estudio-del-proyecto">El Estudio del proyecto</a></li><li><a href="ayuda/dev-proyectos.html#ficha-y-documentos">Ficha y documentos</a></li></ul></nav>
+    <section class="help-sec" id="crear-uno-nuevo"><h2>Crear uno nuevo <a class="anchor" href="ayuda/dev-proyectos.html#crear-uno-nuevo" aria-label="#">#</a></h2><ol><li><strong>+ Nuevo proyecto</strong> en <span class="in-app" title="#/proyectos">En la app: Proyectos</span>.</li><li>Nombre y género, motor (los tuyos primero), estilo y resolución, y las mecánicas clave.</li><li><strong>Crear con Claude:</strong> genera el GDD y el boilerplate. Los juegos web (HTML5, Phaser) se juegan dentro de MasterDev con ▶ Jugar.</li></ol></section>
+<section class="help-sec" id="vincular-el-que-ya-tienes"><h2>Vincular el que ya tienes <a class="anchor" href="ayuda/dev-proyectos.html#vincular-el-que-ya-tienes" aria-label="#">#</a></h2><p><code>/link</code> (o 🔗 Vincular proyecto existente) registra una carpeta que ya tienes. <strong>No copia ni mueve nada.</strong> Las tareas de ese proyecto corren dentro de su carpeta y siguen su propio CLAUDE.md, sus skills y sus permisos. Desvincular solo lo quita de MasterDev.</p></section>
+<section class="help-sec" id="el-estudio-del-proyecto"><h2>El Estudio del proyecto <a class="anchor" href="ayuda/dev-proyectos.html#el-estudio-del-proyecto" aria-label="#">#</a></h2><p>Cada proyecto tiene su pestaña <strong>Estudio</strong>: dibuja el <strong>core loop</strong>, ajusta el <strong>balance</strong> con fórmulas y gráfica, escribe <strong>diálogos</strong> ramificados, organiza un <strong>tablero</strong>, apunta <strong>bugs</strong> y prepara el <strong>devlog</strong>, el <strong>kit de prensa</strong> y la página de la tienda. Claude recibe todo eso en sus tareas.</p></section>
+<section class="help-sec" id="ficha-y-documentos"><h2>Ficha y documentos <a class="anchor" href="ayuda/dev-proyectos.html#ficha-y-documentos" aria-label="#">#</a></h2><p><strong>⚙ Editar ficha:</strong> estado, motor, color e icono del juego (tiñe MasterDev mientras trabajas en él), reglas para Claude y permisos extra. En <strong>Documentos</strong> eliges qué .md ver (README, TAREAS.md, docs/…).</p></section>
+
+    <p class="small help-back"><a href="ayuda.html">← Volver al centro de ayuda</a> · <a href="descargar.html">Descargar MasterDev</a></p>
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <p class="brand-line"><img src="img/app-icon-128.png" alt="" width="28" height="28"> <span>MASTERDEV</span></p>
+      <p class="small">Donde creadores y jugadores se encuentran. Un proyecto indie, gratis para Windows.</p>
+    </div>
+    <nav aria-label="MasterDev">
+      <p class="foot-h">MasterDev</p>
+      <a href="./#como">Cómo funciona</a>
+      <a href="creadores.html">Para creadores</a>
+      <a href="jugadores.html">Para jugadores</a>
+      <a href="roblox.html">Roblox Studio</a>
+      <a href="explora.html">Explora la app</a>
+      <a href="descargar.html">Descargar e instalar</a>
+      <a href="primeros-pasos.html">Primeros 10 minutos</a>
+    </nav>
+    <nav aria-label="Recursos">
+      <p class="foot-h">Recursos</p>
+      <a href="ayuda.html">Centro de ayuda</a>
+      <a href="./#preguntas">Preguntas frecuentes</a>
+      <a href="estado.html">Estado de MasterDev</a>
+      <a href="privacidad.html">Privacidad y datos</a>
+      <a href="descargar.html#actualizaciones">Avisos de versiones nuevas</a>
+      <a href="novedades.html">Novedades</a>
+      <a href="hoja-de-ruta.html">Hoja de ruta</a>
+      <a href="prensa.html">Prensa</a>
+      <a href="https://github.com/noahxaviertrinidad-collab/masterdev-releases">GitHub</a>
+      <a href="creditos.html">Créditos de la música</a>
+    </nav>
+    <nav aria-label="Idioma">
+      <p class="foot-h">Idioma</p>
+      <a href="https://masterdev.website/ayuda/dev-proyectos.html" hreflang="es" lang="es" data-lang-to="es">Español</a>
+      <a href="https://masterdev.website/en/ayuda/dev-proyectos.html" hreflang="en" lang="en" data-lang-to="en">English</a>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p class="mono small">© 2026 MasterDev</p>
+    <p class="small">Solo para Windows 10 y 11 (64 bits).</p>
+  </div>
+</footer>
+<script src="app.js"></script>
+
+</body>
+</html>

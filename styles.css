@@ -543,3 +543,38 @@ html[data-theme="synthwave"] .hero { background: radial-gradient(800px 380px at 
 }
 .pv.wide { grid-column: 1 / -1; }
 .pv h3 { font-size: var(--fs-md); margin: var(--s4) 0 var(--s2); }
+
+/* ── b171 · centro de ayuda (ayuda.html y ayuda/…) y estado (estado.html) ── */
+.help-search { margin: var(--s5) 0 var(--s6); max-width: 760px; }
+.help-search input[type=search] { width: 100%; box-sizing: border-box; font: inherit; font-size: 17px; padding: 12px 14px; border-radius: 10px; background: var(--panel); color: var(--text); border: 1px solid var(--border-2); }
+.help-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--s3); }
+.help-filters .chip { font: 600 var(--fs-xs) var(--mono); padding: 6px 10px; border-radius: 999px; background: var(--panel); color: var(--text-2); border: 1px solid var(--border); cursor: pointer; }
+.help-filters .chip.on { color: var(--on-green); background: var(--green); border-color: var(--green); }
+.help-results { margin: var(--s3) 0 0; padding-left: 1.2em; display: grid; gap: var(--s3); }
+.help-results p { margin: 2px 0 0; }
+.help-guides { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: var(--s5); }
+.help-list { list-style: none; padding: 0; margin: var(--s3) 0 0; display: grid; gap: 6px; }
+.help-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+.help-list .ic { display: inline-block; width: 1.4em; }
+.lv { font: 600 11px var(--mono); padding: 1px 7px; border-radius: 999px; border: 1px solid var(--border-2); color: var(--text-2); }
+.lv-basico { color: var(--green); } .lv-intermedio { color: var(--cyan); } .lv-avanzado { color: var(--violet); }
+.help-faqs, .help-more { margin-top: var(--s7); max-width: 760px; }
+.help-faq { border-bottom: 1px solid var(--border); padding: var(--s3) 0; }
+.help-faq summary { cursor: pointer; font-weight: 600; }
+.help-art { max-width: 760px; min-width: 0; overflow-wrap: anywhere; }
+.help-art h1 { margin-top: var(--s3); }
+.help-sec { margin-top: var(--s6); }
+.help-sec h2 { font-size: 22px; }
+.help-sec .anchor { color: var(--muted); text-decoration: none; font-size: .8em; }
+.help-easy { padding: var(--s3) var(--s4); border-left: 3px solid var(--green); background: var(--panel); border-radius: 6px; }
+.help-toc ul { display: flex; flex-wrap: wrap; gap: 6px 14px; padding: 0; list-style: none; font-size: var(--fs-sm); }
+.help-page .tip { color: var(--text-2); }
+.help-page pre { overflow-x: auto; background: var(--panel-2); padding: var(--s3); border-radius: 8px; }
+.help-page pre code { white-space: pre; border: 0; padding: 0; }
+.in-app { font-weight: 600; color: var(--cyan); }
+.help-back { margin-top: var(--s7); }
+.status { display: grid; gap: var(--s4); max-width: 760px; margin: var(--s5) 0; }
+.st-card { align-items: stretch; }
+.st-line { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 18px; margin: 0 0 var(--s2); }
+.st-dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--border-2); }
+.st-dot.ok { background: var(--green); } .st-dot.down { background: #FF5C5C; }

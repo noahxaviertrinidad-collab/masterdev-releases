@@ -52,6 +52,9 @@ function vars(text: string, lang: Lang, page: string): string {
     root: lang === "es" ? "" : "../",
     lang,
     page,
+    // b171: la propia página relativa a la raíz de su idioma ("" en la portada). Las páginas de una subcarpeta (ayuda/…) llevan
+    // <base href="../">, así que sus enlaces (nav, pie, {{root}}) se escriben como los de una página de arriba.
+    self: page === "index.html" ? "" : page,
     url: urlFor(lang, page),
     es_url: urlFor("es", page),
     en_url: urlFor("en", page),
@@ -62,7 +65,11 @@ function vars(text: string, lang: Lang, page: string): string {
 }
 
 const pages: string[] = [];
-for await (const e of Deno.readDir(new URL("pages/", src))) if (e.isFile && e.name.endsWith(".html")) pages.push(e.name);
+for await (const e of Deno.readDir(new URL("pages/", src))) {
+  if (e.isFile && e.name.endsWith(".html")) pages.push(e.name);
+  // b171: una subcarpeta (ayuda/, la genera tools/ayuda.ts) → páginas «carpeta/nombre.html», un solo nivel.
+  else if (e.isDirectory) for await (const f of Deno.readDir(new URL(`pages/${e.name}/`, src))) if (f.isFile && f.name.endsWith(".html")) pages.push(`${e.name}/${f.name}`);
+}
 pages.sort();
 
 await Deno.mkdir(new URL("en/", out), { recursive: true });
@@ -76,6 +83,7 @@ for (const page of pages) {
     const left = html.match(/\{\{[^}]*\}\}|<\/?(es|en)>/);
     if (left) throw new Error(`${lang}/${page}: queda sin procesar «${left[0]}»`);
     const target = new URL(lang === "es" ? page : `en/${page}`, out);
+    if (page.includes("/")) await Deno.mkdir(new URL(".", target), { recursive: true });
     await Deno.writeTextFile(target, html);
     console.log(`[OK]  ${lang === "es" ? "" : "en/"}${page}`);
   }
